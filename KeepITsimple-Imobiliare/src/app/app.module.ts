@@ -14,6 +14,7 @@ import {MatInputModule} from "@angular/material/input";
 import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
 import { RegisterFormComponent } from './feature/users/register-form/register-form.component';
 import {passwordsMustMatchValidatorDirective} from "./feature/users/passwordsMatch.directive";
+import { RegisterComponent } from './feature/users/register/register.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import {passwordsMustMatchValidatorDirective} from "./feature/users/passwordsMat
     LoginComponent,
     UserFormComponent,
     RegisterFormComponent,
-    passwordsMustMatchValidatorDirective
+    passwordsMustMatchValidatorDirective,
+    RegisterComponent
   ],
   imports: [
     BrowserModule,
