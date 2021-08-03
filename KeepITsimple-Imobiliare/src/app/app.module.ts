@@ -12,12 +12,16 @@ import {MatSnackBarModule} from "@angular/material/snack-bar";
 import {MatFormFieldModule, MatLabel} from "@angular/material/form-field";
 import {MatInputModule} from "@angular/material/input";
 import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
+import { RegisterFormComponent } from './feature/users/register-form/register-form.component';
+import {passwordsMustMatchValidatorDirective} from "./feature/users/passwordsMatch.directive";
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
-    UserFormComponent
+    UserFormComponent,
+    RegisterFormComponent,
+    passwordsMustMatchValidatorDirective
   ],
   imports: [
     BrowserModule,
