@@ -1,6 +1,7 @@
-import {Component, OnInit} from '@angular/core';
+import {Component, EventEmitter, OnInit, Output} from '@angular/core';
 import {AbstractControl, FormControl, FormGroup, ValidationErrors, ValidatorFn, Validators} from "@angular/forms";
 import {passwordsMustMatchValidator} from "../passwordsMatch.directive";
+import {LongUser} from "../model/users.data";
 
 @Component({
   selector: 'app-register-form',
@@ -8,7 +9,7 @@ import {passwordsMustMatchValidator} from "../passwordsMatch.directive";
   styleUrls: ['./register-form.component.scss']
 })
 export class RegisterFormComponent implements OnInit {
-  //@Output() submitForm: EventEmitter<ShortUser> = new EventEmitter<ShortUser>();
+  @Output() submitForm: EventEmitter<LongUser> = new EventEmitter<LongUser>();
   constructor() {
 
   }
@@ -30,12 +31,11 @@ export class RegisterFormComponent implements OnInit {
 
 
   ngOnInit(): void {
-
   }
 
   onSubmit() {
     console.log(this.registerForm.value);
-    //this.submitForm.emit(this.loginForm.value);
+    this.submitForm.emit(this.registerForm.value);
   }
 
 }
