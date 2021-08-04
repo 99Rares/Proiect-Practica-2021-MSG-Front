@@ -16,6 +16,8 @@ import {RegisterFormComponent} from './feature/users/register-form/register-form
 import {passwordsMustMatchValidatorDirective} from "./feature/users/passwordsMatch.directive";
 import {RegisterComponent} from './feature/users/register/register.component';
 import {VerifiedComponent} from "./feature/users/verified/verified/verified.component";
+import { ApartmentListComponent } from './feature/apartments/apartment-list/apartment-list.component';
+import { ApartmentItemComponent } from './feature/apartments/apartment-item/apartment-item.component';
 
 
 @NgModule({
@@ -26,7 +28,9 @@ import {VerifiedComponent} from "./feature/users/verified/verified/verified.comp
     RegisterFormComponent,
     passwordsMustMatchValidatorDirective,
     RegisterComponent,
-    VerifiedComponent
+    VerifiedComponent,
+    ApartmentListComponent,
+    ApartmentItemComponent
   ],
   imports: [
     BrowserModule,
