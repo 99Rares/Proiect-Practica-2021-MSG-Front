@@ -19,6 +19,13 @@ import { HeaderComponent } from './feature/header/header.component';
 import { RegisterFormComponent } from './feature/users/register-form/register-form.component';
 import {RegisterComponent} from "./feature/users/register/register.component";
 import {MatIconModule} from "@angular/material/icon";
+import {authInterceptorProviders} from "./feature/helpers/auth.interceptor";
+import {RegisterFormComponent} from './feature/users/register-form/register-form.component';
+import {passwordsMustMatchValidatorDirective} from "./feature/users/passwordsMatch.directive";
+import {RegisterComponent} from './feature/users/register/register.component';
+import {VerifiedComponent} from "./feature/users/verified/verified/verified.component";
+import { ApartmentListComponent } from './feature/apartments/apartment-list/apartment-list.component';
+import { ApartmentItemComponent } from './feature/apartments/apartment-item/apartment-item.component';
 
 @NgModule({
   declarations: [
@@ -29,7 +36,10 @@ import {MatIconModule} from "@angular/material/icon";
     LogoutComponent,
     HeaderComponent,
     RegisterFormComponent,
-    RegisterComponent
+    RegisterComponent,
+    VerifiedComponent,
+    ApartmentListComponent,
+    ApartmentItemComponent
   ],
   imports: [
     BrowserModule,
@@ -44,7 +54,8 @@ import {MatIconModule} from "@angular/material/icon";
     MatButtonModule,
     MatIconModule
   ],
-  providers: [BackendService],
+  providers: [BackendService,
+    authInterceptorProviders],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -8,5 +8,7 @@ export interface LongUser{
   firstName: string;
   lastName: string;
   email: string;
-  password: string;
+  password?: string;
+  token: string;
+  fullName: string;
 }
