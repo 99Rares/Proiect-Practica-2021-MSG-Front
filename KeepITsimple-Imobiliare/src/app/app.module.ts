@@ -12,6 +12,7 @@ import {MatSnackBarModule} from "@angular/material/snack-bar";
 import {MatFormFieldModule, MatLabel} from "@angular/material/form-field";
 import {MatInputModule} from "@angular/material/input";
 import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
+import {authInterceptorProviders} from "./feature/helpers/auth.interceptor";
 
 @NgModule({
   declarations: [
@@ -30,7 +31,8 @@ import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
     MatFormFieldModule,
     BrowserAnimationsModule
   ],
-  providers: [BackendService],
+  providers: [BackendService,
+    authInterceptorProviders],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

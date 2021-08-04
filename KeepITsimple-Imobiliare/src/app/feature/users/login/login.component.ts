@@ -11,10 +11,17 @@ import { MatSnackBar } from '@angular/material/snack-bar';
   styleUrls: ['./login.component.scss'],
 })
 export class LoginComponent implements OnInit {
+  form: any = {};
+  isLoggedIn = false;
+  isLoginFailed = false;
+  errorMessage = '';
+  roles: string[] = [];
   constructor(
     private service: UserService,
     private router: Router,
     private _snackBar: MatSnackBar
+
+
   ) {}
 
   ngOnInit(): void {}
