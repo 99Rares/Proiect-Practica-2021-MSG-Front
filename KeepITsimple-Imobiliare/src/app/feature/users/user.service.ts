@@ -22,6 +22,7 @@ export class UserService {
 
   //register care primeste user cu toate field urile obs void
   register(user: LongUser): Observable<void>{
+
     return this.service.post(this.urlRegister,{
       firstName: user.firstName,
       lastName: user.lastName,
