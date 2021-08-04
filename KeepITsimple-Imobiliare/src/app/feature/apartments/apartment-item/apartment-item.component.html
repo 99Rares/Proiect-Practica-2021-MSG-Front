@@ -1,1 +1,34 @@
-<p>apartment-item works!</p>
+<!--<table mat-table [dataSource]="data" class="mat-elevation-z8">-->
+<!--  &lt;!&ndash; Name Column &ndash;&gt;-->
+<!--  <ng-container matColumnDef="name">-->
+<!--    <th mat-header-cell *matHeaderCellDef> NAME</th>-->
+<!--    <td mat-cell *matCellDef="let element"> {{element.titleApart}} </td>-->
+<!--  </ng-container>-->
+
+<!--</table>-->
+
+<!--without Angular Material UI-->
+<table>
+  <thead>
+    <tr>
+      <td>Name</td>
+      <td>description</td>
+      <td>city</td>
+      <td>Owner</td>
+      <td>Picture</td>
+    </tr>
+  </thead>
+  <tbody>
+    <!--iterez toate datele cu ngFor-->
+    <!-- ngIf pt conditii-->
+    <tr *ngFor="let p of data">
+      <td>{{p.titleApart}}</td>
+      <td>{{p.description}}</td>
+      <td>{{p.city}}</td>
+      <td>{{p.owner.firstName}}</td>
+      <td><img alt="poza1" src="{{p.pictures[0].url}}"></td>
+<!--      <td *ngIf="p.price>10">{{p.price}}</td>-->
+<!--      <td *ngIf="p.price<=10">ieftin</td>-->
+    </tr>
+  </tbody>
+</table>
