@@ -1,8 +1,7 @@
 import { Injectable } from '@angular/core';
 import {BackendService} from "../../backend/backend.service";
-import {ShortUser} from "./model/users.data";
+import {LongUser, ShortUser} from "./model/users.data";
 import {Observable} from "rxjs";
-import {FormGroup} from "@angular/forms";
 
 @Injectable({
   providedIn: 'root'
@@ -10,6 +9,7 @@ import {FormGroup} from "@angular/forms";
 export class UserService {
 
   url = 'http://localhost:8080/api/users/login';
+  urlRegister = 'http://localhost:8080/api/users/register'
 
   constructor(private service: BackendService) {}
 
@@ -21,4 +21,13 @@ export class UserService {
   }
 
   //register care primeste user cu toate field urile obs void
+  register(user: LongUser): Observable<void>{
+
+    return this.service.post(this.urlRegister,{
+      firstName: user.firstName,
+      lastName: user.lastName,
+      email: user.email,
+      password: user.password
+    })
+  }
 }
