@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
+import {ApartmentDetails} from "../model/apartment.data";
+import {ApartmentService} from "../apartment.service";
 
 @Component({
   selector: 'app-apartment-list',
@@ -7,9 +9,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ApartmentListComponent implements OnInit {
 
-  constructor() { }
-
-  ngOnInit(): void {
+  constructor(private apartmentService: ApartmentService) {
   }
 
+  apartments: ApartmentDetails[] = [];
+
+  ngOnInit(): void {
+    this.loadApartments()
+  }
+
+   loadApartments() {
+    this.apartmentService.getApartments().subscribe((data)=>this.apartments=data)
+  }
 }
