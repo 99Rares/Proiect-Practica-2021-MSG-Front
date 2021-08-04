@@ -12,6 +12,7 @@ import {MatSnackBarModule} from "@angular/material/snack-bar";
 import {MatFormFieldModule} from "@angular/material/form-field";
 import {MatInputModule} from "@angular/material/input";
 import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
+import {authInterceptorProviders} from "./feature/helpers/auth.interceptor";
 import {RegisterFormComponent} from './feature/users/register-form/register-form.component';
 import {passwordsMustMatchValidatorDirective} from "./feature/users/passwordsMatch.directive";
 import {RegisterComponent} from './feature/users/register/register.component';
@@ -43,7 +44,8 @@ import { ApartmentItemComponent } from './feature/apartments/apartment-item/apar
     MatFormFieldModule,
     BrowserAnimationsModule
   ],
-  providers: [BackendService],
+  providers: [BackendService,
+    authInterceptorProviders],
   bootstrap: [AppComponent]
 })
 export class AppModule {
