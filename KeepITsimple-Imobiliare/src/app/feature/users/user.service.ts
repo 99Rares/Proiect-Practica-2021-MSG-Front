@@ -13,7 +13,7 @@ export class UserService {
 
   constructor(private service: BackendService) {}
 
-  login(user: ShortUser): Observable<boolean> {
+  login(user: ShortUser): Observable<LongUser> {
     return this.service.post(this.url, {
       email: user.username,
       password: user.password
