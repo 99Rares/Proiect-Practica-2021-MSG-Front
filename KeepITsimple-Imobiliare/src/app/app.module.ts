@@ -22,6 +22,10 @@ import {authInterceptorProviders} from "./feature/helpers/auth.interceptor";
 import {VerifiedComponent} from "./feature/users/verified/verified/verified.component";
 import {ApartmentListComponent} from './feature/apartments/apartment-list/apartment-list.component';
 import {ApartmentItemComponent} from './feature/apartments/apartment-item/apartment-item.component';
+import {MatCardModule} from "@angular/material/card";
+import {MatToolbarModule} from "@angular/material/toolbar";
+import {FlexLayoutModule} from "@angular/flex-layout";
+import {MatTableModule} from "@angular/material/table";
 
 @NgModule({
   declarations: [
@@ -48,7 +52,11 @@ import {ApartmentItemComponent} from './feature/apartments/apartment-item/apartm
     MatFormFieldModule,
     BrowserAnimationsModule,
     MatButtonModule,
-    MatIconModule
+    MatIconModule,
+    MatCardModule,
+    MatToolbarModule,
+    FlexLayoutModule,
+    MatTableModule,
   ],
   providers: [BackendService,
     authInterceptorProviders],
