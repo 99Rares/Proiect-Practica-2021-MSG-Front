@@ -26,6 +26,7 @@ import {MatCardModule} from "@angular/material/card";
 import {MatToolbarModule} from "@angular/material/toolbar";
 import {FlexLayoutModule} from "@angular/flex-layout";
 import {MatTableModule} from "@angular/material/table";
+import {MatTooltipModule} from '@angular/material/tooltip';
 
 @NgModule({
   declarations: [
@@ -57,6 +58,7 @@ import {MatTableModule} from "@angular/material/table";
     MatToolbarModule,
     FlexLayoutModule,
     MatTableModule,
+    MatTooltipModule
   ],
   providers: [BackendService,
     authInterceptorProviders],

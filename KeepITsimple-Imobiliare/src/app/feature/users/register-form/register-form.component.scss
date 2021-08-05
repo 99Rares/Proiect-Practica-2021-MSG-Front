@@ -1,7 +1,7 @@
 form{
   text-align: center;
   padding: 10px;
-  outline: 3px darkslateblue solid;
+  outline: 3px seagreen solid;
 }
 
 .container{
@@ -13,4 +13,12 @@ form{
 
 .passwords-do-not-match-error-message{
   color: red;
+}
+
+.register-button{
+  background-color: seagreen;
+}
+
+.login-link:visited, .login-link:link{
+  color: black;
 }

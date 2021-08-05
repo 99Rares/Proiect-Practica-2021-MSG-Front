@@ -13,7 +13,11 @@
       </mat-form-field>
     </div>
     <div class="row">
-      <button mat-button color="primary" type = "submit" [disabled]="!isValid()">Login</button>
+      <button mat-raised-button color="primary" type = "submit" [disabled]="!isValid()" class="login-button">Login</button>
+    </div>
+    <br>
+    <div class="row">
+        <a class="register-link" [routerLink]="['/register']">Nu ai cont? Inregistreaza-te!</a>
     </div>
 
   </form>
