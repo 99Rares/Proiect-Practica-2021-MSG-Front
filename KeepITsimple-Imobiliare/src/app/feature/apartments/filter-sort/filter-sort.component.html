@@ -1,0 +1,86 @@
+<mat-accordion>
+  <mat-expansion-panel hideToggle>
+    <mat-expansion-panel-header>
+      <mat-panel-title>
+        FILTER
+      </mat-panel-title>
+      <mat-panel-description>
+        Filtreaza rezultatatele dupa optiuni
+      </mat-panel-description>
+    </mat-expansion-panel-header>
+
+    <!--  <p>Optiune 1</p>  -->
+    <!------------------------------------------Slider----------------------------------------------------->
+    <mat-card class="example-result-card">
+      <mat-card-content>
+        <div class="example-label-container" [class]="vertical ? 'example-label-vertical' : 'example-label-horizontal'">
+          <label id="example-name-label" class="example-name-label">Pret(€): </label>
+          <label class="example-value-label">{{value}}</label>
+        </div>
+        <mat-slider
+          class="example-margin"
+          [disabled]="disabled"
+          [invert]="invert"
+          [max]="max"
+          [min]="min"
+          [step]="step"
+          [thumbLabel]="thumbLabel"
+          [tickInterval]="0"
+          [(ngModel)]="value"
+          [vertical]="vertical"
+          aria-labelledby="example-name-label">
+        </mat-slider>
+      </mat-card-content>
+    </mat-card>
+    <br>
+    <!-----------------------------------------------Radio-Bts----------------------------------------------->
+    <mat-card>
+      <mat-card-content>
+        <mat-radio-group aria-label="Select an option">
+          <p style="font-size:180%;">Doresc sa:</p>
+          <p></p>
+          <mat-radio-button value="1">Inchiriez</mat-radio-button>
+          <mat-radio-button value="2">Cumpar</mat-radio-button>
+        </mat-radio-group>
+      </mat-card-content>
+    </mat-card>
+    <!------------------------------------------------------------------------------------------------------->
+
+  </mat-expansion-panel>
+
+  <mat-expansion-panel hideToggle>
+    <mat-expansion-panel-header>
+      <mat-panel-title>
+        SORT
+      </mat-panel-title>
+      <mat-panel-description>
+        Sorteaza rezultatatele dupa optiuni
+      </mat-panel-description>
+    </mat-expansion-panel-header>
+    <p>Optiune 2</p>
+    <!-----------------------------------------------Radio-Bts----------------------------------------------->
+    <mat-card>
+      <mat-card-content>
+        <mat-radio-group aria-label="Select an option">
+          <p style="font-size:180%;">Sorteaza dupa pret:</p>
+          <p></p>
+          <mat-radio-button value="1">Crescator</mat-radio-button>
+          <mat-radio-button value="2">Descrescator</mat-radio-button>
+        </mat-radio-group>
+      </mat-card-content>
+    </mat-card>
+    <!------------------------------------------------------------------------------------------------------->
+    <!-----------------------------------------------Radio-Bts----------------------------------------------->
+    <mat-card>
+      <mat-card-content>
+        <mat-radio-group aria-label="Select an option">
+          <p style="font-size:180%;">Sorteaza dupa suprafata:</p>
+          <p></p>
+          <mat-radio-button value="1">Crescator</mat-radio-button>
+          <mat-radio-button value="2">Descrescator</mat-radio-button>
+        </mat-radio-group>
+      </mat-card-content>
+    </mat-card>
+    <!------------------------------------------------------------------------------------------------------->
+  </mat-expansion-panel>
+</mat-accordion>
