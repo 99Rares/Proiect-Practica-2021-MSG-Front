@@ -1,9 +1,9 @@
 <div class="container">
-<!--  logo aplicatie care sa duca la homepage apartaments-->
-
   <p>{{getFullName()}}</p>
 
-  <h1>KeepITsimple - Imobiliare</h1>
+  <div class="logo">
+    <img src="./assets/KeepITsimple_Logo.png" alt="KeepITsimple-Imobiliare" [routerLink]="['']">
+  </div>
 
   <div class="button-container">
     <button mat-raised-button matTooltip="Log in" (click)="login()" *ngIf="!isLogged()">
