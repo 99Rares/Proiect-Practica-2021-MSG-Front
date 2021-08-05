@@ -1,30 +1,17 @@
 <mat-toolbar class="toolbar-apartamente">Locuinte</mat-toolbar>
+<app-filter-sort></app-filter-sort>
 <div class="content">
   <div fxLayout = "row wrap" fxLayoutGap="16px grid">
     <div fxFlex="25%" fxFlex.xs="100%" fxFlex.sm="33%" *ngFor="let p of data">
       <mat-card  class="mat-elevation-z4" [routerLink]="['/apartments', p.id]">
         <mat-card-header>
           <mat-card-title>{{p.titleApart}}</mat-card-title>
-          <mat-card-subtitle class="transaction-type">{{p.transactionType}}</mat-card-subtitle>
+          <mat-card-subtitle class="transaction-type"><b>{{p.transactionType}}</b></mat-card-subtitle>
           <mat-card-subtitle>{{p.description}}</mat-card-subtitle>
           <mat-card-subtitle>{{p.city}}, {{p.neighbourhood}}</mat-card-subtitle>
         </mat-card-header>
 
         <img mat-card-image alt="poza1" src="{{p.pictures[0].url}}">
-
-        <mat-card-content>
-          <p>Numar camere: {{p.nrRooms}}, Suprafata: {{p.surface}} mp, An constructie: {{p.yearConstruction}}</p>
-        </mat-card-content>
-
-        <mat-card-content>
-          <th>Detalii proprietar</th>
-          <br>
-          <td>{{p.owner.firstName}} {{p.owner.lastName}}</td>
-          <br>
-          <td>{{p.owner.phoneNumber}}</td>
-          <br>
-          <td><a href="">{{p.owner.urlStatisticsChart}}</a></td>
-        </mat-card-content>
 
         <mat-card-footer>
           {{p.price | currency:'EUR'}}
