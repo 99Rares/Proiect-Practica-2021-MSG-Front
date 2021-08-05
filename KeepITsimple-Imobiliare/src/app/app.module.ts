@@ -48,9 +48,7 @@ import {MatCarouselModule} from "@ngbmodule/material-carousel";
     VerifiedComponent,
     ApartmentListComponent,
     ApartmentItemComponent,
-    FilterSortComponent
-    ApartmentItemComponent,
-    ApartmentPageComponent,
+    FilterSortComponent,
     ApartmentPageComponent,
     // CarouselModule,
     // WavesModule
@@ -74,10 +72,7 @@ import {MatCarouselModule} from "@ngbmodule/material-carousel";
     MatTooltipModule,
     MatExpansionModule,
     MatSliderModule,
-    MatRadioModule
-    MatTooltipModule,
-    ReactiveFormsModule,
-    BrowserModule,
+    MatRadioModule,
     RouterModule,
     MatCarouselModule
   ],
