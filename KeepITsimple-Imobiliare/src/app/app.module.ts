@@ -29,6 +29,7 @@ import {MatTableModule} from "@angular/material/table";
 import {ApartmentPageComponent} from './feature/apartments/apartment-page/apartment-page.component';
 import {RouterModule} from "@angular/router";
 import {MatTooltipModule} from '@angular/material/tooltip';
+import {MatCarouselModule} from "@ngbmodule/material-carousel";
 
 @NgModule({
   declarations: [
@@ -67,10 +68,8 @@ import {MatTooltipModule} from '@angular/material/tooltip';
     MatTooltipModule,
     ReactiveFormsModule,
     BrowserModule,
-    RouterModule.forRoot([
-      {path: '', component: ApartmentListComponent},
-      {path: 'apartments/:apartmentId', component: ApartmentPageComponent},
-    ])
+    RouterModule,
+    MatCarouselModule
   ],
   providers: [BackendService,
     authInterceptorProviders],

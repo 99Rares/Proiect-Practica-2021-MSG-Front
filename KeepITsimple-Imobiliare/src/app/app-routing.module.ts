@@ -4,6 +4,7 @@ import {LoginComponent} from "./feature/users/login/login.component";
 import {RegisterComponent} from "./feature/users/register/register.component";
 import {VerifiedComponent} from "./feature/users/verified/verified/verified.component";
 import {ApartmentListComponent} from "./feature/apartments/apartment-list/apartment-list.component";
+import {ApartmentPageComponent} from "./feature/apartments/apartment-page/apartment-page.component";
 
 const routes: Routes = [
   {path: '', component: ApartmentListComponent},
@@ -11,18 +12,14 @@ const routes: Routes = [
   {path: 'register', component: RegisterComponent},
   {path: 'verify', component: VerifiedComponent},
   {path: 'apartments', component: ApartmentListComponent},
+  {path: 'apartments/:apartmentId', component: ApartmentPageComponent},
   {path: '**', redirectTo: ''}
 ];
 
 export const routing = RouterModule.forRoot(routes);
 
 @NgModule({
-  imports: [
-    ReactiveFormsModule,
-    RouterModule.forRoot([
-      {path: '', component: ApartmentListComponent},
-      {path: 'apartments/:apartmentId', component: ApartmentPageComponent},
-    ])],
+  imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule]
 })
 export class AppRoutingModule {
