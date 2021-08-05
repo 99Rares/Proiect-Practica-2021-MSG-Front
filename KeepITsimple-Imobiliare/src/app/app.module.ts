@@ -26,6 +26,8 @@ import {MatCardModule} from "@angular/material/card";
 import {MatToolbarModule} from "@angular/material/toolbar";
 import {FlexLayoutModule} from "@angular/flex-layout";
 import {MatTableModule} from "@angular/material/table";
+import {ApartmentPageComponent} from './feature/apartments/apartment-page/apartment-page.component';
+import {RouterModule} from "@angular/router";
 
 @NgModule({
   declarations: [
@@ -39,7 +41,11 @@ import {MatTableModule} from "@angular/material/table";
     RegisterComponent,
     VerifiedComponent,
     ApartmentListComponent,
-    ApartmentItemComponent
+    ApartmentItemComponent,
+    ApartmentPageComponent,
+    ApartmentPageComponent,
+    // CarouselModule,
+    // WavesModule
   ],
   imports: [
     BrowserModule,
@@ -57,6 +63,12 @@ import {MatTableModule} from "@angular/material/table";
     MatToolbarModule,
     FlexLayoutModule,
     MatTableModule,
+    ReactiveFormsModule,
+    BrowserModule,
+    RouterModule.forRoot([
+      {path: '', component: ApartmentListComponent},
+      {path: 'apartments/:apartmentId', component: ApartmentPageComponent},
+    ])
   ],
   providers: [BackendService,
     authInterceptorProviders],
@@ -64,4 +76,3 @@ import {MatTableModule} from "@angular/material/table";
 })
 export class AppModule {
 }
-
