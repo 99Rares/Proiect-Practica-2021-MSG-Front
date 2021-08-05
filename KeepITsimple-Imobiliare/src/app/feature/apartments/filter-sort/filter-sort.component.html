@@ -9,6 +9,35 @@
       </mat-panel-description>
     </mat-expansion-panel-header>
     <p>Optiune 1</p>
+    <!------------------------------------------Slider----------------------------------------------------->
+
+    <mat-card class="example-result-card">
+      <mat-card-content>
+        <h2>Result</h2>
+        <br>
+        <br>
+
+        <div class="example-label-container" [class]="vertical ? 'example-label-vertical' : 'example-label-horizontal'">
+          <label id="example-name-label" class="example-name-label">Max Value</label>
+          <label class="example-value-label">{{value}}</label>
+        </div>
+        <mat-slider
+          class="example-margin"
+          [disabled]="disabled"
+          [invert]="invert"
+          [max]="max"
+          [min]="min"
+          [step]="step"
+          [thumbLabel]="thumbLabel"
+          [tickInterval]="10"
+          [(ngModel)]="value"
+          [vertical]="vertical"
+          aria-labelledby="example-name-label">
+        </mat-slider>
+      </mat-card-content>
+    </mat-card>
+
+    <!----------------------------------------------------------------------------------------------------->
   </mat-expansion-panel>
 
   <mat-expansion-panel hideToggle>
