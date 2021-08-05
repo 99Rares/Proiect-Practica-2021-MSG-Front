@@ -1,0 +1,36 @@
+mat-toolbar {
+  justify-content: space-between;
+}
+
+.mat-toolbar-row, .mat-toolbar-single-row{
+  padding: 0 50px;
+}
+
+.content {
+  padding: 16px;
+  font-size: x-large;
+}
+
+.transaction-type{
+  color: seagreen;
+}
+
+.content > mat-card {
+  margin-bottom: 16px;
+}
+
+.mat-card-image{
+  width: calc(100% + 32px);
+  margin: 0 -16px 16px -16px;
+}
+
+img.mat-card-image{
+  height: 400px;
+}
+.mat-card-footer{
+  display: block;
+  margin: 0 -16px -16px -16px;
+  padding: 20px 20px 20px 20px;
+  font-weight: 900;
+}
+
