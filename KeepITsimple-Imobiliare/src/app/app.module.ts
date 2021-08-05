@@ -26,7 +26,10 @@ import {MatCardModule} from "@angular/material/card";
 import {MatToolbarModule} from "@angular/material/toolbar";
 import {FlexLayoutModule} from "@angular/flex-layout";
 import {MatTableModule} from "@angular/material/table";
+import {ApartmentPageComponent} from './feature/apartments/apartment-page/apartment-page.component';
+import {RouterModule} from "@angular/router";
 import {MatTooltipModule} from '@angular/material/tooltip';
+import {MatCarouselModule} from "@ngbmodule/material-carousel";
 
 @NgModule({
   declarations: [
@@ -40,7 +43,11 @@ import {MatTooltipModule} from '@angular/material/tooltip';
     RegisterComponent,
     VerifiedComponent,
     ApartmentListComponent,
-    ApartmentItemComponent
+    ApartmentItemComponent,
+    ApartmentPageComponent,
+    ApartmentPageComponent,
+    // CarouselModule,
+    // WavesModule
   ],
   imports: [
     BrowserModule,
@@ -58,7 +65,11 @@ import {MatTooltipModule} from '@angular/material/tooltip';
     MatToolbarModule,
     FlexLayoutModule,
     MatTableModule,
-    MatTooltipModule
+    MatTooltipModule,
+    ReactiveFormsModule,
+    BrowserModule,
+    RouterModule,
+    MatCarouselModule
   ],
   providers: [BackendService,
     authInterceptorProviders],

@@ -9,6 +9,7 @@ export interface OwnerDetails{
  }
 
 export interface ApartmentDetails{
+  id:number,
   titleApart: string,
   transactionType: string,
   propertyType: string,
