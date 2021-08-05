@@ -28,6 +28,7 @@ import {FlexLayoutModule} from "@angular/flex-layout";
 import {MatTableModule} from "@angular/material/table";
 import {ApartmentPageComponent} from './feature/apartments/apartment-page/apartment-page.component';
 import {RouterModule} from "@angular/router";
+import {MatTooltipModule} from '@angular/material/tooltip';
 
 @NgModule({
   declarations: [
@@ -63,6 +64,7 @@ import {RouterModule} from "@angular/router";
     MatToolbarModule,
     FlexLayoutModule,
     MatTableModule,
+    MatTooltipModule,
     ReactiveFormsModule,
     BrowserModule,
     RouterModule.forRoot([
@@ -76,3 +78,4 @@ import {RouterModule} from "@angular/router";
 })
 export class AppModule {
 }
+

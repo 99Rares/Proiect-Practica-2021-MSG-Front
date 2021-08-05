@@ -22,8 +22,6 @@ export class LoginComponent implements OnInit {
     private router: Router,
     private _snackBar: MatSnackBar,
     private storageService: TokenStorageService
-
-
   ) {}
 
   ngOnInit(): void {}
@@ -34,13 +32,16 @@ export class LoginComponent implements OnInit {
         console.log(user)
         this.storageService.saveToken(user.token)
         this.storageService.saveUser(user)
-          this._snackBar.open('Logged in successfully!');
+        this.router.navigate([''])
+        this._snackBar.open('Logged in successfully!','Ok',{
+          duration:3000
+        });
 
       },error =>{
         console.log(error)
-        this._snackBar.open('Log in failed!')
+        this._snackBar.open('Log in failed!','Ok',{
+          duration:3000
+        })
       } );
   }
-
-
 }
