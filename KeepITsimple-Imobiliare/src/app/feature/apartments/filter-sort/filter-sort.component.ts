@@ -14,14 +14,13 @@ export class FilterSortComponent implements OnInit {
   autoTicks = false;
   disabled = false;
   invert = false;
-  max = 1000000;
+  max = 500000;
   min = 0;
   showTicks = false;
   step = 1000;
   thumbLabel = true;
   value = 0;
   vertical = false;
-  tickInterval = 1;
 
     ngOnInit(): void {
   }
