@@ -33,4 +33,12 @@ img.mat-card-image{
   padding: 20px 20px 20px 20px;
   font-weight: 900;
 }
+.zoom {
+  transition: transform .2s; /* Animation */
+}
+
+.zoom:hover {
+  cursor: pointer;
+  transform: scale(1.03); /* (150% zoom)*/
+}
 
