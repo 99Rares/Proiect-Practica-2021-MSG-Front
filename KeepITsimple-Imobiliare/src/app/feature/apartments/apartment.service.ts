@@ -15,5 +15,8 @@ export class ApartmentService {
   getApartments(): Observable<ApartmentDetails[]> {
     return this.service.get(`${this.api}/${this.productsEndpoint}`);
   }
+  getApartmentsDetail(id: number): Observable<ApartmentDetails> {
+    return this.service.get(`${this.api}/${this.productsEndpoint}/${id}`);
+  }
 
 }

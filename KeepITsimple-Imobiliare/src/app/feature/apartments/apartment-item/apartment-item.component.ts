@@ -7,11 +7,11 @@ import {ApartmentDetails} from "../model/apartment.data";
   styleUrls: ['./apartment-item.component.scss']
 })
 export class ApartmentItemComponent implements OnInit {
-  @Input() data:ApartmentDetails[]=[];
+  @Input() data: ApartmentDetails[] = [];
 
-  constructor() { }
+  constructor() {
+  }
 
   ngOnInit(): void {
   }
-
 }
