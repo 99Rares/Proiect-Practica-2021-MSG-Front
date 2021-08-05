@@ -30,6 +30,7 @@ import {MatTooltipModule} from '@angular/material/tooltip';
 import {MatExpansionModule} from "@angular/material/expansion";
 import { FilterSortComponent } from './feature/apartments/filter-sort/filter-sort.component';
 import {MatSliderModule} from '@angular/material/slider';
+import {MatRadioModule} from '@angular/material/radio';
 
 @NgModule({
   declarations: [
@@ -64,7 +65,8 @@ import {MatSliderModule} from '@angular/material/slider';
     MatTableModule,
     MatTooltipModule,
     MatExpansionModule,
-    MatSliderModule
+    MatSliderModule,
+    MatRadioModule
   ],
   providers: [BackendService,
     authInterceptorProviders],

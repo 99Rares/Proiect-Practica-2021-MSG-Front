@@ -8,17 +8,13 @@
         Filtreaza rezultatatele dupa optiuni
       </mat-panel-description>
     </mat-expansion-panel-header>
-    <p>Optiune 1</p>
-    <!------------------------------------------Slider----------------------------------------------------->
 
+    <!--  <p>Optiune 1</p>  -->
+    <!------------------------------------------Slider----------------------------------------------------->
     <mat-card class="example-result-card">
       <mat-card-content>
-        <h2>Result</h2>
-        <br>
-        <br>
-
         <div class="example-label-container" [class]="vertical ? 'example-label-vertical' : 'example-label-horizontal'">
-          <label id="example-name-label" class="example-name-label">Max Value</label>
+          <label id="example-name-label" class="example-name-label">Pret(€): </label>
           <label class="example-value-label">{{value}}</label>
         </div>
         <mat-slider
@@ -29,15 +25,27 @@
           [min]="min"
           [step]="step"
           [thumbLabel]="thumbLabel"
-          [tickInterval]="10"
+          [tickInterval]="0"
           [(ngModel)]="value"
           [vertical]="vertical"
           aria-labelledby="example-name-label">
         </mat-slider>
       </mat-card-content>
     </mat-card>
+    <br>
+    <!-----------------------------------------------Radio-Bts----------------------------------------------->
+    <mat-card>
+      <mat-card-content>
+        <mat-radio-group aria-label="Select an option">
+          <p style="font-size:180%;">Doresc sa:</p>
+          <p></p>
+          <mat-radio-button value="1">Inchiriez</mat-radio-button>
+          <mat-radio-button value="2">Cumpar</mat-radio-button>
+        </mat-radio-group>
+      </mat-card-content>
+    </mat-card>
+    <!------------------------------------------------------------------------------------------------------->
 
-    <!----------------------------------------------------------------------------------------------------->
   </mat-expansion-panel>
 
   <mat-expansion-panel hideToggle>
