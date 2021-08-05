@@ -27,6 +27,8 @@ import {MatToolbarModule} from "@angular/material/toolbar";
 import {FlexLayoutModule} from "@angular/flex-layout";
 import {MatTableModule} from "@angular/material/table";
 import {MatTooltipModule} from '@angular/material/tooltip';
+import {MatExpansionModule} from "@angular/material/expansion";
+import { FilterSortComponent } from './feature/apartments/filter-sort/filter-sort.component';
 
 @NgModule({
   declarations: [
@@ -40,7 +42,8 @@ import {MatTooltipModule} from '@angular/material/tooltip';
     RegisterComponent,
     VerifiedComponent,
     ApartmentListComponent,
-    ApartmentItemComponent
+    ApartmentItemComponent,
+    FilterSortComponent
   ],
   imports: [
     BrowserModule,
@@ -58,7 +61,8 @@ import {MatTooltipModule} from '@angular/material/tooltip';
     MatToolbarModule,
     FlexLayoutModule,
     MatTableModule,
-    MatTooltipModule
+    MatTooltipModule,
+    MatExpansionModule
   ],
   providers: [BackendService,
     authInterceptorProviders],
