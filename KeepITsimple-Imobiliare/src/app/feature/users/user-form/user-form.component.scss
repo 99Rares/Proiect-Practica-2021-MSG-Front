@@ -1,7 +1,7 @@
 form{
   text-align: center;
   padding: 10px;
-  outline: 3px darkslateblue solid;
+  outline: 3px seagreen solid;
 }
 
 .container{
@@ -10,3 +10,11 @@ form{
   justify-content: center;
   align-items: center;
 }
+
+.login-button{
+  background-color: seagreen;
+}
+.register-link:visited, .register-link:link{
+  color: black;
+}
+

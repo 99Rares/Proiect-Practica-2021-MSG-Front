@@ -1,6 +1,7 @@
 import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { ShortUser } from '../model/users.data';
+import {Router} from "@angular/router";
 
 @Component({
   selector: 'app-user-form',
@@ -10,7 +11,7 @@ import { ShortUser } from '../model/users.data';
 export class UserFormComponent implements OnInit {
   @Output() submitForm: EventEmitter<ShortUser> = new EventEmitter<ShortUser>();
 
-  constructor() {}
+  constructor(private router:Router) {}
 
   loginForm = new FormGroup({
     username: new FormControl('', [
@@ -35,5 +36,9 @@ export class UserFormComponent implements OnInit {
       !!this.loginForm.controls['username'].value &&
       !!this.loginForm.controls['password'].value
     );
+  }
+
+  register(){
+    this.router.navigate(['/register']);
   }
 }

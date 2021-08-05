@@ -1,41 +1,21 @@
 <div class="container">
-<!--  <div class="user">-->
-<!--    <p>user</p>-->
-<!--  </div>-->
-<!--  <div class="title">-->
-<!--    <h3>KeepITsimple - Imobiliare</h3>-->
-<!--  </div>-->
-<!--  <div class="buttons">-->
-<!--    <button (click)="wishlist()">-->
-<!--      <mat-icon>logout</mat-icon>-->
-<!--    </button>-->
-<!--    <button (click)="logout()">-->
-<!--      <mat-icon>logout</mat-icon>-->
-<!--    </button>-->
-<!--  </div>-->
+<!--  logo aplicatie care sa duca la homepage apartaments-->
 
-  <p>user</p>
+  <p>{{getFullName()}}</p>
 
   <h1>KeepITsimple - Imobiliare</h1>
 
   <div class="button-container">
-    <button (click)="wishlist()">
+    <button mat-raised-button matTooltip="Log in" (click)="login()" *ngIf="!isLogged()">
+      <mat-icon>login</mat-icon>
+    </button>
+
+    <button mat-raised-button matTooltip="Go to wishlist" (click)="wishlist()" *ngIf="isLogged()">
       <mat-icon>favorite</mat-icon>
     </button>
 
-    <button (click)="logout()">
+    <button mat-raised-button matTooltip="Log out" (click)="logout()" *ngIf="isLogged()">
       <mat-icon>logout</mat-icon>
     </button>
   </div>
 </div>
-
-
-<!--<div class="container">-->
-<!--  <p>user</p>-->
-<!--  <div class="button-container">-->
-<!--    <button (click)="logout()">-->
-<!--      <mat-icon>logout</mat-icon>-->
-<!--    </button>-->
-<!--  </div>-->
-
-<!--</div>-->

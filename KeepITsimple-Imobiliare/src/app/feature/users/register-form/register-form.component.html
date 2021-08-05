@@ -35,8 +35,14 @@
     </div>
     <br>
     <div class="row">
-      <button mat-button color="primary" type = "submit">Register</button>
+      <button mat-raised-button color="primary" type = "submit" class="register-button">Register</button>
     </div>
+    <br>
+    <div class="row">
+      <a class="login-link" [routerLink]="['/login']">Ai deja cont? Autentifica-te!</a>
+    </div>
+
+    <!--    buton de login cu routing sa ma redirect pe comp de login-->
 
   </form>
 </div>

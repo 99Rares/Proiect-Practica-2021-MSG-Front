@@ -24,9 +24,9 @@ export class RegisterComponent implements OnInit {
     this.service.register(user).subscribe(
       data => {
         //this.router.navigate(['/products']);
-        this._snackBar.open('You have registered successfully!',"Ok");
+        this._snackBar.open('You have registered successfully!',"Ok",{duration: 3000});
       },
-      (error) => console.log(this._snackBar.open('Registration failed!',"Ok"))
+      (error) => console.log(this._snackBar.open('Registration failed!',"Ok",{duration: 3000}))
     )
   }
 
