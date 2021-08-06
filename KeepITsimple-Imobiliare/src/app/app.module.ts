@@ -34,6 +34,7 @@ import { FilterSortComponent } from './feature/apartments/filter-sort/filter-sor
 import {MatSliderModule} from '@angular/material/slider';
 import {MatRadioModule} from '@angular/material/radio';
 import {MatCarouselModule} from "@ngbmodule/material-carousel";
+import {MatTabsModule} from "@angular/material/tabs";
 
 @NgModule({
   declarations: [
@@ -74,7 +75,8 @@ import {MatCarouselModule} from "@ngbmodule/material-carousel";
     MatSliderModule,
     MatRadioModule,
     RouterModule,
-    MatCarouselModule
+    MatCarouselModule,
+    MatTabsModule
   ],
   providers: [BackendService,
     authInterceptorProviders],

@@ -1,0 +1,19 @@
+.carousel-container{
+  display: block;
+  //width: 50%;
+  //margin:auto;
+}
+
+::ng-deep mat-tab-body {
+  margin: 30px 30px 30px;
+}
+
+.transaction-type{
+  color: seagreen;
+}
+
+.container{
+  max-width:75%;
+  display: block;
+  margin: 25px auto 0px auto;
+}
