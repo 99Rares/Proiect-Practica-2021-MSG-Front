@@ -1,24 +1,12 @@
-<h2>Product Details</h2>
-
-<div *ngIf="apartment">
-  <h3>{{ apartment.titleApart }}</h3>
-  <h4>{{ apartment.price | currency }}</h4>
-  <p>{{ apartment.city }}</p>
-  <p>{{ apartment.neighbourhood }}</p>
-  <p>{{ apartment.nrRooms }}</p>
-  <p>{{ apartment.surface }} m2</p>
-  <p>Tip tranzactie: <strong>{{ apartment.transactionType }}</strong></p>
-  <p>{{ apartment.propertyType }}</p>
-  <p>Anul constructiei: {{ apartment.yearConstruction }}</p>
-  <p>{{ apartment.description }}</p>
-  <div [style.height]="500">
+<div *ngIf="apartment" class="container">
+  <div [style.height]="500" class="carousel-container">
     <mat-carousel
       timings="250ms ease-in"
       [autoplay]="true"
       [interval]="5000"
-      color="accent"
-      maxWidth="50%"
-      [proportion]="50"
+      color="primary"
+      maxWidth="auto"
+      [proportion]="35"
       [loop]="true"
       [hideArrows]="false"
       [hideIndicators]="false"
@@ -35,11 +23,30 @@
       ></mat-carousel-slide>
     </mat-carousel>
   </div>
-  <h2>Owner Details</h2>
-  <p>{{ apartment.owner.firstName }}</p>
-  <p>{{ apartment.owner.lastName }}</p>
-  <p>{{ apartment.owner.phoneNumber }}</p>
-  <p><a href="{{ apartment.owner.urlStatisticsChart }}">Statistica</a></p>
+  <mat-tab-group>
+    <mat-tab label="Descriere apartament">
+      <strong>{{apartment.titleApart}}</strong>
+      <br>
+      <b class="transaction-type">{{apartment.transactionType}}</b>
+      <br>
+      <p>{{apartment.description}}</p>
+      <p>{{apartment.city}}, {{apartment.neighbourhood}}</p>
+    </mat-tab>
 
+    <mat-tab label="Caracteristici">
+      <p>Numar camere: {{apartment.nrRooms}}</p>
+      <p>Suprafata: {{apartment.surface}} mp</p>
+      <p>An constructie: {{apartment.yearConstruction}}</p>
+    </mat-tab>
 
+    <mat-tab label="Pret">
+      {{apartment.price | currency:'EUR'}}
+    </mat-tab>
+
+    <mat-tab label="Contact proprietar">
+      <p>{{apartment.owner.firstName}} {{apartment.owner.lastName}}</p>
+      <p>{{apartment.owner.phoneNumber}}</p>
+      <p><a href="{{apartment.owner.urlStatisticsChart}}">Statistica Locuinte</a></p>
+    </mat-tab>
+  </mat-tab-group>
 </div>
