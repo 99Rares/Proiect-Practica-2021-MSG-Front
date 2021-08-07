@@ -23,7 +23,7 @@ export class HeaderComponent implements OnInit {
   }
 
   wishlist() {
-    console.log("wishlist button works");
+    this.router.navigate(['/download']);
   }
 
   getFullName(){
