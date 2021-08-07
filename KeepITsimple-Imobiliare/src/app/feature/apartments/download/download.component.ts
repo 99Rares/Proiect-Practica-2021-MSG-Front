@@ -1,6 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {ApartmentService} from "../apartment.service";
-import { saveAs } from 'file-saver';
+import {saveAs} from 'file-saver';
 
 
 @Component({
@@ -10,10 +10,12 @@ import { saveAs } from 'file-saver';
 })
 export class DownloadComponent implements OnInit {
 
-  constructor(private service:ApartmentService) { }
+  constructor(private service: ApartmentService) {
+  }
 
   ngOnInit(): void {
   }
+
   downloadFile(filename: string): void {
     this.service
       .download()

@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 
 @Component({
   selector: 'app-filter-sort',
@@ -7,7 +7,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class FilterSortComponent implements OnInit {
 
-  constructor() { }
+  constructor() {
+  }
 
   panelOpenState = false;
 
@@ -22,7 +23,7 @@ export class FilterSortComponent implements OnInit {
   value = 0;
   vertical = false;
 
-    ngOnInit(): void {
+  ngOnInit(): void {
   }
 
 }
