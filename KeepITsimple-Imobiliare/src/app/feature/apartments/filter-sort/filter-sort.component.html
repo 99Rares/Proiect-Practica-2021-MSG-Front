@@ -14,7 +14,7 @@
     <mat-card class="example-result-card">
       <mat-card-content>
         <div class="example-label-container" [class]="vertical ? 'example-label-vertical' : 'example-label-horizontal'">
-          <label id="example-name-label" class="example-name-label">Pret(€): </label>
+          <label id="example-name-label" class="example-name-label" style="font-size:180%;">Pret(€): </label>
           <label class="example-value-label">{{value}}</label>
         </div>
         <mat-slider
@@ -44,6 +44,8 @@
         </mat-radio-group>
       </mat-card-content>
     </mat-card>
+    <!----------------------------------------------Select--------------------------------------------------->
+    <app-select></app-select>
     <!------------------------------------------------------------------------------------------------------->
 
   </mat-expansion-panel>
@@ -57,7 +59,7 @@
         Sorteaza rezultatele dupa optiuni
       </mat-panel-description>
     </mat-expansion-panel-header>
-    <p>Optiune 2</p>
+
     <!-----------------------------------------------Radio-Bts----------------------------------------------->
     <mat-card>
       <mat-card-content>

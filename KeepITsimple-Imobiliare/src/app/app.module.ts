@@ -30,11 +30,13 @@ import {ApartmentPageComponent} from './feature/apartments/apartment-page/apartm
 import {RouterModule} from "@angular/router";
 import {MatTooltipModule} from '@angular/material/tooltip';
 import {MatExpansionModule} from "@angular/material/expansion";
-import { FilterSortComponent } from './feature/apartments/filter-sort/filter-sort.component';
+import {FilterSortComponent} from './feature/apartments/filter-sort/filter-sort.component';
 import {MatSliderModule} from '@angular/material/slider';
 import {MatRadioModule} from '@angular/material/radio';
 import {MatCarouselModule} from "@ngbmodule/material-carousel";
 import {MatTabsModule} from "@angular/material/tabs";
+import {MatSelectModule} from "@angular/material/select";
+import { SelectComponent } from './feature/apartments/filter-sort/select.component';
 
 @NgModule({
   declarations: [
@@ -51,6 +53,8 @@ import {MatTabsModule} from "@angular/material/tabs";
     ApartmentItemComponent,
     FilterSortComponent,
     ApartmentPageComponent,
+    SelectComponent,
+
     // CarouselModule,
     // WavesModule
   ],
@@ -76,7 +80,11 @@ import {MatTabsModule} from "@angular/material/tabs";
     MatRadioModule,
     RouterModule,
     MatCarouselModule,
-    MatTabsModule
+    MatTabsModule,
+    MatSelectModule,
+
+
+
   ],
   providers: [BackendService,
     authInterceptorProviders],
