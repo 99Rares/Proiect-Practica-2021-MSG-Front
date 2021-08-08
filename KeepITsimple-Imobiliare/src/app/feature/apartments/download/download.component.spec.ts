@@ -1,20 +1,20 @@
 import {ComponentFixture, TestBed} from '@angular/core/testing';
 
-import {FilterSortComponent} from './filter-sort.component';
+import {DownloadComponent} from './download.component';
 
-describe('FilterSortComponent', () => {
-  let component: FilterSortComponent;
-  let fixture: ComponentFixture<FilterSortComponent>;
+describe('DownloadComponent', () => {
+  let component: DownloadComponent;
+  let fixture: ComponentFixture<DownloadComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [FilterSortComponent]
+      declarations: [DownloadComponent]
     })
       .compileComponents();
   });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(FilterSortComponent);
+    fixture = TestBed.createComponent(DownloadComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

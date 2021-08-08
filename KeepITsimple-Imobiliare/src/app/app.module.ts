@@ -30,11 +30,12 @@ import {ApartmentPageComponent} from './feature/apartments/apartment-page/apartm
 import {RouterModule} from "@angular/router";
 import {MatTooltipModule} from '@angular/material/tooltip';
 import {MatExpansionModule} from "@angular/material/expansion";
-import { FilterSortComponent } from './feature/apartments/filter-sort/filter-sort.component';
+import {FilterSortComponent} from './feature/apartments/filter-sort/filter-sort.component';
 import {MatSliderModule} from '@angular/material/slider';
 import {MatRadioModule} from '@angular/material/radio';
 import {MatCarouselModule} from "@ngbmodule/material-carousel";
 import {MatTabsModule} from "@angular/material/tabs";
+import {DownloadComponent} from './feature/apartments/download/download.component';
 
 @NgModule({
   declarations: [
@@ -51,6 +52,7 @@ import {MatTabsModule} from "@angular/material/tabs";
     ApartmentItemComponent,
     FilterSortComponent,
     ApartmentPageComponent,
+    DownloadComponent,
     // CarouselModule,
     // WavesModule
   ],
