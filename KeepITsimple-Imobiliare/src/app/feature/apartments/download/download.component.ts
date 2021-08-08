@@ -1,6 +1,7 @@
 import {Component, OnInit} from '@angular/core';
 import {ApartmentService} from "../apartment.service";
 import {saveAs} from 'file-saver';
+import {TokenStorageService} from "../../services/token-storage.service";
 
 
 @Component({
@@ -10,7 +11,7 @@ import {saveAs} from 'file-saver';
 })
 export class DownloadComponent implements OnInit {
 
-  constructor(private service: ApartmentService) {
+  constructor(private service: ApartmentService,private tokenService:TokenStorageService) {
   }
 
   ngOnInit(): void {
@@ -18,7 +19,7 @@ export class DownloadComponent implements OnInit {
 
   downloadFile(filename: string): void {
     this.service
-      .download()
+      .download(this.tokenService.getUserEmail())
       .subscribe(blob => saveAs(blob, filename));
   }
 

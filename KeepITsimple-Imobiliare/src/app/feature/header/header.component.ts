@@ -1,6 +1,7 @@
 import {Component, OnInit} from '@angular/core';
 import {TokenStorageService} from "../services/token-storage.service";
 import {Router} from "@angular/router";
+import {MatSnackBar} from "@angular/material/snack-bar";
 
 @Component({
   selector: 'app-header',
@@ -9,7 +10,7 @@ import {Router} from "@angular/router";
 })
 export class HeaderComponent implements OnInit {
 
-  constructor(private tokenStorageService: TokenStorageService, private router: Router) {
+  constructor(private tokenStorageService: TokenStorageService, private router: Router, private _snackBar: MatSnackBar,) {
   }
 
   ngOnInit(): void {
@@ -21,6 +22,9 @@ export class HeaderComponent implements OnInit {
 
   logout() {
     this.tokenStorageService.signOut();
+    this._snackBar.open('Logged Out successfully!', 'Ok', {
+      duration: 3000
+    });
   }
 
   wishlist() {
