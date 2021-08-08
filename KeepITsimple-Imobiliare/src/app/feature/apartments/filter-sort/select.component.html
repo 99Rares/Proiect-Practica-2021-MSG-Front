@@ -1,0 +1,19 @@
+<mat-card>
+  <mat-card-content>
+    <p style="font-size:180%;">Oras:</p>
+    <select placeholder="Oras" [(ngModel)]="selectedOras" (change)="changeOras($event)">
+      <option> Alege orasul </option>
+      <option *ngFor="let oras of Orase">{{oras.name}}</option>
+    </select>
+  </mat-card-content>
+
+
+  <p style="font-size:180%;">Cartier:</p>
+    <select placeholder="Cartier" (change)="changeCartier($event)">
+      <option> Alege cartierul </option>
+      <option *ngFor="let cartier of cartiere">{{cartier.name}}</option>
+    </select>
+
+<router-outlet></router-outlet>
+
+</mat-card>
