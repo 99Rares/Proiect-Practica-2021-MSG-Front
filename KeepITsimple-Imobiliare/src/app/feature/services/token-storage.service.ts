@@ -39,4 +39,15 @@ export class TokenStorageService {
 
     return null;
   }
+
+  public getUserId() {
+    const item = sessionStorage.getItem(USER_KEY);
+    if(item){
+      //return JSON.parse(item);
+      let user = JSON.parse(item);
+      return user.id;
+    }
+
+    return null;
+  }
 }
