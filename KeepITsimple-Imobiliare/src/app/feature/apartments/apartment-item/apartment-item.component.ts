@@ -2,6 +2,7 @@ import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
 import {ApartmentDetails} from "../model/apartment.data";
 import {TokenStorageService} from "../../services/token-storage.service";
 import {MatSnackBar} from "@angular/material/snack-bar";
+import {WishlistService} from "../../wishlist/wishlist.service";
 
 @Component({
   selector: 'app-apartment-item',
@@ -11,26 +12,21 @@ import {MatSnackBar} from "@angular/material/snack-bar";
 export class ApartmentItemComponent implements OnInit {
   @Input() data: ApartmentDetails[] = [];
   @Input() wishlist: ApartmentDetails[] = [];
-  @Output() apartmentId: EventEmitter<{ id: number, liked: boolean }> = new EventEmitter<{ id: number, liked: boolean }>();
+  @Output() apartmentId: EventEmitter<number> = new EventEmitter<number>();
   color: String = 'gray';
 
   constructor(private tokenService: TokenStorageService,
-              private _snackBar: MatSnackBar) {
+              private _snackBar: MatSnackBar,private wishlistService: WishlistService) {
   }
-
   ngOnInit(): void {
+
   }
 
-  toWishlist(index: number) {
-    this.apartmentId.emit({id: index, liked: this.isFavourite(index)});
+  toWishlist(id: number) {
+    this.apartmentId.emit(id);
   }
 
   isFavourite(apartmentId: number) {
-    // console.log('aici');
-    // console.log(this.wishlist);
-    // return true;
-    return !!this.wishlist.find(el => {
-      return el.id === apartmentId;
-    });
+    return this.wishlistService.isFavourite(apartmentId)
   }
 }

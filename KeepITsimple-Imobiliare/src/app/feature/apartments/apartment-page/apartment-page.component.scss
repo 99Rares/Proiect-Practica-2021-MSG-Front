@@ -27,7 +27,7 @@
   position: absolute;
   margin-left: 30px;
   font-size: x-large;
-  color: darkslateblue;
+  color: blue;
   padding-top: 5px;
   padding-bottom: 15px;
 }
@@ -36,7 +36,9 @@
   height: 50px;
   display: inline-flex;
   border: seagreen 4px;
-  border-style: double;
+  border-style:solid;
   border-radius: 10px;
-
+}
+.buton:hover{
+  background-color:#E1FFDD;
 }
