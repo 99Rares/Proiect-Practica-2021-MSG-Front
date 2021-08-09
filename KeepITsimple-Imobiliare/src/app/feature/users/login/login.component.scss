@@ -1,0 +1,34 @@
+.snackbar-fail {
+  max-width: 90% !important;
+  margin-left: auto !important; // center align from left
+  margin-right: auto !important; // center align from right
+  margin-bottom: 1rem !important;
+  padding: 20px !important; // spacing between the text and boundary
+  background-color: darkred;
+  color: white;
+  font-size: 28px !important;
+  white-space: pre-wrap !important;
+
+
+  .mat-button-wrapper {
+    color: black !important; // action text color
+    max-width: 100% !important;
+  }
+}
+.snackbar-success{
+  max-width: 90% !important;
+  margin-left: auto !important; // center align from left
+  margin-right: auto !important; // center align from right
+  margin-bottom: 1rem !important;
+  padding: 20px !important; // spacing between the text and boundary
+  background-color: seagreen;
+  color: white;
+  font-size: 28px !important;
+  white-space: pre-wrap !important;
+
+
+  .mat-button-wrapper {
+    color: black !important; // action text color
+    max-width: 100% !important;
+  }
+}

@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit, ViewEncapsulation} from '@angular/core';
 import {UserService} from "../user.service";
 import {Router} from "@angular/router";
 import {MatSnackBar} from "@angular/material/snack-bar";
@@ -7,7 +7,8 @@ import {LongUser} from "../model/users.data";
 @Component({
   selector: 'app-register',
   templateUrl: './register.component.html',
-  styleUrls: ['./register.component.scss']
+  styleUrls: ['./register.component.scss'],
+  encapsulation: ViewEncapsulation.None,
 })
 export class RegisterComponent implements OnInit {
 
@@ -15,7 +16,8 @@ export class RegisterComponent implements OnInit {
     private service: UserService,
     private router: Router,
     private _snackBar: MatSnackBar
-  ) {}
+  ) {
+  }
 
   ngOnInit(): void {
   }
@@ -24,9 +26,16 @@ export class RegisterComponent implements OnInit {
     this.service.register(user).subscribe(
       data => {
         //this.router.navigate(['/products']);
-        this._snackBar.open('You have registered successfully!',"Ok",{duration: 3000});
+        const msg: string = `You have registered successfully! \n Please check your email to confirm your account!`;
+        this._snackBar.open(msg, 'OK', {
+          duration: 10000,
+          panelClass: ['success-snackbar']
+        });
       },
-      (error) => console.log(this._snackBar.open('Registration failed!',"Ok",{duration: 3000}))
+      (error) => console.log(this._snackBar.open('Registration failed!', "Ok", {
+        duration: 3000,
+        panelClass: ['fail-snackbar']
+      }))
     )
   }
 
