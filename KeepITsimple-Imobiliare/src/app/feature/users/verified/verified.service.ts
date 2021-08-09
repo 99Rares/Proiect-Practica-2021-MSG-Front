@@ -13,8 +13,6 @@ export class VerifiedService {
   }
 
   verify(code: string | null): Observable<string> {
-    console.log(this.api+this.loginEndpoint+code)
-    console.log(this.service.get(this.api+this.loginEndpoint+code))
     return this.service.get(this.api+this.loginEndpoint+code,{ responseType : 'text' })
 
   }

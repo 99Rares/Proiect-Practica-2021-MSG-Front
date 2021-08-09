@@ -34,6 +34,7 @@ export class TokenStorageService {
     if(item){
       //return JSON.parse(item);
       let user = JSON.parse(item);
+
       return user.fullName;
     }
 
@@ -46,6 +47,16 @@ export class TokenStorageService {
       //return JSON.parse(item);
       let user = JSON.parse(item);
       return user.id;
+    }
+
+    return null;
+  }
+  public getUserEmail() {
+    const item = sessionStorage.getItem(USER_KEY);
+    if(item){
+      //return JSON.parse(item);
+      let user = JSON.parse(item);
+      return user.email;
     }
 
     return null;

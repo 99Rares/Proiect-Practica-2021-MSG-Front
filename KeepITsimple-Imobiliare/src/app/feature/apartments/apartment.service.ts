@@ -4,6 +4,9 @@ import {ApartmentDetails} from "./model/apartment.data";
 import {Observable} from "rxjs";
 import {HttpClient} from "@angular/common/http";
 import {LongUser} from "../users/model/users.data";
+import {TokenStorageService} from "../services/token-storage.service";
+import {UserService} from "../users/user.service";
+import {LongUser, ShortUser} from "../users/model/users.data";
 
 @Injectable({
   providedIn: 'root'
@@ -25,8 +28,9 @@ export class ApartmentService {
     return this.service.get(`${this.api}/${this.apartmentsEndpoint}/${id}`);
   }
 
-  download(): Observable<Blob> {
-    return this.http.get(`${this.api}/${this.wishlistEndpoint}`, {
+  download(email:string): Observable<Blob> {
+    console.log(email)
+    return this.http.get(`${this.api}/${this.wishlistEndpoint}/${email}`, {
       responseType: 'blob'
     });
   }
