@@ -37,6 +37,7 @@ import {MatCarouselModule} from "@ngbmodule/material-carousel";
 import {MatTabsModule} from "@angular/material/tabs";
 import {DownloadComponent} from './feature/apartments/download/download.component';
 import { WishlistComponent } from './feature/wishlist/wishlist/wishlist.component';
+import {MatBadgeModule} from "@angular/material/badge";
 
 @NgModule({
   declarations: [
@@ -58,30 +59,31 @@ import { WishlistComponent } from './feature/wishlist/wishlist/wishlist.componen
     // CarouselModule,
     // WavesModule
   ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule,
-    FormsModule,
-    HttpClientModule,
-    MatSnackBarModule,
-    MatInputModule,
-    ReactiveFormsModule,
-    MatFormFieldModule,
-    BrowserAnimationsModule,
-    MatButtonModule,
-    MatIconModule,
-    MatCardModule,
-    MatToolbarModule,
-    FlexLayoutModule,
-    MatTableModule,
-    MatTooltipModule,
-    MatExpansionModule,
-    MatSliderModule,
-    MatRadioModule,
-    RouterModule,
-    MatCarouselModule,
-    MatTabsModule
-  ],
+    imports: [
+        BrowserModule,
+        AppRoutingModule,
+        FormsModule,
+        HttpClientModule,
+        MatSnackBarModule,
+        MatInputModule,
+        ReactiveFormsModule,
+        MatFormFieldModule,
+        BrowserAnimationsModule,
+        MatButtonModule,
+        MatIconModule,
+        MatCardModule,
+        MatToolbarModule,
+        FlexLayoutModule,
+        MatTableModule,
+        MatTooltipModule,
+        MatExpansionModule,
+        MatSliderModule,
+        MatRadioModule,
+        RouterModule,
+        MatCarouselModule,
+        MatTabsModule,
+        MatBadgeModule
+    ],
   providers: [BackendService,
     authInterceptorProviders],
   bootstrap: [AppComponent]

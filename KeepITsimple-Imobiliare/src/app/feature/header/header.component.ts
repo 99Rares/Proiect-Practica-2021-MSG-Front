@@ -2,6 +2,7 @@ import {Component, OnInit} from '@angular/core';
 import {TokenStorageService} from "../services/token-storage.service";
 import {Router} from "@angular/router";
 import {MatSnackBar} from "@angular/material/snack-bar";
+import {WishlistService} from "../wishlist/wishlist.service";
 
 @Component({
   selector: 'app-header',
@@ -10,10 +11,12 @@ import {MatSnackBar} from "@angular/material/snack-bar";
 })
 export class HeaderComponent implements OnInit {
 
-  constructor(private tokenStorageService: TokenStorageService, private router: Router, private _snackBar: MatSnackBar,) {
+  constructor(private tokenStorageService: TokenStorageService, private router: Router, private _snackBar: MatSnackBar,private wishlistService:WishlistService) {
   }
+  count:number=0;
 
   ngOnInit(): void {
+    this.wishlistService.wishlist.subscribe(data=>this.count=data.length)
   }
 
   login() {

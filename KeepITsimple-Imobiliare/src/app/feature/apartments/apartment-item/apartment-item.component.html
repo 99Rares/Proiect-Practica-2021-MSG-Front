@@ -16,7 +16,7 @@
         <mat-card-footer>
           {{p.price | currency:'EUR'}}
           <mat-card-actions>
-            <button mat-icon-button color="warn" (click)="toWishlist(i)">
+            <button mat-icon-button color="warn" (click)="toWishlist(p.id)">
               <mat-icon [ngStyle]="{'color': isFavourite(p.id) ? 'red' : 'gray'}">favorite</mat-icon>
             </button>
           </mat-card-actions>

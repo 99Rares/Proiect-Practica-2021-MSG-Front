@@ -38,3 +38,11 @@ img {
   height: 60px;
   padding-left: 70px;
 }
+.zoom {
+  transition: transform .2s; /* Animation */
+}
+
+.zoom:hover {
+  cursor: pointer;
+  transform: scale(1.03); /* (150% zoom)*/
+}
