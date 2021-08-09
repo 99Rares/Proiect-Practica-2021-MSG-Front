@@ -1,7 +1,7 @@
 <div class="container">
   <p>{{getFullName()}}</p>
 
-  <div class="logo">
+  <div class="logo zoom">
     <img src="./assets/KeepITsimple_Logo.png" alt="KeepITsimple-Imobiliare" [routerLink]="['']">
   </div>
 
@@ -10,7 +10,7 @@
       <mat-icon>login</mat-icon>
     </button>
     <button mat-raised-button matTooltip="Go to wishlist" (click)="wishlist()" *ngIf="isLogged()">
-      <mat-icon>favorite</mat-icon>
+      <mat-icon matBadgeSize="small" matBadge="{{count}}" matBadgeColor="warn" >favorite</mat-icon>
     </button>
 
     <button mat-raised-button matTooltip="Log out" (click)="logout()" *ngIf="isLogged()" [routerLink]="['']">
