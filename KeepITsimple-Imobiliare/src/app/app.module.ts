@@ -36,7 +36,6 @@ import {MatRadioModule} from '@angular/material/radio';
 import {MatCarouselModule} from "@ngbmodule/material-carousel";
 import {MatTabsModule} from "@angular/material/tabs";
 import {MatSelectModule} from "@angular/material/select";
-import { SelectComponent } from './feature/apartments/filter-sort/select.component';
 
 @NgModule({
   declarations: [
@@ -53,7 +52,6 @@ import { SelectComponent } from './feature/apartments/filter-sort/select.compone
     ApartmentItemComponent,
     FilterSortComponent,
     ApartmentPageComponent,
-    SelectComponent,
 
     // CarouselModule,
     // WavesModule

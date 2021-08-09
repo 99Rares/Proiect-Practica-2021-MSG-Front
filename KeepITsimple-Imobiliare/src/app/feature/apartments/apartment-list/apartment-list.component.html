@@ -1,2 +1,4 @@
 <!--<app-filter-sort></app-filter-sort>-->
-<app-apartment-item [data]="apartments"></app-apartment-item>
+<mat-toolbar class="toolbar-apartamente">Locuinte</mat-toolbar>
+<app-filter-sort (formFilterOutput)="filter($event)" (formSortOutput)="sort($event)"></app-filter-sort>
+<app-apartment-item [data]="copyapartments"></app-apartment-item>
