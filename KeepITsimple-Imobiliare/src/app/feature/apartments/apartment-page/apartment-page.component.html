@@ -49,4 +49,14 @@
       <p><a href="{{apartment.owner.urlStatisticsChart}}">Statistica Locuinte</a></p>
     </mat-tab>
   </mat-tab-group>
+  <div class="buton">
+  <button  mat-icon-button color="warn" (click)="toWishlist(apartment.id)">
+    <mat-icon class="size" [ngStyle]="{'color': isFavourite(apartment.id) ? 'red' : 'gray'}">favorite</mat-icon>
+    <span class="text">Add to Wishlist</span>
+  </button>
+  </div>
+  <br>
+  <br>
+  <br>
+  <br>
 </div>

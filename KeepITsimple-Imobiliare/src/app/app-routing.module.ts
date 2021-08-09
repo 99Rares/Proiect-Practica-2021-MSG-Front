@@ -14,7 +14,7 @@ const routes: Routes = [
   {path: 'verify', component: VerifiedComponent},
   {path: 'apartments', component: ApartmentListComponent},
   {path: 'apartments/:apartmentId', component: ApartmentPageComponent},
-  {path: 'download', component: DownloadComponent},
+  {path: 'wishlist', component: DownloadComponent},
   {path: '**', redirectTo: ''}
 ];
 
