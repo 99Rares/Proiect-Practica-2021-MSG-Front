@@ -5,6 +5,7 @@ export interface ShortUser {
 
 //nou model de date -> user cu toate campurile care sa coincida cu backend ul
 export interface LongUser{
+  id: number,
   firstName: string;
   lastName: string;
   email: string;
