@@ -36,6 +36,7 @@ import {MatRadioModule} from '@angular/material/radio';
 import {MatCarouselModule} from "@ngbmodule/material-carousel";
 import {MatTabsModule} from "@angular/material/tabs";
 import {DownloadComponent} from './feature/apartments/download/download.component';
+import { WishlistComponent } from './feature/wishlist/wishlist/wishlist.component';
 
 @NgModule({
   declarations: [
@@ -53,6 +54,7 @@ import {DownloadComponent} from './feature/apartments/download/download.componen
     FilterSortComponent,
     ApartmentPageComponent,
     DownloadComponent,
+    WishlistComponent,
     // CarouselModule,
     // WavesModule
   ],

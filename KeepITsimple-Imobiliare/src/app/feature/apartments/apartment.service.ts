@@ -14,6 +14,7 @@ export class ApartmentService {
   api = 'http://localhost:8080';
   apartmentsEndpoint = 'api/apartments';
   wishlistEndpoint = 'api/wishlist/pdf';
+  addWishlistEndpoint = 'api/wishlist';
 
   constructor(private service: BackendService, private http: HttpClient) {
   }
@@ -31,5 +32,10 @@ export class ApartmentService {
     return this.http.get(`${this.api}/${this.wishlistEndpoint}/${email}`, {
       responseType: 'blob'
     });
+  }
+
+  addToWishlist(userId: number, apartment: ApartmentDetails) : Observable<void> {
+    console.log(userId, apartment.id);
+    return this.service.post(`${this.api}/${this.addWishlistEndpoint}/${userId}/${apartment.id}`);
   }
 }
