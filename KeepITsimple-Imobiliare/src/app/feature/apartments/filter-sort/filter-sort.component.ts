@@ -36,14 +36,14 @@ export class FilterSortComponent implements OnInit {
 
   formFilter = new FormGroup({
     pret: new FormControl('', []),
-    tip: new FormControl('inchiriere', []),
+    tip: new FormControl('', []),
     oras: new FormControl('', []),
     cartier: new FormControl('', []),
   });
 
   formSort = new FormGroup({
-    pretsort: new FormControl('crescator', []),
-    suprafata: new FormControl('crescator', []),
+    pretsort: new FormControl('', []),
+    suprafata: new FormControl('', []),
   });
 
   selectedOras: String = "--Alege orasul--";
