@@ -14,7 +14,7 @@ export class WishlistService {
   wishlist : BehaviorSubject<WishlistData []> = new BehaviorSubject<WishlistData []>([]);
 
   getAllWishlists(userId: number) {
-    this.backendService.get(`${this.url}/userId`).subscribe(data => {
+    this.backendService.get(`${this.url}/${userId}`).subscribe(data => {
       this.wishlist.next(data);
       console.log(data);
     });

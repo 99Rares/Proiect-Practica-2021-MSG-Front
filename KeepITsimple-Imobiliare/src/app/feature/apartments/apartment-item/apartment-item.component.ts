@@ -28,7 +28,12 @@ export class ApartmentItemComponent implements OnInit {
     this.apartmentId.emit(index);
   }
 
-  isFavourite(apartmentId: number): WishlistData | undefined {
-    return this.wishlist.find(el => el.apartmentId === apartmentId);
+  isFavourite(apartmentId: number) {
+    // console.log('aici');
+    // console.log(this.wishlist);
+    // return true;
+    return this.wishlist.find(el => {
+      return el.apartment.id === apartmentId;
+    });
   }
 }

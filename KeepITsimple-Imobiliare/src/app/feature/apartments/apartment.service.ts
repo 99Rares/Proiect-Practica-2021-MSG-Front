@@ -3,7 +3,6 @@ import {BackendService} from "../../backend/backend.service";
 import {ApartmentDetails} from "./model/apartment.data";
 import {Observable} from "rxjs";
 import {HttpClient} from "@angular/common/http";
-import {LongUser} from "../users/model/users.data";
 import {TokenStorageService} from "../services/token-storage.service";
 import {UserService} from "../users/user.service";
 import {LongUser, ShortUser} from "../users/model/users.data";

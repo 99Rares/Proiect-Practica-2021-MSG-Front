@@ -66,10 +66,15 @@ export class ApartmentListComponent implements OnInit {
   }
 
   loadWishlist() {
-    this.wishlistService.getAllWishlists(this.tokenService.getUserId());
-    this.wishlistService.wishlist.subscribe(data => {
-      this.wishlist = data;
-      console.log(data);
-    });
+    if (!this.tokenService.getUser()) {
+      this._snackBar.open('Please log in!','Ok',{
+        duration:3000
+      });
+    }else {
+      this.wishlistService.getAllWishlists(this.tokenService.getUserId());
+      this.wishlistService.wishlist.subscribe(data => {
+        this.wishlist = data;
+      });
+    }
   }
 }
