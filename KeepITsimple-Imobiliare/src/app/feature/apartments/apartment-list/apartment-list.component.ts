@@ -1,5 +1,5 @@
 import {Component, OnInit} from '@angular/core';
-import {ApartmentDetails} from "../model/apartment.data";
+import {ApartmentDetails, OwnerDetails, PictureDetails} from "../model/apartment.data";
 import {ApartmentService} from "../apartment.service";
 import {WishlistService} from "../../wishlist/wishlist.service";
 import {TokenStorageService} from "../../services/token-storage.service";

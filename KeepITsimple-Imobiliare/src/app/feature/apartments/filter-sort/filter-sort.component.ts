@@ -1,4 +1,5 @@
-import {Component, OnInit} from '@angular/core';
+import {Component, EventEmitter, OnInit, Output} from '@angular/core';
+import {FormControl, FormGroup} from "@angular/forms";
 
 @Component({
   selector: 'app-filter-sort',
@@ -49,7 +50,7 @@ export class FilterSortComponent implements OnInit {
   selectedOras: String = "--Alege orasul--";
 
   Orase: Array<any> = [
-    { name: 'Cluj-Napoca', cartiere: [ {name: 'Manastur'},
+    { name: 'Cluj', cartiere: [ {name: 'Manastur'},
         {name: 'Marasti'},{name: 'Intre Lacuri'},{name: 'Zorilor'}] },
     { name: 'Brasov', cartiere: [ {name: 'Astra'}, {name: 'Valea Cetatii'} ] },
     { name: 'Sibiu', cartiere: [ {name: 'Valea Aurie'} ] },
