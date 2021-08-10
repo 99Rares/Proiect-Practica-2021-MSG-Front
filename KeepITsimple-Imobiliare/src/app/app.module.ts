@@ -35,6 +35,7 @@ import {MatSliderModule} from '@angular/material/slider';
 import {MatRadioModule} from '@angular/material/radio';
 import {MatCarouselModule} from "@ngbmodule/material-carousel";
 import {MatTabsModule} from "@angular/material/tabs";
+import {MatSelectModule} from "@angular/material/select";
 import {DownloadComponent} from './feature/apartments/download/download.component';
 import { WishlistComponent } from './feature/wishlist/wishlist/wishlist.component';
 import {MatBadgeModule} from "@angular/material/badge";
@@ -84,7 +85,8 @@ import { StatisticsComponent } from './feature/apartments/statistics/statistics.
         RouterModule,
         MatCarouselModule,
         MatTabsModule,
-        MatBadgeModule
+        MatBadgeModule,
+        MatSelectModule
     ],
   providers: [BackendService,
     authInterceptorProviders],

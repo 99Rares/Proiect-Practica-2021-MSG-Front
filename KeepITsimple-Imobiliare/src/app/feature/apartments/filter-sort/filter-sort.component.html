@@ -1,4 +1,6 @@
+
 <mat-accordion>
+  <form [formGroup]="formFilter" (ngSubmit)="onSubmitfilter()">
   <mat-expansion-panel hideToggle>
     <mat-expansion-panel-header>
       <mat-panel-title>
@@ -14,7 +16,7 @@
     <mat-card class="example-result-card">
       <mat-card-content>
         <div class="example-label-container" [class]="vertical ? 'example-label-vertical' : 'example-label-horizontal'">
-          <label id="example-name-label" class="example-name-label">Pret(€): </label>
+          <label id="example-name-label" class="example-name-label" style="font-size:180%;">Pret(€): </label>
           <label class="example-value-label">{{value}}</label>
         </div>
         <mat-slider
@@ -27,6 +29,7 @@
           [thumbLabel]="thumbLabel"
           [tickInterval]="0"
           [(ngModel)]="value"
+          formControlName="pret"
           [vertical]="vertical"
           aria-labelledby="example-name-label">
         </mat-slider>
@@ -36,20 +39,46 @@
     <!-----------------------------------------------Radio-Bts----------------------------------------------->
     <mat-card>
       <mat-card-content>
-        <mat-radio-group aria-label="Select an option">
+        <mat-radio-group formControlName="tip" aria-label="Select an option">
+
           <p style="font-size:180%;">Doresc sa:</p>
           <p></p>
-          <mat-radio-button value="1">Inchiriez</mat-radio-button>
-          <mat-radio-button value="2">Cumpar</mat-radio-button>
+          <mat-radio-button value="inchiriere">Inchiriez</mat-radio-button>
+          <mat-radio-button value="vanzare">Cumpar</mat-radio-button>
         </mat-radio-group>
       </mat-card-content>
     </mat-card>
+    <!----------------------------------------------Select--------------------------------------------------->
+    <mat-card>
+      <mat-card-content>
+        <p style="font-size:180%;">Oras:</p>
+        <select placeholder="Oras" formControlName="oras" (change)="changeOras($event)">
+          <option> Alege orasul </option>
+          <option *ngFor="let oras of Orase">{{oras.name}}</option>
+        </select>
+      </mat-card-content>
+
+
+      <p style="font-size:180%;">Cartier:</p>
+      <select placeholder="Cartier" formControlName="cartier"(change)="changeCartier($event)">
+        <option> Alege cartierul </option>
+        <option *ngFor="let cartier of cartiere">{{cartier.name}}</option>
+      </select>
+    </mat-card>
+    <br>
+    <button mat-raised-button color="primary" type = "submit">Filtrare</button>
     <!------------------------------------------------------------------------------------------------------->
 
   </mat-expansion-panel>
+  </form>
 
+
+
+  <!--                                                              SORT              -->
+  <form [formGroup]="formSort" (ngSubmit)="onSubmitsort()">
   <mat-expansion-panel hideToggle>
     <mat-expansion-panel-header>
+
       <mat-panel-title>
         SORT
       </mat-panel-title>
@@ -57,15 +86,15 @@
         Sorteaza rezultatele dupa optiuni
       </mat-panel-description>
     </mat-expansion-panel-header>
-    <p>Optiune 2</p>
+
     <!-----------------------------------------------Radio-Bts----------------------------------------------->
     <mat-card>
       <mat-card-content>
-        <mat-radio-group aria-label="Select an option">
+        <mat-radio-group formControlName="pretsort" aria-label="Select an option">
           <p style="font-size:180%;">Sorteaza dupa pret:</p>
           <p></p>
-          <mat-radio-button value="1">Crescator</mat-radio-button>
-          <mat-radio-button value="2">Descrescator</mat-radio-button>
+          <mat-radio-button value="crescator">Crescator</mat-radio-button>
+          <mat-radio-button value="descrescator">Descrescator</mat-radio-button>
         </mat-radio-group>
       </mat-card-content>
     </mat-card>
@@ -73,14 +102,17 @@
     <!-----------------------------------------------Radio-Bts----------------------------------------------->
     <mat-card>
       <mat-card-content>
-        <mat-radio-group aria-label="Select an option">
+        <mat-radio-group formControlName="suprafata" aria-label="Select an option">
           <p style="font-size:180%;">Sorteaza dupa suprafata:</p>
           <p></p>
-          <mat-radio-button value="1">Crescator</mat-radio-button>
-          <mat-radio-button value="2">Descrescator</mat-radio-button>
+          <mat-radio-button value="crescator">Crescator</mat-radio-button>
+          <mat-radio-button value="descrescator">Descrescator</mat-radio-button>
         </mat-radio-group>
       </mat-card-content>
     </mat-card>
+    <br>
+    <button mat-raised-button color="primary" type = "submit">Sortare</button>
     <!------------------------------------------------------------------------------------------------------->
   </mat-expansion-panel>
+ </form>
 </mat-accordion>
