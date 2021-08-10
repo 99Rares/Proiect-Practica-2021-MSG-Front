@@ -36,7 +36,7 @@ export class ApartmentPageComponent implements OnInit {
 
   async toWishlist(id: number) {
     this.wishlistService.toWishlist(id)
-    await new Promise(f => setTimeout(f, 10));
+    await new Promise(f => setTimeout(f, 100));
     this.getStatistics1(id)
   }
 
