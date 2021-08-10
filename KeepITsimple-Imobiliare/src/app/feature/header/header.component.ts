@@ -31,7 +31,7 @@ export class HeaderComponent implements OnInit {
   }
 
   wishlist() {
-    this.router.navigate(['/download']);
+    this.router.navigate(['/wishlist']);
   }
 
   getFullName() {

@@ -18,7 +18,7 @@ export class DownloadComponent implements OnInit {
   apartments: ApartmentDetails[] = []
 
   ngOnInit(): void {
-    this.wishlistService.getAllWishlists(this.tokenService.getUserId());
+    this.wishlistService.loadWishlist()
     this.wishlistService.wishlist.subscribe(data => {
       this.apartments = data;
     });
@@ -30,13 +30,8 @@ export class DownloadComponent implements OnInit {
       .subscribe(blob => saveAs(blob, filename));
   }
 
-  toWishlist(obj: { id: number, liked: boolean }) {
-    const index = obj.id
-    console.log(index, obj.liked)
-    this.wishlistService.deletefromWishlist(this.tokenService.getUserId(), index).subscribe(() => {
-      const list=this.apartments.filter(el=>el.id!==index)
-      this.wishlistService.wishlist.next(list);
-    })
+  toWishlist(id: number) {
+    this.wishlistService.toWishlist(id);
 
   }
 
