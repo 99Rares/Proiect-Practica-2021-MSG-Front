@@ -38,6 +38,7 @@ import {MatTabsModule} from "@angular/material/tabs";
 import {DownloadComponent} from './feature/apartments/download/download.component';
 import { WishlistComponent } from './feature/wishlist/wishlist/wishlist.component';
 import {MatBadgeModule} from "@angular/material/badge";
+import { StatisticsComponent } from './feature/apartments/statistics/statistics.component';
 
 @NgModule({
   declarations: [
@@ -56,6 +57,7 @@ import {MatBadgeModule} from "@angular/material/badge";
     ApartmentPageComponent,
     DownloadComponent,
     WishlistComponent,
+    StatisticsComponent,
     // CarouselModule,
     // WavesModule
   ],

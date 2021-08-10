@@ -41,4 +41,8 @@ export class HeaderComponent implements OnInit {
   isLogged(): boolean {
     return this.tokenStorageService.getUser() ? true : false;
   }
+
+  goToStatistics(){
+    this.router.navigate(['/statistics']);
+  }
 }

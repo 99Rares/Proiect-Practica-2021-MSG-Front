@@ -6,6 +6,7 @@ import {VerifiedComponent} from "./feature/users/verified/verified/verified.comp
 import {ApartmentListComponent} from "./feature/apartments/apartment-list/apartment-list.component";
 import {ApartmentPageComponent} from "./feature/apartments/apartment-page/apartment-page.component";
 import {DownloadComponent} from "./feature/apartments/download/download.component";
+import {StatisticsComponent} from "./feature/apartments/statistics/statistics.component";
 
 const routes: Routes = [
   {path: '', component: ApartmentListComponent},
@@ -15,6 +16,7 @@ const routes: Routes = [
   {path: 'apartments', component: ApartmentListComponent},
   {path: 'apartments/:apartmentId', component: ApartmentPageComponent},
   {path: 'wishlist', component: DownloadComponent},
+  {path: 'statistics', component: StatisticsComponent},
   {path: '**', redirectTo: ''}
 ];
 
