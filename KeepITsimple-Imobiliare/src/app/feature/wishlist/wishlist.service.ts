@@ -19,6 +19,7 @@ export class WishlistService {
   url = 'http://localhost:8080/api/wishlist';
   deleteWishlistEndpoint = 'api/wishlist/user';
   addWishlistEndpoint = 'api/wishlist';
+  statistics1Endpoint = 'api/wishlist/statistics';
   ///api/wishlist/user/{userId}/apartment/{apId}
   wishlist: BehaviorSubject<ApartmentDetails []> = new BehaviorSubject<ApartmentDetails []>([]);
 
@@ -26,6 +27,10 @@ export class WishlistService {
     this.backendService.get(`${this.url}/${userId}`).subscribe(data => {
       this.wishlist.next(data);
     });
+  }
+
+  getStatistics1(apartmentId: number): Observable<string> {
+    return this.backendService.get(`${this.api}/${this.statistics1Endpoint}/${apartmentId}`, {responseType: 'text'})
   }
 
   deletefromWishlist(userId: number, apartment: number): Observable<void> {
