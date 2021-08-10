@@ -1,0 +1,8 @@
+<div class="list-group">
+
+  <button (click)="downloadFile('KeepITsimple - Imobiliare')" mat-raised-button matTooltip="Download PDF with Wishlist">
+    <mat-icon>download</mat-icon>
+  </button>
+
+</div>
+<app-apartment-item [data]="apartments" (apartmentId)="toWishlist($event)" [wishlist]="apartments"></app-apartment-item>

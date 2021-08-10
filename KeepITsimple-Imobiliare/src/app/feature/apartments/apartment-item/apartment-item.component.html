@@ -1,7 +1,7 @@
 <div class="content">
   <div fxLayout = "row wrap" fxLayoutGap="16px grid">
-    <div fxFlex="25%" fxFlex.xs="100%" fxFlex.sm="33%" *ngFor="let p of data">
-      <mat-card  class="mat-elevation-z4" [routerLink]="['/apartments', p.id]">
+    <div fxFlex="25%" fxFlex.xs="100%" fxFlex.sm="33%" *ngFor="let p of data; index as i;">
+      <mat-card  class="mat-elevation-z4" >
         <mat-card-header>
           <mat-card-title>{{p.titleApart}}</mat-card-title>
           <mat-card-subtitle class="transaction-type"><b>{{p.transactionType}}</b></mat-card-subtitle>
@@ -9,13 +9,13 @@
           <mat-card-subtitle>{{p.city}}, {{p.neighbourhood}}</mat-card-subtitle>
         </mat-card-header>
 
-        <img mat-card-image alt="poza1" src="{{p.pictures[0].url}}">
+        <img class="zoom" mat-card-image alt="poza1" src="{{p.pictures[0].url}}" [routerLink]="['/apartments', p.id]">
 
         <mat-card-footer>
           {{p.price | currency:'EUR'}}
           <mat-card-actions>
-            <button mat-icon-button color="warn">
-              <mat-icon style="color: gray">favorite</mat-icon>
+            <button mat-icon-button color="warn" (click)="toWishlist(p.id)">
+              <mat-icon [ngStyle]="{'color': isFavourite(p.id) ? 'red' : 'gray'}">favorite</mat-icon>
             </button>
           </mat-card-actions>
         </mat-card-footer>

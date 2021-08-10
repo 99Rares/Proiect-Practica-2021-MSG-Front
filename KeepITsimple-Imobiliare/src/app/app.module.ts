@@ -36,6 +36,10 @@ import {MatRadioModule} from '@angular/material/radio';
 import {MatCarouselModule} from "@ngbmodule/material-carousel";
 import {MatTabsModule} from "@angular/material/tabs";
 import {MatSelectModule} from "@angular/material/select";
+import {DownloadComponent} from './feature/apartments/download/download.component';
+import { WishlistComponent } from './feature/wishlist/wishlist/wishlist.component';
+import {MatBadgeModule} from "@angular/material/badge";
+import { StatisticsComponent } from './feature/apartments/statistics/statistics.component';
 
 @NgModule({
   declarations: [
@@ -52,38 +56,38 @@ import {MatSelectModule} from "@angular/material/select";
     ApartmentItemComponent,
     FilterSortComponent,
     ApartmentPageComponent,
-
+    DownloadComponent,
+    WishlistComponent,
+    StatisticsComponent,
     // CarouselModule,
     // WavesModule
   ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule,
-    FormsModule,
-    HttpClientModule,
-    MatSnackBarModule,
-    MatInputModule,
-    ReactiveFormsModule,
-    MatFormFieldModule,
-    BrowserAnimationsModule,
-    MatButtonModule,
-    MatIconModule,
-    MatCardModule,
-    MatToolbarModule,
-    FlexLayoutModule,
-    MatTableModule,
-    MatTooltipModule,
-    MatExpansionModule,
-    MatSliderModule,
-    MatRadioModule,
-    RouterModule,
-    MatCarouselModule,
-    MatTabsModule,
-    MatSelectModule,
-
-
-
-  ],
+    imports: [
+        BrowserModule,
+        AppRoutingModule,
+        FormsModule,
+        HttpClientModule,
+        MatSnackBarModule,
+        MatInputModule,
+        ReactiveFormsModule,
+        MatFormFieldModule,
+        BrowserAnimationsModule,
+        MatButtonModule,
+        MatIconModule,
+        MatCardModule,
+        MatToolbarModule,
+        FlexLayoutModule,
+        MatTableModule,
+        MatTooltipModule,
+        MatExpansionModule,
+        MatSliderModule,
+        MatRadioModule,
+        RouterModule,
+        MatCarouselModule,
+        MatTabsModule,
+        MatBadgeModule,
+        MatSelectModule
+    ],
   providers: [BackendService,
     authInterceptorProviders],
   bootstrap: [AppComponent]

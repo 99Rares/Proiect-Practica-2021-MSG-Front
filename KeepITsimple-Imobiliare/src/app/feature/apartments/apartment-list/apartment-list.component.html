@@ -2,3 +2,4 @@
 <mat-toolbar class="toolbar-apartamente">Locuinte</mat-toolbar>
 <app-filter-sort (formFilterOutput)="filter($event)" (formSortOutput)="sort($event)"></app-filter-sort>
 <app-apartment-item [data]="copyapartments"></app-apartment-item>
+<app-apartment-item [data]="apartments" (apartmentId)="toWishlist($event)" [wishlist]="wishlist"></app-apartment-item>

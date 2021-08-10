@@ -1,6 +1,6 @@
-import { ComponentFixture, TestBed } from '@angular/core/testing';
+import {ComponentFixture, TestBed} from '@angular/core/testing';
 
-import { FilterSortComponent } from './filter-sort.component';
+import {FilterSortComponent} from './filter-sort.component';
 
 describe('FilterSortComponent', () => {
   let component: FilterSortComponent;
@@ -8,9 +8,9 @@ describe('FilterSortComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ FilterSortComponent ]
+      declarations: [FilterSortComponent]
     })
-    .compileComponents();
+      .compileComponents();
   });
 
   beforeEach(() => {

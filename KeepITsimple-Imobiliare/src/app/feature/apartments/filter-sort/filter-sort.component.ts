@@ -1,5 +1,4 @@
-import {Component, EventEmitter, OnInit, Output} from '@angular/core';
-import {FormControl, FormGroup} from "@angular/forms";
+import {Component, OnInit} from '@angular/core';
 
 @Component({
   selector: 'app-filter-sort',
@@ -87,4 +86,3 @@ export class FilterSortComponent implements OnInit {
     this.formSort.reset();
   }
 }
-

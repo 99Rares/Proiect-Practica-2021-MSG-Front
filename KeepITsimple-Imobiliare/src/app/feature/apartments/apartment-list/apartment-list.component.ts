@@ -1,6 +1,9 @@
 import {Component, OnInit} from '@angular/core';
-import {ApartmentDetails, OwnerDetails, PictureDetails} from "../model/apartment.data";
+import {ApartmentDetails} from "../model/apartment.data";
 import {ApartmentService} from "../apartment.service";
+import {WishlistService} from "../../wishlist/wishlist.service";
+import {TokenStorageService} from "../../services/token-storage.service";
+import {MatSnackBar} from "@angular/material/snack-bar";
 
 @Component({
   selector: 'app-apartment-list',
@@ -9,7 +12,10 @@ import {ApartmentService} from "../apartment.service";
 })
 export class ApartmentListComponent implements OnInit {
 
-  constructor(private apartmentService: ApartmentService) {
+  constructor(private apartmentService: ApartmentService,
+              private wishlistService: WishlistService,
+              private tokenService: TokenStorageService,
+              private _snackBar: MatSnackBar) {
   }
 
   apartments: ApartmentDetails[] = [];
@@ -35,9 +41,17 @@ export class ApartmentListComponent implements OnInit {
     yearConstruction: number = 0;
   };
 
+
+  wishlist: ApartmentDetails [] = [];
+
   ngOnInit(): void {
     this.loadApartments()
     this.loadApartmentsCopy()
+    this.loadWishlist();
+  }
+
+  toWishlist(id: number) {
+    this.wishlistService.toWishlist(id)
   }
 
   loadApartments() {
@@ -105,4 +119,17 @@ export class ApartmentListComponent implements OnInit {
       }
   }
 
+
+  loadWishlist() {
+    if (!this.tokenService.getUser()) {
+      // this._snackBar.open('Please log in!','Ok',{
+      //   duration:3000
+      // });
+    } else {
+      this.wishlistService.loadWishlist()
+      this.wishlistService.wishlist.subscribe(data => {
+        this.wishlist = data;
+      });
+    }
+  }
 }

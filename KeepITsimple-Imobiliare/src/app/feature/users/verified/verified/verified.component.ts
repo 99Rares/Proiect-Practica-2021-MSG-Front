@@ -21,7 +21,6 @@ export class VerifiedComponent implements OnInit {
   ngOnInit() {
     let code: string | null = ""
     code = this.route.snapshot.queryParamMap.get('code');
-    console.log(code); // code
     this.verify(code);
   }
 
@@ -35,7 +34,6 @@ export class VerifiedComponent implements OnInit {
         }
         if (data === "verify_fail") {
           this.isVerified=false;
-          console.log("verify_fail");
           this._snackBar.open('Verification failed!',"Ok")
         }
 
