@@ -40,6 +40,7 @@ import {DownloadComponent} from './feature/apartments/download/download.componen
 import { WishlistComponent } from './feature/wishlist/wishlist/wishlist.component';
 import {MatBadgeModule} from "@angular/material/badge";
 import { StatisticsComponent } from './feature/apartments/statistics/statistics.component';
+import {NgxChartsModule} from "@swimlane/ngx-charts";
 
 @NgModule({
   declarations: [
@@ -86,6 +87,7 @@ import { StatisticsComponent } from './feature/apartments/statistics/statistics.
         MatCarouselModule,
         MatTabsModule,
         MatBadgeModule,
+        NgxChartsModule,
         MatSelectModule
     ],
   providers: [BackendService,

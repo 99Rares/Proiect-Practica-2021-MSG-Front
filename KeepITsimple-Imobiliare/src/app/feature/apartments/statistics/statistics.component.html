@@ -1,1 +1,9 @@
-<p>Procentaj: {{percent}}</p>
+<p>Procentaj: {{apiResponse.apartmentsInWishlist/apiResponse.apartmentsTotal*100+"%"}}</p>
+
+<ngx-charts-pie-chart
+  [results]="apartmentData"
+  [legend]="true"
+  [legendTitle]="'Statistics Apartments'"
+  [view]="[1100,500]"
+  [labels]="true" >
+</ngx-charts-pie-chart>

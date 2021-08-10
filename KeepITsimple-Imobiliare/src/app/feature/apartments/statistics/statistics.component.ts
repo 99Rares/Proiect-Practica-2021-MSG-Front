@@ -10,7 +10,12 @@ export class StatisticsComponent implements OnInit {
 
   constructor(private wishlistService: WishlistService) { }
 
-  percent: number | undefined;
+  apiResponse: any;
+  apartmentData: any;
+  // saleData = [
+  //   { name: "Total apartamente", value:  this.apiResponse.apartmentsTotal},
+  //   { name: "In wishlist", value: 4}
+  // ];
 
   ngOnInit(): void {
     this.loadStatistics();
@@ -18,7 +23,13 @@ export class StatisticsComponent implements OnInit {
 
   loadStatistics(){
 
-    this.wishlistService.getFromStatistics().subscribe(data => this.percent = data);
+    this.wishlistService.getFromStatistics().subscribe(data => {
+      this.apiResponse=data;
+      this.apartmentData = [
+        { name: "Total apartamente", value:  data.apartmentsTotal},
+        { name: "Apartamente in wishlist", value: data.apartmentsInWishlist}
+      ]
+    });
   }
 
 
