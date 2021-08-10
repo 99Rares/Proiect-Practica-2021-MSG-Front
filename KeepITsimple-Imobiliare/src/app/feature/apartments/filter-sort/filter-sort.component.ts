@@ -29,10 +29,11 @@ export class FilterSortComponent implements OnInit {
   @Output()
   formSortOutput:EventEmitter<any> = new EventEmitter<any>();
 
+  @Output()
+  formResetOutput:EventEmitter<any> = new EventEmitter<any>();
+
     ngOnInit(): void {
   }
-
-
 
   formFilter = new FormGroup({
     pret: new FormControl('', []),
@@ -77,12 +78,13 @@ export class FilterSortComponent implements OnInit {
   onSubmitfilter(){
     console.log(this.formFilter.value)
     this.formFilterOutput.emit(this.formFilter.value);
+    this.formFilter.reset();
   }
 
   onSubmitsort(){
     console.log(this.formSort.value)
     this.formSortOutput.emit(this.formSort.value);
+    this.formSort.reset();
   }
-
 }
 
