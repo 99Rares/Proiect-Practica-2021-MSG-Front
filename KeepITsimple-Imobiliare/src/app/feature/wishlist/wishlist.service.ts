@@ -19,6 +19,8 @@ export class WishlistService {
   url = 'http://localhost:8080/api/wishlist';
   deleteWishlistEndpoint = 'api/wishlist/user';
   addWishlistEndpoint = 'api/wishlist';
+  statisticsEndpoint = 'api/wishlist/statistics';
+
   statistics1Endpoint = 'api/wishlist/statistics';
   ///api/wishlist/user/{userId}/apartment/{apId}
   wishlist: BehaviorSubject<ApartmentDetails []> = new BehaviorSubject<ApartmentDetails []>([]);
@@ -70,5 +72,9 @@ export class WishlistService {
     } else {
       this.getAllWishlists(this.tokenService.getUserId());
     }
+  }
+
+  getFromStatistics(){
+    return this.backendService.get(`${this.api}/${this.statisticsEndpoint}`);
   }
 }
