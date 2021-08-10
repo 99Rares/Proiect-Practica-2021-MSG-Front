@@ -1,9 +1,13 @@
 .list-group {
   margin: auto;
-  position: absolute;
+  //position: absolute;
   size: auto;
   padding-left: 95%;
-  padding-top: 10px;
+  padding-top: 15px;
+  padding-bottom: 10px;
+}
+mat-toolbar{
+  position: absolute;
 }
 
 button {
