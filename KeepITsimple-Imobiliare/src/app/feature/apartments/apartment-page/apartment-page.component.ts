@@ -15,6 +15,8 @@ export class ApartmentPageComponent implements OnInit {
 
   apartment: ApartmentDetails | undefined;
 
+  getStatistics1Data: string = '';
+
   constructor(private route: ActivatedRoute,
               private apartmentService: ApartmentService,
               private wishlistService: WishlistService,
@@ -29,13 +31,20 @@ export class ApartmentPageComponent implements OnInit {
     const apartmentIdFromRoute = Number(routeParams.get('apartmentId'));
     this.wishlistService.loadWishlist()
     this.apartmentService.getApartmentsDetail(apartmentIdFromRoute).subscribe((data) => this.apartment = data);
+    this.getStatistics1(apartmentIdFromRoute)
   }
 
-  toWishlist(id: number) {
+  async toWishlist(id: number) {
     this.wishlistService.toWishlist(id)
+    await new Promise(f => setTimeout(f, 10));
+    this.getStatistics1(id)
   }
 
   isFavourite(apartmentId: number) {
     return this.wishlistService.isFavourite(apartmentId)
+  }
+
+  getStatistics1(apartmentId: number) {
+    this.wishlistService.getStatistics1(apartmentId).subscribe(data => this.getStatistics1Data = data)
   }
 }
