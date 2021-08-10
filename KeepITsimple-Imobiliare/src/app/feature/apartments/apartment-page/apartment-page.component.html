@@ -52,7 +52,8 @@
   <div class="buton">
   <button  mat-icon-button color="warn" (click)="toWishlist(apartment.id)">
     <mat-icon class="size" [ngStyle]="{'color': isFavourite(apartment.id) ? 'red' : 'gray'}">favorite</mat-icon>
-    <span class="text">Add to Wishlist</span>
+    <span *ngIf="!isFavourite(apartment.id)" class="text">Adauga</span>
+    <span *ngIf="isFavourite(apartment.id)" class="text">Sterge</span>
   </button>
   </div>
   <br>
