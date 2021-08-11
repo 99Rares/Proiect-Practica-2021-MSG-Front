@@ -30,7 +30,7 @@ export class UserDetailsFormComponent implements OnInit {
   userDetailsForm = new FormGroup({
       firstName: new FormControl('', [Validators.required]),
       lastName: new FormControl('', [Validators.required]),
-      email: new FormControl('', [Validators.email, Validators.required])}
+      email: new FormControl({value: '', disabled: true}, [Validators.email, Validators.required])}
   )
 
 
@@ -49,7 +49,7 @@ export class UserDetailsFormComponent implements OnInit {
     console.log('before emit')
     this.user.firstName = this.userDetailsForm.value.firstName;
     this.user.lastName = this.userDetailsForm.value.lastName;
-    this.user.email =this.userDetailsForm.value.email;
+    //this.user.email =this.userDetailsForm.value.email;
     this.user.id= this.tokenStorageService.getUserId();
     this.submitForm.emit(this.user);
     console.log('after emit')
