@@ -26,7 +26,7 @@ export class DownloadComponent implements OnInit {
 
   downloadFile(filename: string): void {
     this.service
-      .download(this.tokenService.getUserEmail())
+      .download(this.tokenService.getUserId())
       .subscribe(blob => saveAs(blob, filename));
   }
 

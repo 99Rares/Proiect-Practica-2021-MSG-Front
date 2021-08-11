@@ -1,0 +1,15 @@
+<div class="container">
+  <form [formGroup]="resetForm" (ngSubmit)="onSubmit()">
+    <div class="row">
+      <mat-form-field>
+        <mat-label>Email</mat-label>
+        <input matInput formControlName="username">
+      </mat-form-field>
+    </div>
+    <div class="row">
+      <button mat-raised-button color="primary" type="submit" class="login-button">Submit</button>
+    </div>
+    <br>
+
+  </form>
+</div>
