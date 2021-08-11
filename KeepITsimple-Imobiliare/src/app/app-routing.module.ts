@@ -7,6 +7,8 @@ import {ApartmentListComponent} from "./feature/apartments/apartment-list/apartm
 import {ApartmentPageComponent} from "./feature/apartments/apartment-page/apartment-page.component";
 import {DownloadComponent} from "./feature/apartments/download/download.component";
 import {StatisticsComponent} from "./feature/apartments/statistics/statistics.component";
+import {UserDetailsFormComponent} from "./feature/users/user-details-form/user-details-form.component";
+import {HistoryComponent} from "./feature/users/history/history.component";
 
 const routes: Routes = [
   {path: '', component: ApartmentListComponent},
@@ -17,6 +19,8 @@ const routes: Routes = [
   {path: 'apartments/:apartmentId', component: ApartmentPageComponent},
   {path: 'wishlist', component: DownloadComponent},
   {path: 'statistics', component: StatisticsComponent},
+  {path: 'userDetails', component: UserDetailsFormComponent},
+  {path: 'userHistory', component: HistoryComponent},
   {path: '**', redirectTo: ''}
 ];
 

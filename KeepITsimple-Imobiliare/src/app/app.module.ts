@@ -41,6 +41,8 @@ import { WishlistComponent } from './feature/wishlist/wishlist/wishlist.componen
 import {MatBadgeModule} from "@angular/material/badge";
 import { StatisticsComponent } from './feature/apartments/statistics/statistics.component';
 import {NgxChartsModule} from "@swimlane/ngx-charts";
+import { UserDetailsFormComponent } from './feature/users/user-details-form/user-details-form.component';
+import { HistoryComponent } from './feature/users/history/history.component';
 
 @NgModule({
   declarations: [
@@ -60,6 +62,8 @@ import {NgxChartsModule} from "@swimlane/ngx-charts";
     DownloadComponent,
     WishlistComponent,
     StatisticsComponent,
+    UserDetailsFormComponent,
+    HistoryComponent,
     // CarouselModule,
     // WavesModule
   ],

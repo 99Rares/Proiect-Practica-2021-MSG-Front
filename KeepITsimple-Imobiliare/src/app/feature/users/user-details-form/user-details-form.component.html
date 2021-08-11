@@ -1,0 +1,31 @@
+<div class="history-button">
+<button mat-raised-button matTooltip="History" color="primary" (click)="goToHistory()">
+  <mat-icon>history</mat-icon>
+</button>
+</div>
+
+<div class="container">
+  <form [formGroup]="userDetailsForm" (ngSubmit)="onSubmit()" appPasswordsMatch>
+    <div class="row">
+      <mat-form-field>
+        <mat-label>Firstname</mat-label>
+        <input matInput formControlName="firstName">
+      </mat-form-field>
+    </div>
+    <div class="row">
+      <mat-form-field>
+        <mat-label>Lastname</mat-label>
+        <input matInput formControlName="lastName">
+      </mat-form-field>
+    </div>
+    <div class="row">
+      <mat-form-field>
+        <mat-label>Email</mat-label>
+        <input matInput formControlName="email">
+      </mat-form-field>
+    </div>
+    <div class="row">
+      <button mat-raised-button color="primary" class="update-button">Update Details</button>
+    </div>
+  </form>
+</div>

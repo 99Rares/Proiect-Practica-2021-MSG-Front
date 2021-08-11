@@ -45,4 +45,9 @@ export class HeaderComponent implements OnInit {
   goToStatistics(){
     this.router.navigate(['/statistics']);
   }
+
+  goToUserDetails(){
+    this.router.navigate(['/userDetails']);
+  }
+
 }

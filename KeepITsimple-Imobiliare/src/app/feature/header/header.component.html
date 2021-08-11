@@ -9,6 +9,11 @@
     <button mat-raised-button matTooltip="Log in" (click)="login()" *ngIf="!isLogged()">
       <mat-icon>login</mat-icon>
     </button>
+
+    <button mat-raised-button matTooltip="Manage Account Details" (click)="goToUserDetails()" *ngIf="isLogged()">
+      <mat-icon>manage_accounts</mat-icon>
+    </button>
+
     <button mat-raised-button matTooltip="Go to statistics" (click)="goToStatistics()" *ngIf="isLogged()">
       <mat-icon>analytics</mat-icon>
     </button>
