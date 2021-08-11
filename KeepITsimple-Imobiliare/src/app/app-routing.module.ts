@@ -7,6 +7,8 @@ import {ApartmentListComponent} from "./feature/apartments/apartment-list/apartm
 import {ApartmentPageComponent} from "./feature/apartments/apartment-page/apartment-page.component";
 import {DownloadComponent} from "./feature/apartments/download/download.component";
 import {StatisticsComponent} from "./feature/apartments/statistics/statistics.component";
+import {VerifyEmailComponent} from "./feature/users/vreify-reset/verify-email.component";
+import {PasswordResetComponent} from "./feature/users/password-reset/password-reset.component";
 
 const routes: Routes = [
   {path: '', component: ApartmentListComponent},
@@ -17,6 +19,8 @@ const routes: Routes = [
   {path: 'apartments/:apartmentId', component: ApartmentPageComponent},
   {path: 'wishlist', component: DownloadComponent},
   {path: 'statistics', component: StatisticsComponent},
+  {path: 'reset', component: VerifyEmailComponent},
+  {path: 'password-reset', component: PasswordResetComponent},
   {path: '**', redirectTo: ''}
 ];
 

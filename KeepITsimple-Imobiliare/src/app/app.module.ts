@@ -41,6 +41,10 @@ import { WishlistComponent } from './feature/wishlist/wishlist/wishlist.componen
 import {MatBadgeModule} from "@angular/material/badge";
 import { StatisticsComponent } from './feature/apartments/statistics/statistics.component';
 import {NgxChartsModule} from "@swimlane/ngx-charts";
+import { VerifyEmailComponent } from './feature/users/vreify-reset/verify-email.component';
+import { VerifyResetFormComponent } from './feature/users/verify-reset-form/verify-reset-form.component';
+import { PasswordResetFormComponent } from './feature/users/password-reset-form/password-reset-form.component';
+import { PasswordResetComponent } from './feature/users/password-reset/password-reset.component';
 
 @NgModule({
   declarations: [
@@ -60,6 +64,10 @@ import {NgxChartsModule} from "@swimlane/ngx-charts";
     DownloadComponent,
     WishlistComponent,
     StatisticsComponent,
+    VerifyEmailComponent,
+    VerifyResetFormComponent,
+    PasswordResetFormComponent,
+    PasswordResetComponent,
     // CarouselModule,
     // WavesModule
   ],

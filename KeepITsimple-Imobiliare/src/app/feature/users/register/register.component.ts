@@ -32,10 +32,10 @@ export class RegisterComponent implements OnInit {
           panelClass: ['success-snackbar']
         });
       },
-      (error) => console.log(this._snackBar.open('Registration failed!', "Ok", {
+      (error) => this._snackBar.open('Registration failed!', "Ok", {
         duration: 3000,
         panelClass: ['fail-snackbar']
-      }))
+      })
     )
   }
 
