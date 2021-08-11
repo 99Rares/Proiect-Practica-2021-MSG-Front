@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit, ViewEncapsulation} from '@angular/core';
 import {LongUser} from "../model/users.data";
 import {TokenStorageService} from "../../services/token-storage.service";
 import {Router} from "@angular/router";
@@ -8,7 +8,8 @@ import {MatSnackBar} from "@angular/material/snack-bar";
 @Component({
   selector: 'app-user-details',
   templateUrl: './user-details.component.html',
-  styleUrls: ['./user-details.component.scss']
+  styleUrls: ['./user-details.component.scss'],
+  encapsulation: ViewEncapsulation.None,
 })
 export class UserDetailsComponent implements OnInit {
 
@@ -22,9 +23,14 @@ export class UserDetailsComponent implements OnInit {
     this.service.updateUser(user).subscribe(
       () => {
         this.service.getUserDetails(this.tokenStorageService.getUserId())
-        this._snackBar.open('User was successfully updated');
+        this._snackBar.open('User was successfully updated','OK', {
+          duration:7000,
+          panelClass: ['success-snackbar']});
       },
-      (error) => this._snackBar.open('Failed to update user details')
+      (error) => this._snackBar.open('Failed to update user details', 'OK', {
+        panelClass: ['fail-snackbar'],
+        duration:5000,
+      })
     );
   }
 
