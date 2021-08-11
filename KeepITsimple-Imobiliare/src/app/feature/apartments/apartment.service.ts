@@ -23,9 +23,8 @@ export class ApartmentService {
     return this.service.get(`${this.api}/${this.apartmentsEndpoint}/${id}`);
   }
 
-  download(email: string): Observable<Blob> {
-    console.log(email)
-    return this.http.get(`${this.api}/${this.wishlistEndpoint}/${email}`, {
+  download(id: number): Observable<Blob> {
+    return this.http.get(`${this.api}/${this.wishlistEndpoint}/${id}`, {
       responseType: 'blob'
     });
   }
