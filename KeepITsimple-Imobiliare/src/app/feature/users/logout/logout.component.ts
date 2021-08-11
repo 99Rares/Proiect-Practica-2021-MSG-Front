@@ -13,7 +13,11 @@ export class LogoutComponent implements OnInit {
   }
 
   logout() {
+    console.log("logged out")
+    alert("ceva")
     localStorage.removeItem('user');
     sessionStorage.removeItem('token');
+    window.location.reload();
+    console.log("logged out")
   }
 }
