@@ -1,7 +1,13 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, EventEmitter, Inject, Injectable, OnInit, Output} from '@angular/core';
 import {TokenStorageService} from "../../services/token-storage.service";
 import {Router} from "@angular/router";
 import {FormControl, FormGroup, Validators} from "@angular/forms";
+import {UserService} from "../user.service";
+import {MAT_DIALOG_DATA} from "@angular/material/dialog";
+import {matFormFieldAnimations} from "@angular/material/form-field";
+import {LongUser} from "../model/users.data";
+import {MatSnackBar} from "@angular/material/snack-bar";
+import {UserDetailsComponent} from "../user-details/user-details.component";
 
 @Component({
   selector: 'app-user-details-form',
@@ -9,8 +15,17 @@ import {FormControl, FormGroup, Validators} from "@angular/forms";
   styleUrls: ['./user-details-form.component.scss']
 })
 export class UserDetailsFormComponent implements OnInit {
-
-  constructor(private tokenStorageService: TokenStorageService, private router: Router) { }
+  @Output() submitForm: EventEmitter<LongUser> = new EventEmitter<LongUser>();
+  user: LongUser = new class implements LongUser {
+    email: string = '';
+    firstName: string = '';
+    fullName: string = '';
+    id: number = 0;
+    lastName: string = '';
+    password: string ='';
+    token: string='';
+  };
+  constructor(private tokenStorageService: TokenStorageService, private router: Router, private service: UserService) { }
 
   userDetailsForm = new FormGroup({
       firstName: new FormControl('', [Validators.required]),
@@ -18,7 +33,11 @@ export class UserDetailsFormComponent implements OnInit {
       email: new FormControl('', [Validators.email, Validators.required])}
   )
 
+
   ngOnInit(): void {
+    //console.log(this.tokenStorageService.getUserId());
+    this.service.getUserDetails(this.tokenStorageService.getUserId()).subscribe((result) => {
+      this.userDetailsForm.patchValue(result);})
   }
 
   goToHistory(){
@@ -27,6 +46,17 @@ export class UserDetailsFormComponent implements OnInit {
 
   onSubmit() {
     console.log(this.userDetailsForm.value);
+    console.log('before emit')
+    this.user.firstName = this.userDetailsForm.value.firstName;
+    this.user.lastName = this.userDetailsForm.value.lastName;
+    this.user.email =this.userDetailsForm.value.email;
+    this.user.id= this.tokenStorageService.getUserId();
+    this.submitForm.emit(this.user);
+    console.log('after emit')
+  }
+
+  getFullName() {
+    return this.tokenStorageService.getUser();
   }
 
 }

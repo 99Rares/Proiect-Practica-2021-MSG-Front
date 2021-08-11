@@ -47,6 +47,7 @@ import { VerifyEmailComponent } from './feature/users/vreify-reset/verify-email.
 import { VerifyResetFormComponent } from './feature/users/verify-reset-form/verify-reset-form.component';
 import { PasswordResetFormComponent } from './feature/users/password-reset-form/password-reset-form.component';
 import { PasswordResetComponent } from './feature/users/password-reset/password-reset.component';
+import { UserDetailsComponent } from './feature/users/user-details/user-details.component';
 
 @NgModule({
   declarations: [
@@ -72,6 +73,7 @@ import { PasswordResetComponent } from './feature/users/password-reset/password-
     VerifyResetFormComponent,
     PasswordResetFormComponent,
     PasswordResetComponent,
+    UserDetailsComponent,
     // CarouselModule,
     // WavesModule
   ],

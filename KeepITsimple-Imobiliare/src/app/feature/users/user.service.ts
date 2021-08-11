@@ -12,6 +12,8 @@ export class UserService {
   urlRegister = 'http://localhost:8080/api/users/register'
   resetEndpoint = 'http://localhost:8080/api/users/reset'
   resetPasswordEndpoint='http://localhost:8080/api/users/reset/'
+  getUserDetailsEndpoint = 'http://localhost:8080/api/users'
+  updateUserDetailsEndpoint ='http://localhost:8080/api/users/updateUserDetails'
 
 
   constructor(private service: BackendService) {
@@ -44,4 +46,15 @@ export class UserService {
       password: user.password
     })
   }
+
+  getUserDetails(id: number): Observable<LongUser> {
+    return this.service.get(`${this.getUserDetailsEndpoint}/${id}`);
+  }
+
+  updateUser(user: LongUser): Observable<LongUser> {
+    console.log(this.updateUserDetailsEndpoint);
+    console.log(user);
+    return this.service.put(`${this.updateUserDetailsEndpoint}`, user);
+  }
+
 }

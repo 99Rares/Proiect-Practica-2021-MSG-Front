@@ -10,8 +10,18 @@ button {
 .update-button{
   border-radius: 0;
 }
-form{
-  text-align: left;
+
+p{
   padding: 15px;
+  text-align: center;
+}
+
+form{
+  text-align: center;
+  padding: 15px;
+}
+
+.example-full-width {
+  width: 40%;
 }
 

@@ -5,27 +5,29 @@
 </div>
 
 <div class="container">
-  <form [formGroup]="userDetailsForm" (ngSubmit)="onSubmit()" appPasswordsMatch>
+  <p>Bun venit, {{getFullName()}}! Aici iti poti modifica datele contului!</p>
+  <form [formGroup]="userDetailsForm" (ngSubmit)="onSubmit()">
     <div class="row">
-      <mat-form-field>
+      <mat-form-field class="example-full-width" appearance="fill">
         <mat-label>Firstname</mat-label>
-        <input matInput formControlName="firstName">
+        <input matInput type="text" formControlName="firstName">
       </mat-form-field>
     </div>
     <div class="row">
-      <mat-form-field>
+      <mat-form-field class="example-full-width" appearance="fill">
         <mat-label>Lastname</mat-label>
-        <input matInput formControlName="lastName">
+        <input matInput type="text" formControlName="lastName">
       </mat-form-field>
     </div>
     <div class="row">
-      <mat-form-field>
+      <mat-form-field class="example-full-width" appearance="fill">
         <mat-label>Email</mat-label>
-        <input matInput formControlName="email">
+        <input matInput type="email" formControlName="email">
       </mat-form-field>
     </div>
+    <br>
     <div class="row">
-      <button mat-raised-button color="primary" class="update-button">Update Details</button>
+      <button mat-raised-button color="primary" class="update-button" type="submit">Update Details</button>
     </div>
   </form>
 </div>
