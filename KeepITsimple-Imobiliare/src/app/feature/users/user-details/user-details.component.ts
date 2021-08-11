@@ -19,11 +19,10 @@ export class UserDetailsComponent implements OnInit {
   }
 
   updateUser(user: LongUser) {
-    console.log("sal")
     this.service.updateUser(user).subscribe(
-      () => {
+      (newUser) => {
         this.service.getUserDetails(this.tokenStorageService.getUserId())
-        this._snackBar.open('User was successfully updated','OK', {
+        this._snackBar.open('User was successfully updated! Please log out and then log in again to see your changes!','OK', {
           duration:7000,
           panelClass: ['success-snackbar']});
       },
