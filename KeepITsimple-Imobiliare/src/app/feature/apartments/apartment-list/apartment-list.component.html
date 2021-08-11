@@ -1,3 +1,4 @@
 <mat-toolbar class="toolbar-apartamente">Locuinte</mat-toolbar>
 <app-filter-sort (formFilterOutput)="filter($event)" (formSortOutput)="sort($event)"></app-filter-sort>
+<button mat-raised-button color="primary" type = "submit" (click)='reload()' style="margin-left: 10px; margin-top: 5px">Refresh</button>
 <app-apartment-item [data]="copyapartments" (apartmentId)="toWishlist($event)" [wishlist]="wishlist"></app-apartment-item>
