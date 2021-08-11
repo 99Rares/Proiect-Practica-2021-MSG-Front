@@ -3,6 +3,8 @@ import {ApartmentDetails} from "../model/apartment.data";
 import {TokenStorageService} from "../../services/token-storage.service";
 import {MatSnackBar} from "@angular/material/snack-bar";
 import {WishlistService} from "../../wishlist/wishlist.service";
+import {PageEvent} from "@angular/material/paginator";
+
 
 @Component({
   selector: 'app-apartment-item',
@@ -15,12 +17,15 @@ export class ApartmentItemComponent implements OnInit {
   @Output() apartmentId: EventEmitter<number> = new EventEmitter<number>();
   color: String = 'gray';
 
+
+
   constructor(private tokenService: TokenStorageService,
               private _snackBar: MatSnackBar,private wishlistService: WishlistService) {
   }
-  ngOnInit(): void {
 
+  ngOnInit(): void {
   }
+
 
   toWishlist(id: number) {
     this.apartmentId.emit(id);

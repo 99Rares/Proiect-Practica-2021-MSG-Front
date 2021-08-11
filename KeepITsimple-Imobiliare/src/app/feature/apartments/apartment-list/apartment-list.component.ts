@@ -12,6 +12,7 @@ import {MatSnackBar} from "@angular/material/snack-bar";
 })
 export class ApartmentListComponent implements OnInit {
 
+
   constructor(private apartmentService: ApartmentService,
               private wishlistService: WishlistService,
               private tokenService: TokenStorageService,
@@ -49,6 +50,7 @@ export class ApartmentListComponent implements OnInit {
     this.loadApartmentsCopy()
     this.loadWishlist();
   }
+
 
   toWishlist(id: number) {
     this.wishlistService.toWishlist(id)
