@@ -1,7 +1,5 @@
 import {Component, EventEmitter, OnInit, Output} from '@angular/core';
-import {UserService} from "../user.service";
 import {FormControl, FormGroup, Validators} from "@angular/forms";
-import {ShortUser} from "../model/users.data";
 
 @Component({
   selector: 'app-verify-reset-form',
@@ -10,7 +8,10 @@ import {ShortUser} from "../model/users.data";
 })
 export class VerifyResetFormComponent implements OnInit {
   @Output() submitForm: EventEmitter<string> = new EventEmitter<string>();
-  constructor(private service: UserService) { }
+
+  constructor() {
+  }
+
   resetForm = new FormGroup({
     username: new FormControl('', [
       Validators.required,
@@ -21,6 +22,14 @@ export class VerifyResetFormComponent implements OnInit {
 
   ngOnInit(): void {
   }
+  isValid() {
+    return !!this.resetForm.controls['username'].value;
+
+    // return !!(this.passwordReset.controls['passwordConfirm'].value === this.passwordReset.controls['password'].value && this.passwordReset.controls['passwordConfirm'].value &&
+    //   this.passwordReset.controls['password'].value);
+
+  }
+
   onSubmit() {
     console.log(this.resetForm.value.username)
     this.submitForm.emit(this.resetForm.value.username);

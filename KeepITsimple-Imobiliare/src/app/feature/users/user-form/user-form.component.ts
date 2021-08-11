@@ -27,7 +27,6 @@ export class UserFormComponent implements OnInit {
   ngOnInit(): void {}
 
   onSubmit() {
-    //console.log(this.loginForm.value);
     this.submitForm.emit(this.loginForm.value);
   }
 

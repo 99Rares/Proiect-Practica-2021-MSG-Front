@@ -36,13 +36,6 @@ export class PasswordResetFormComponent implements OnInit {
     return !!(this.passwordReset.controls['passwordConfirm'].value === this.passwordReset.controls['password'].value && this.passwordReset.controls['passwordConfirm'].value &&
       this.passwordReset.controls['password'].value);
 
-    // return !(
-    //   this.passwordReset.controls['passwordConfirm'].value ===
-    //   this.passwordReset.controls['password'].value
-    // )&&(
-    //   this.passwordReset.controls['passwordConfirm'].value &&
-    //   this.passwordReset.controls['password'].value
-    // );
   }
 
   onSubmit() {

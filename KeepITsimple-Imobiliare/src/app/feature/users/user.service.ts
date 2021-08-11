@@ -11,6 +11,7 @@ export class UserService {
   url = 'http://localhost:8080/api/users/login';
   urlRegister = 'http://localhost:8080/api/users/register'
   resetEndpoint = 'http://localhost:8080/api/users/reset'
+  resetPasswordEndpoint='http://localhost:8080/api/users/reset/'
 
 
   constructor(private service: BackendService) {
@@ -27,7 +28,6 @@ export class UserService {
     console.log(`${this.resetEndpoint}/${email}`)
     return this.service.post(`${this.resetEndpoint}`,email);
   }
-  resetPasswordEndpoint='http://localhost:8080/api/users/reset/'
   //resetPasswordEndpoint='http://localhost:8080/api/users/reset/{code}/pass'
   resetPassword(password:string,code:string|null):Observable<void>{
     console.log(`${this.resetPasswordEndpoint}${code}/pass`)
