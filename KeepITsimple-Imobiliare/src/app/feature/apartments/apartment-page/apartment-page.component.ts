@@ -36,7 +36,7 @@ export class ApartmentPageComponent implements OnInit {
     this.history = JSON.parse(<string>sessionStorage.getItem("my_history"));
     this.toHistory(this.apartment)
     this.wishlistService.toHistory();
-    this.wishlistService.history.subscribe(info=>this.history=info)
+    this.wishlistService.history.subscribe(info => this.history = info)
   }
 
   async toWishlist(id: number) {
@@ -45,26 +45,26 @@ export class ApartmentPageComponent implements OnInit {
     this.getStatistics1(id)
   }
 
-   toHistory(apartment: ApartmentDetails | undefined) {
-    // await new Promise(f => setTimeout(f, 100));
-    console.log(this.history)
-    console.log("not ok")
-    if (apartment) {
-      console.log("ok")
-      if (this.isHistory(apartment.id)) {
-        const index = this.history.map(function (e) {
-          return e.id;
-        }).indexOf(apartment.id);
-        console.log(index)
-        if (index > -1) {
-          this.history.splice(index, 1);
+  toHistory(apartment: ApartmentDetails | undefined) {
+    if (this.tokenService.getUser()) {
+      // await new Promise(f => setTimeout(f, 100));
+      if (apartment) {
+        if (this.history === null)
+          this.history = [];
+        if (this.isHistory(apartment.id)) {
+          const index = this.history.map(function (e) {
+            return e.id;
+          }).indexOf(apartment.id);
+          if (index > -1) {
+            this.history.splice(index, 1);
+          }
         }
+        this.history.unshift(apartment)
+        if (this.history.length === 5)
+          this.history.pop();
+        this.wishlistService.history.next(this.history)
+        sessionStorage.setItem("my_history", JSON.stringify(this.history));
       }
-      this.history.unshift(apartment)
-      if (this.history.length === 5)
-        this.history.pop();
-      this.wishlistService.history.next(this.history)
-      sessionStorage.setItem("my_history", JSON.stringify(this.history));
     }
   }
 
