@@ -119,6 +119,10 @@ export class ApartmentListComponent implements OnInit {
       }
   }
 
+  reload(){
+    this.ngOnInit()
+  }
+
 
   loadWishlist() {
     if (!this.tokenService.getUser()) {
