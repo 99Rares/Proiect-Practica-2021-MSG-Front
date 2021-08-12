@@ -50,11 +50,10 @@ export class ApartmentListComponent implements OnInit {
   async ngOnInit(): Promise<void> {
 
     this.loadApartments();
-    await new Promise(f => setTimeout(f, 200));
+    await new Promise(f => setTimeout(f, 500));
     this.loadApartmentsCopy();
-    await new Promise(f => setTimeout(f, 200));
+    await new Promise(f => setTimeout(f, 500));
     this.setPageLength(this.copyapartments.length);
-    //this.setPage();
     this.startSlice();
     this.loadWishlist();
     console.log(this.copyapartments.length);
@@ -203,6 +202,8 @@ export class ApartmentListComponent implements OnInit {
 
   onPageChange($event: { pageIndex: number; pageSize: number; }) {
     this.currPage =  this.copyapartments.slice($event.pageIndex*$event.pageSize, $event.pageIndex*$event.pageSize + $event.pageSize);
+    this.pageSize = $event.pageSize;
+    console.log(this.pageSize);
   }
 
 }
