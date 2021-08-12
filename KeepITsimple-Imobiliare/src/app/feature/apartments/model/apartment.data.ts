@@ -1,4 +1,5 @@
 export interface OwnerDetails{
+  id: number,
   firstName: string,
   lastName: string,
   phoneNumber: string,

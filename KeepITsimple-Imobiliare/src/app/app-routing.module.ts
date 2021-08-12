@@ -7,6 +7,7 @@ import {ApartmentListComponent} from "./feature/apartments/apartment-list/apartm
 import {ApartmentPageComponent} from "./feature/apartments/apartment-page/apartment-page.component";
 import {DownloadComponent} from "./feature/apartments/download/download.component";
 import {StatisticsComponent} from "./feature/apartments/statistics/statistics.component";
+import {ApartmentByOwnerComponent} from "./feature/apartments/apartment-by-owner/apartment-by-owner.component";
 
 const routes: Routes = [
   {path: '', component: ApartmentListComponent},
@@ -15,6 +16,7 @@ const routes: Routes = [
   {path: 'verify', component: VerifiedComponent},
   {path: 'apartments', component: ApartmentListComponent},
   {path: 'apartments/:apartmentId', component: ApartmentPageComponent},
+  {path: 'owners/:ownerId', component: ApartmentByOwnerComponent},
   {path: 'wishlist', component: DownloadComponent},
   {path: 'statistics', component: StatisticsComponent},
   {path: '**', redirectTo: ''}

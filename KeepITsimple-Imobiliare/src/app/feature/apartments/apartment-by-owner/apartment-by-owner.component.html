@@ -1,2 +1,25 @@
-<p>apartment-by-owner works!</p>
-<!--<app-apartment-item [data]="copyapartments" (apartmentId)="toWishlist($event)" [wishlist]="wishlist"></app-apartment-item>-->
+<div class="ownerInfo">
+  <h1>{{owner.firstName}} {{owner.lastName}}</h1>
+  <h3>Contact:</h3>
+  <p>Nr tel: {{owner.phoneNumber}} </p>
+</div>
+
+<div class="chart">
+  <ngx-charts-pie-chart
+    [results]="statisticData"
+    [legend]="true"
+    [legendTitle]="'Statistics Apartments'"
+    [view]="[1100,500]"
+    [labels]="true" >
+  </ngx-charts-pie-chart>
+</div>
+
+
+<div class="apartments">
+  <p>Imobiliarele lui {{owner.firstName}} {{owner.lastName}}: </p>
+  <app-apartment-item [data]="apartments" (apartmentId)="toWishlist($event)" [wishlist]="wishlist"></app-apartment-item>
+</div>
+
+
+
+<!--[results]="[{name: 'How many times appears the apartments from ' + this.owner.firstName + ' in the wishlists of any user', value: statisticArray[0].valueOf()}, {name: 'How many apartments belongs to ' + this.owner.firstName, value: statisticArray[1].valueOf()}]"-->
