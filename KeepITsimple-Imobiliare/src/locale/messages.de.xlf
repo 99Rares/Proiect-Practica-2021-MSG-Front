@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
-  <file source-language="en-US" datatype="plaintext" original="ng2.template">
+  <file source-language="ro" datatype="plaintext" original="ng2.template">
     <body>
       <trans-unit id="contactHeader" datatype="html">
         <source>Contact:</source>
@@ -14,7 +14,7 @@
       </trans-unit>
       <trans-unit id="contactDescription" datatype="html">
         <source>Nr tel: <x id="INTERPOLATION" equiv-text="{{owner.phoneNumber}}"/> </source>
-        <target>Telefonnummer: <x id="INTERPOLATION" equiv-text="{{owner.phoneNumber}}"/> </target>
+        <target>Telefonnumer: <x id="INTERPOLATION" equiv-text="{{owner.phoneNumber}}"/> </target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/feature/apartments/apartment-by-owner/apartment-by-owner.component.html</context>
           <context context-type="linenumber">4,7</context>
@@ -31,6 +31,285 @@
         </context-group>
         <note priority="1" from="description">A description for the apartments card</note>
         <note priority="1" from="meaning">Card Description</note>
+      </trans-unit>
+      <trans-unit id="toolbarApartments" datatype="html">
+        <source>Locuinte</source>
+        <target>Wohnungen</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/feature/apartments/apartment-list/apartment-list.component.html</context>
+          <context context-type="linenumber">1,2</context>
+        </context-group>
+        <note priority="1" from="description">Toolbar for apartments</note>
+        <note priority="1" from="meaning">Toolbar Apartments</note>
+      </trans-unit>
+      <trans-unit id="buttonRefresh" datatype="html">
+        <source>Refresh</source>
+        <target>Aktualisieren</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/feature/apartments/apartment-list/apartment-list.component.html</context>
+          <context context-type="linenumber">3,4</context>
+        </context-group>
+        <note priority="1" from="description">Button for refresh</note>
+        <note priority="1" from="meaning">Refresh button</note>
+      </trans-unit>
+      <trans-unit id="apartDescriptionTab" datatype="html">
+        <source><x id="START_TAG_STRONG" ctype="x-strong" equiv-text="&lt;strong&gt;"/><x id="INTERPOLATION" equiv-text="{{apartment.titleApart}}"/><x id="CLOSE_TAG_STRONG" ctype="x-strong" equiv-text="&lt;/strong&gt;"/><x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br&gt;"/><x id="START_BOLD_TEXT" ctype="x-b" equiv-text="&lt;b class=&quot;transaction-type&quot;&gt;"/><x id="INTERPOLATION_1" equiv-text="{{apartment.transactionType}}"/><x id="CLOSE_BOLD_TEXT" ctype="x-b" equiv-text="&lt;/b&gt;"/><x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br&gt;"/><x id="START_PARAGRAPH" ctype="x-p" equiv-text="&lt;p&gt;"/><x id="INTERPOLATION_2" equiv-text="{{apartment.description}}"/><x id="CLOSE_PARAGRAPH" ctype="x-p" equiv-text="&lt;/p&gt;"/><x id="START_PARAGRAPH" ctype="x-p" equiv-text="&lt;p&gt;"/><x id="INTERPOLATION_3" equiv-text="{{apartment.city}}"/>, <x id="INTERPOLATION_4" equiv-text="{{apartment.neighbourhood}}"/><x id="CLOSE_PARAGRAPH" ctype="x-p" equiv-text="&lt;/p&gt;"/><x id="START_PARAGRAPH" ctype="x-p" equiv-text="&lt;p&gt;"/>Apartamentul apare de <x id="START_TAG_STRONG" ctype="x-strong" equiv-text="&lt;strong&gt;"/><x id="INTERPOLATION_5" equiv-text="{{getStatistics1Data}}"/><x id="CLOSE_TAG_STRONG" ctype="x-strong" equiv-text="&lt;/strong&gt;"/> ori in lista de favorite a utilizatorilor<x id="CLOSE_PARAGRAPH" ctype="x-p" equiv-text="&lt;/p&gt;"/></source>
+        <target><x id="START_TAG_STRONG" ctype="x-strong" equiv-text="&lt;strong&gt;"/><x id="INTERPOLATION" equiv-text="{{apartment.titleApart}}"/><x id="CLOSE_TAG_STRONG" ctype="x-strong" equiv-text="&lt;/strong&gt;"/><x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br&gt;"/><x id="START_BOLD_TEXT" ctype="x-b" equiv-text="&lt;b class=&quot;transaction-type&quot;&gt;"/><x id="INTERPOLATION_1" equiv-text="{{apartment.transactionType}}"/><x id="CLOSE_BOLD_TEXT" ctype="x-b" equiv-text="&lt;/b&gt;"/><x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br&gt;"/><x id="START_PARAGRAPH" ctype="x-p" equiv-text="&lt;p&gt;"/><x id="INTERPOLATION_2" equiv-text="{{apartment.description}}"/><x id="CLOSE_PARAGRAPH" ctype="x-p" equiv-text="&lt;/p&gt;"/><x id="START_PARAGRAPH" ctype="x-p" equiv-text="&lt;p&gt;"/><x id="INTERPOLATION_3" equiv-text="{{apartment.city}}"/>, <x id="INTERPOLATION_4" equiv-text="{{apartment.neighbourhood}}"/><x id="CLOSE_PARAGRAPH" ctype="x-p" equiv-text="&lt;/p&gt;"/><x id="START_PARAGRAPH" ctype="x-p" equiv-text="&lt;p&gt;"/>Die Wohnung erscheint <x id="START_TAG_STRONG" ctype="x-strong" equiv-text="&lt;strong&gt;"/><x id="INTERPOLATION_5" equiv-text="{{getStatistics1Data}}"/><x id="CLOSE_TAG_STRONG" ctype="x-strong" equiv-text="&lt;/strong&gt;"/> mal in der Favoritenliste der Benutzer<x id="CLOSE_PARAGRAPH" ctype="x-p" equiv-text="&lt;/p&gt;"/></target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/feature/apartments/apartment-page/apartment-page.component.html</context>
+          <context context-type="linenumber">28,36</context>
+        </context-group>
+        <note priority="1" from="description">Description for the apartment tab</note>
+        <note priority="1" from="meaning">Tab Description Apartment</note>
+      </trans-unit>
+      <trans-unit id="characteristicsTab" datatype="html">
+        <source><x id="START_PARAGRAPH" ctype="x-p" equiv-text="&lt;p&gt;"/>Numar camere: <x id="INTERPOLATION" equiv-text="{{apartment.nrRooms}}"/><x id="CLOSE_PARAGRAPH" ctype="x-p" equiv-text="&lt;/p&gt;"/><x id="START_PARAGRAPH" ctype="x-p" equiv-text="&lt;p&gt;"/>Suprafata: <x id="INTERPOLATION_1" equiv-text="{{apartment.surface}}"/> mp<x id="CLOSE_PARAGRAPH" ctype="x-p" equiv-text="&lt;/p&gt;"/><x id="START_PARAGRAPH" ctype="x-p" equiv-text="&lt;p&gt;"/>An constructie: <x id="INTERPOLATION_2" equiv-text="{{apartment.yearConstruction}}"/><x id="CLOSE_PARAGRAPH" ctype="x-p" equiv-text="&lt;/p&gt;"/></source>
+        <target><x id="START_PARAGRAPH" ctype="x-p" equiv-text="&lt;p&gt;"/>Anzahl der Räume: <x id="INTERPOLATION" equiv-text="{{apartment.nrRooms}}"/><x id="CLOSE_PARAGRAPH" ctype="x-p" equiv-text="&lt;/p&gt;"/><x id="START_PARAGRAPH" ctype="x-p" equiv-text="&lt;p&gt;"/>Oberfläche: <x id="INTERPOLATION_1" equiv-text="{{apartment.surface}}"/> mp<x id="CLOSE_PARAGRAPH" ctype="x-p" equiv-text="&lt;/p&gt;"/><x id="START_PARAGRAPH" ctype="x-p" equiv-text="&lt;p&gt;"/>Baujahr: <x id="INTERPOLATION_2" equiv-text="{{apartment.yearConstruction}}"/><x id="CLOSE_PARAGRAPH" ctype="x-p" equiv-text="&lt;/p&gt;"/></target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/feature/apartments/apartment-page/apartment-page.component.html</context>
+          <context context-type="linenumber">38,42</context>
+        </context-group>
+        <note priority="1" from="description">Description for apartment characteristics tab</note>
+        <note priority="1" from="meaning">Characteristics Tab</note>
+      </trans-unit>
+      <trans-unit id="priceTab" datatype="html">
+        <source> <x id="INTERPOLATION" equiv-text="{{apartment.price | currency:&apos;EUR&apos;}"/> </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/feature/apartments/apartment-page/apartment-page.component.html</context>
+          <context context-type="linenumber">43,45</context>
+        </context-group>
+        <note priority="1" from="description">Description for price tab</note>
+        <note priority="1" from="meaning">Price Tab</note>
+      </trans-unit>
+      <trans-unit id="ownerTab" datatype="html">
+        <source><x id="START_PARAGRAPH" ctype="x-p" equiv-text="&lt;p &gt;"/><x id="INTERPOLATION" equiv-text="{{apartment.owner.firstName}}"/> <x id="INTERPOLATION_1" equiv-text="{{apartment.owner.lastName}}"/><x id="CLOSE_PARAGRAPH" ctype="x-p" equiv-text="&lt;/p&gt;"/><x id="START_PARAGRAPH" ctype="x-p" equiv-text="&lt;p &gt;"/><x id="INTERPOLATION_2" equiv-text="{{apartment.owner.phoneNumber}}"/><x id="CLOSE_PARAGRAPH" ctype="x-p" equiv-text="&lt;/p&gt;"/><x id="START_PARAGRAPH" ctype="x-p" equiv-text="&lt;p &gt;"/><x id="START_LINK" ctype="x-a" equiv-text="&lt;a href=&quot;{{apartment.owner.urlStatisticsChart}}&quot;&gt;"/>Statistica Locuinte<x id="CLOSE_LINK" ctype="x-a" equiv-text="&lt;/a&gt;"/><x id="CLOSE_PARAGRAPH" ctype="x-p" equiv-text="&lt;/p&gt;"/></source>
+        <target><x id="START_PARAGRAPH" ctype="x-p" equiv-text="&lt;p &gt;"/><x id="INTERPOLATION" equiv-text="{{apartment.owner.firstName}}"/> <x id="INTERPOLATION_1" equiv-text="{{apartment.owner.lastName}}"/><x id="CLOSE_PARAGRAPH" ctype="x-p" equiv-text="&lt;/p&gt;"/><x id="START_PARAGRAPH" ctype="x-p" equiv-text="&lt;p &gt;"/><x id="INTERPOLATION_2" equiv-text="{{apartment.owner.phoneNumber}}"/><x id="CLOSE_PARAGRAPH" ctype="x-p" equiv-text="&lt;/p&gt;"/><x id="START_PARAGRAPH" ctype="x-p" equiv-text="&lt;p &gt;"/><x id="START_LINK" ctype="x-a" equiv-text="&lt;a href=&quot;{{apartment.owner.urlStatisticsChart}}&quot;&gt;"/>Wohnungsstatistik<x id="CLOSE_LINK" ctype="x-a" equiv-text="&lt;/a&gt;"/><x id="CLOSE_PARAGRAPH" ctype="x-p" equiv-text="&lt;/p&gt;"/></target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/feature/apartments/apartment-page/apartment-page.component.html</context>
+          <context context-type="linenumber">48,52</context>
+        </context-group>
+        <note priority="1" from="description">Description for owner details tab</note>
+        <note priority="1" from="meaning">Owner details Tab</note>
+      </trans-unit>
+      <trans-unit id="addButton" datatype="html">
+        <source>Adauga</source>
+        <target>Hinzufügen</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/feature/apartments/apartment-page/apartment-page.component.html</context>
+          <context context-type="linenumber">56,57</context>
+        </context-group>
+        <note priority="1" from="description">Button for add</note>
+        <note priority="1" from="meaning">AddButton</note>
+      </trans-unit>
+      <trans-unit id="deleteButton" datatype="html">
+        <source>Sterge</source>
+        <target>Löschen</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/feature/apartments/apartment-page/apartment-page.component.html</context>
+          <context context-type="linenumber">57,62</context>
+        </context-group>
+        <note priority="1" from="description">Button for delete</note>
+        <note priority="1" from="meaning">DeleteButton</note>
+      </trans-unit>
+      <trans-unit id="toolbarApartmentsD" datatype="html">
+        <source>Locuinte</source>
+        <target>Wohnungen</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/feature/apartments/download/download.component.html</context>
+          <context context-type="linenumber">1</context>
+        </context-group>
+        <note priority="1" from="description">Toolbar for apartmentsD</note>
+        <note priority="1" from="meaning">Toolbar ApartmentsD</note>
+      </trans-unit>
+      <trans-unit id="filterDescription" datatype="html">
+        <source> Filtreaza rezultatele dupa optiuni </source>
+        <target> Ergebnisse nach Optionen filtern </target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/feature/apartments/filter-sort/filter-sort.component.html</context>
+          <context context-type="linenumber">10,11</context>
+        </context-group>
+        <note priority="1" from="description">Description for filter panel</note>
+        <note priority="1" from="meaning">FilterDescription</note>
+      </trans-unit>
+      <trans-unit id="priceEuro" datatype="html">
+        <source>Pret(€): </source>
+        <target>Preis(€): </target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/feature/apartments/filter-sort/filter-sort.component.html</context>
+          <context context-type="linenumber">19</context>
+        </context-group>
+        <note priority="1" from="description">Price in euros</note>
+        <note priority="1" from="meaning">PriceEuro</note>
+      </trans-unit>
+      <trans-unit id="want" datatype="html">
+        <source>Doresc sa:</source>
+        <target>Ich will: </target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/feature/apartments/filter-sort/filter-sort.component.html</context>
+          <context context-type="linenumber">44</context>
+        </context-group>
+        <note priority="1" from="description">I want to</note>
+        <note priority="1" from="meaning">Iwant</note>
+      </trans-unit>
+      <trans-unit id="rentOption" datatype="html">
+        <source>Inchiriez</source>
+        <target>Vermieten</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/feature/apartments/filter-sort/filter-sort.component.html</context>
+          <context context-type="linenumber">46</context>
+        </context-group>
+        <note priority="1" from="description">Option for rent</note>
+        <note priority="1" from="meaning">RentOption</note>
+      </trans-unit>
+      <trans-unit id="buyOption" datatype="html">
+        <source>Cumpar</source>
+        <target>Kaufen</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/feature/apartments/filter-sort/filter-sort.component.html</context>
+          <context context-type="linenumber">47</context>
+        </context-group>
+        <note priority="1" from="description">Option for buy</note>
+        <note priority="1" from="meaning">BuyOption</note>
+      </trans-unit>
+      <trans-unit id="cityOption" datatype="html">
+        <source>Oras:</source>
+        <target>Stadt:</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/feature/apartments/filter-sort/filter-sort.component.html</context>
+          <context context-type="linenumber">54</context>
+        </context-group>
+        <note priority="1" from="description">Option for city</note>
+        <note priority="1" from="meaning">CityOption</note>
+      </trans-unit>
+      <trans-unit id="cityChoose" datatype="html">
+        <source> Alege orasul </source>
+        <target> Wähle eine Stadt </target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/feature/apartments/filter-sort/filter-sort.component.html</context>
+          <context context-type="linenumber">56</context>
+        </context-group>
+        <note priority="1" from="description">Choose city</note>
+        <note priority="1" from="meaning">CityOptionChoose</note>
+      </trans-unit>
+      <trans-unit id="neighbourhoodOption" datatype="html">
+        <source>Cartier:</source>
+        <target>Nachbarschaft:</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/feature/apartments/filter-sort/filter-sort.component.html</context>
+          <context context-type="linenumber">62</context>
+        </context-group>
+        <note priority="1" from="description">Option for neighbourhood</note>
+        <note priority="1" from="meaning">NeighbourhoodOption</note>
+      </trans-unit>
+      <trans-unit id="neighbourhoodChoose" datatype="html">
+        <source> Alege cartierul </source>
+        <target> Wähle eine Nachbarschaft </target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/feature/apartments/filter-sort/filter-sort.component.html</context>
+          <context context-type="linenumber">64</context>
+        </context-group>
+        <note priority="1" from="description">Choose neighbourhood</note>
+        <note priority="1" from="meaning">NeighbourhoodOptionChoose</note>
+      </trans-unit>
+      <trans-unit id="filterButton" datatype="html">
+        <source>Filtrare</source>
+        <target>Filtern</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/feature/apartments/filter-sort/filter-sort.component.html</context>
+          <context context-type="linenumber">69</context>
+        </context-group>
+        <note priority="1" from="description">Button for filter</note>
+        <note priority="1" from="meaning">FilterButton</note>
+      </trans-unit>
+      <trans-unit id="sortDescription" datatype="html">
+        <source> Sorteaza rezultatele dupa optiuni </source>
+        <target> Ergebnisse nach Optionen sortieren </target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/feature/apartments/filter-sort/filter-sort.component.html</context>
+          <context context-type="linenumber">86,87</context>
+        </context-group>
+        <note priority="1" from="description">Description for sort panel</note>
+        <note priority="1" from="meaning">SortDescription</note>
+      </trans-unit>
+      <trans-unit id="sortPrice" datatype="html">
+        <source>Sorteaza dupa pret:</source>
+        <target>Nach Preis sortieren:</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/feature/apartments/filter-sort/filter-sort.component.html</context>
+          <context context-type="linenumber">94</context>
+        </context-group>
+        <note priority="1" from="description">Sort by price</note>
+        <note priority="1" from="meaning">SortByPrice</note>
+      </trans-unit>
+      <trans-unit id="sortAscendingP" datatype="html">
+        <source>Crescator</source>
+        <target>Aufsteigend</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/feature/apartments/filter-sort/filter-sort.component.html</context>
+          <context context-type="linenumber">96</context>
+        </context-group>
+        <note priority="1" from="description">Sort ascendingP</note>
+        <note priority="1" from="meaning">SortAscendingP</note>
+      </trans-unit>
+      <trans-unit id="sortDescendingP" datatype="html">
+        <source>Descrescator</source>
+        <target>Absteigend</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/feature/apartments/filter-sort/filter-sort.component.html</context>
+          <context context-type="linenumber">97</context>
+        </context-group>
+        <note priority="1" from="description">Sort descendingP</note>
+        <note priority="1" from="meaning">SortDescendingP</note>
+      </trans-unit>
+      <trans-unit id="sortSurface" datatype="html">
+        <source>Sorteaza dupa suprafata:</source>
+        <target>Nach Oberfläche sortieren:</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/feature/apartments/filter-sort/filter-sort.component.html</context>
+          <context context-type="linenumber">106</context>
+        </context-group>
+        <note priority="1" from="description">Sort by surface</note>
+        <note priority="1" from="meaning">SortBySurface</note>
+      </trans-unit>
+      <trans-unit id="sortAscendingS" datatype="html">
+        <source>Crescator</source>
+        <target>Aufsteigend</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/feature/apartments/filter-sort/filter-sort.component.html</context>
+          <context context-type="linenumber">108</context>
+        </context-group>
+        <note priority="1" from="description">Sort ascendingS</note>
+        <note priority="1" from="meaning">SortAscendingS</note>
+      </trans-unit>
+      <trans-unit id="sortDescendingS" datatype="html">
+        <source>Descrescator</source>
+        <target>Absteigend</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/feature/apartments/filter-sort/filter-sort.component.html</context>
+          <context context-type="linenumber">109</context>
+        </context-group>
+        <note priority="1" from="description">Sort descendingS</note>
+        <note priority="1" from="meaning">SortDescendingS</note>
+      </trans-unit>
+      <trans-unit id="sortButton" datatype="html">
+        <source>Sortare</source>
+        <target>Sortieren</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/feature/apartments/filter-sort/filter-sort.component.html</context>
+          <context context-type="linenumber">114</context>
+        </context-group>
+        <note priority="1" from="description">Button for sort</note>
+        <note priority="1" from="meaning">SortButton</note>
+      </trans-unit>
+      <trans-unit id="percentageDesc" datatype="html">
+        <source>Procentaj: <x id="INTERPOLATION" equiv-text="{{apiResponse.apartmentsInWishlist/apiResponse.apartmentsTotal*100+&quot;%&quot;}}"/></source>
+        <target>Prozentsatz: <x id="INTERPOLATION" equiv-text="{{apiResponse.apartmentsInWishlist/apiResponse.apartmentsTotal*100+&quot;%&quot;}}"/></target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/feature/apartments/statistics/statistics.component.html</context>
+          <context context-type="linenumber">2</context>
+        </context-group>
+        <note priority="1" from="description">Description of percentage</note>
+        <note priority="1" from="meaning">PercentageDescription</note>
       </trans-unit>
     </body>
   </file>

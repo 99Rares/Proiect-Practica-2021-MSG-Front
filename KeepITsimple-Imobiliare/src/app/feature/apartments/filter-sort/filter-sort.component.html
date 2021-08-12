@@ -6,7 +6,7 @@
       <mat-panel-title>
         FILTER
       </mat-panel-title>
-      <mat-panel-description>
+      <mat-panel-description i18n="FilterDescription|Description for filter panel@@filterDescription">
         Filtreaza rezultatele dupa optiuni
       </mat-panel-description>
     </mat-expansion-panel-header>
@@ -16,7 +16,7 @@
     <mat-card class="example-result-card">
       <mat-card-content>
         <div class="example-label-container" [class]="vertical ? 'example-label-vertical' : 'example-label-horizontal'">
-          <label id="example-name-label" class="example-name-label" style="font-size:180%;">Pret(€): </label>
+          <label id="example-name-label" class="example-name-label" style="font-size:180%;" i18n="PriceEuro|Price in euros@@priceEuro">Pret(€): </label>
           <label class="example-value-label">{{value}}</label>
         </div>
         <mat-slider
@@ -41,32 +41,32 @@
       <mat-card-content>
         <mat-radio-group formControlName="tip" aria-label="Select an option">
 
-          <p style="font-size:180%;">Doresc sa:</p>
+          <p style="font-size:180%;" i18n="Iwant|I want to@@want">Doresc sa:</p>
           <p></p>
-          <mat-radio-button value="inchiriere">Inchiriez</mat-radio-button>
-          <mat-radio-button value="vanzare">Cumpar</mat-radio-button>
+          <mat-radio-button value="inchiriere" i18n="RentOption|Option for rent@@rentOption">Inchiriez</mat-radio-button>
+          <mat-radio-button value="vanzare" i18n="BuyOption|Option for buy@@buyOption">Cumpar</mat-radio-button>
         </mat-radio-group>
       </mat-card-content>
     </mat-card>
     <!----------------------------------------------Select--------------------------------------------------->
     <mat-card>
       <mat-card-content>
-        <p style="font-size:180%;">Oras:</p>
+        <p style="font-size:180%;" i18n="CityOption|Option for city@@cityOption">Oras:</p>
         <select placeholder="Oras" formControlName="oras" (change)="changeOras($event)">
-          <option> Alege orasul </option>
+          <option i18n="CityOptionChoose|Choose city@@cityChoose"> Alege orasul </option>
           <option *ngFor="let oras of Orase">{{oras.name}}</option>
         </select>
       </mat-card-content>
 
 
-      <p style="font-size:180%;">Cartier:</p>
+      <p style="font-size:180%;" i18n="NeighbourhoodOption|Option for neighbourhood@@neighbourhoodOption">Cartier:</p>
       <select placeholder="Cartier" formControlName="cartier"(change)="changeCartier($event)">
-        <option> Alege cartierul </option>
+        <option i18n="NeighbourhoodOptionChoose|Choose neighbourhood@@neighbourhoodChoose"> Alege cartierul </option>
         <option *ngFor="let cartier of cartiere">{{cartier.name}}</option>
       </select>
     </mat-card>
     <br>
-    <button mat-raised-button color="primary" type = "submit">Filtrare</button>
+    <button mat-raised-button color="primary" type = "submit" i18n="FilterButton|Button for filter@@filterButton">Filtrare</button>
     <!------------------------------------------------------------------------------------------------------->
 
   </mat-expansion-panel>
@@ -82,7 +82,7 @@
       <mat-panel-title>
         SORT
       </mat-panel-title>
-      <mat-panel-description>
+      <mat-panel-description i18n="SortDescription|Description for sort panel@@sortDescription">
         Sorteaza rezultatele dupa optiuni
       </mat-panel-description>
     </mat-expansion-panel-header>
@@ -91,10 +91,10 @@
     <mat-card>
       <mat-card-content>
         <mat-radio-group formControlName="pretsort" aria-label="Select an option">
-          <p style="font-size:180%;">Sorteaza dupa pret:</p>
+          <p style="font-size:180%;" i18n="SortByPrice|Sort by price@@sortPrice">Sorteaza dupa pret:</p>
           <p></p>
-          <mat-radio-button value="crescator">Crescator</mat-radio-button>
-          <mat-radio-button value="descrescator">Descrescator</mat-radio-button>
+          <mat-radio-button value="crescator" i18n="SortAscendingP|Sort ascendingP@@sortAscendingP">Crescator</mat-radio-button>
+          <mat-radio-button value="descrescator" i18n="SortDescendingP|Sort descendingP@@sortDescendingP">Descrescator</mat-radio-button>
         </mat-radio-group>
       </mat-card-content>
     </mat-card>
@@ -103,15 +103,15 @@
     <mat-card>
       <mat-card-content>
         <mat-radio-group formControlName="suprafata" aria-label="Select an option">
-          <p style="font-size:180%;">Sorteaza dupa suprafata:</p>
+          <p style="font-size:180%;" i18n="SortBySurface|Sort by surface@@sortSurface">Sorteaza dupa suprafata:</p>
           <p></p>
-          <mat-radio-button value="crescator">Crescator</mat-radio-button>
-          <mat-radio-button value="descrescator">Descrescator</mat-radio-button>
+          <mat-radio-button value="crescator" i18n="SortAscendingS|Sort ascendingS@@sortAscendingS">Crescator</mat-radio-button>
+          <mat-radio-button value="descrescator" i18n="SortDescendingS|Sort descendingS@@sortDescendingS">Descrescator</mat-radio-button>
         </mat-radio-group>
       </mat-card-content>
     </mat-card>
     <br>
-    <button mat-raised-button color="primary" type = "submit">Sortare</button>
+    <button mat-raised-button color="primary" type = "submit" i18n="SortButton|Button for sort@@sortButton">Sortare</button>
     <!------------------------------------------------------------------------------------------------------->
   </mat-expansion-panel>
  </form>

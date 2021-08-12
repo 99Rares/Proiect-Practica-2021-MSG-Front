@@ -1,5 +1,5 @@
 <div class="container">
-<p>Procentaj: {{apiResponse.apartmentsInWishlist/apiResponse.apartmentsTotal*100+"%"}}</p>
+<p i18n="PercentageDescription|Description of percentage@@percentageDesc">Procentaj: {{apiResponse.apartmentsInWishlist/apiResponse.apartmentsTotal*100+"%"}}</p>
 
 <ngx-charts-pie-chart
   [results]="apartmentData"
