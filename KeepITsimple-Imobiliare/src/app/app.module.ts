@@ -41,6 +41,7 @@ import { WishlistComponent } from './feature/wishlist/wishlist/wishlist.componen
 import {MatBadgeModule} from "@angular/material/badge";
 import { StatisticsComponent } from './feature/apartments/statistics/statistics.component';
 import {NgxChartsModule} from "@swimlane/ngx-charts";
+import { ApartmentByOwnerComponent } from './feature/apartments/apartment-by-owner/apartment-by-owner.component';
 import { UserDetailsFormComponent } from './feature/users/user-details-form/user-details-form.component';
 import { HistoryComponent } from './feature/users/history/history.component';
 import { VerifyEmailComponent } from './feature/users/vreify-reset/verify-email.component';
@@ -68,6 +69,7 @@ import {MatPaginatorModule} from "@angular/material/paginator";
     DownloadComponent,
     WishlistComponent,
     StatisticsComponent,
+    ApartmentByOwnerComponent,
     UserDetailsFormComponent,
     HistoryComponent,
     VerifyEmailComponent,

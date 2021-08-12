@@ -29,6 +29,7 @@ export class ApartmentListComponent implements OnInit {
     neighbourhood: string = "";
     nrRooms: number = 0;
     owner: OwnerDetails = new class implements OwnerDetails {
+      id: number = 0;
       firstName: string = "";
       lastName: string = "";
       phoneNumber: string = "";
