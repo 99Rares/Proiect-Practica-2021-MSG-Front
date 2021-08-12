@@ -50,9 +50,9 @@ export class ApartmentListComponent implements OnInit {
   async ngOnInit(): Promise<void> {
 
     this.loadApartments();
-    await new Promise(f => setTimeout(f, 100));
+    await new Promise(f => setTimeout(f, 200));
     this.loadApartmentsCopy();
-    await new Promise(f => setTimeout(f, 100));
+    await new Promise(f => setTimeout(f, 200));
     this.setPageLength(this.copyapartments.length);
     //this.setPage();
     this.startSlice();
@@ -83,26 +83,31 @@ export class ApartmentListComponent implements OnInit {
     if(form.pret){
       this.copyapartments = this.apartments.filter(ap =>ap.price <= form.pret)
       this.updatePage();
+      this.startSlice();
     }
 
     if(form.tip == "inchiriere"){
       this.copyapartments = this.apartments.filter(ap => ap.transactionType == "inchiriere")
       this.updatePage();
+      this.startSlice();
     }
     else
       if(form.tip == "vanzare"){
         this.copyapartments = this.apartments.filter(ap => ap.transactionType == "vanzare")
         this.updatePage();
+        this.startSlice();
       }
 
     if(form.oras){
       this.copyapartments = this.apartments.filter(ap => ap.city === form.oras)
       this.updatePage();
+      this.startSlice();
     }
 
     if(form.cartier){
       this.copyapartments = this.apartments.filter(ap => ap.neighbourhood === form.cartier)
       this.updatePage();
+      this.startSlice();
     }
   }
 
@@ -111,45 +116,53 @@ export class ApartmentListComponent implements OnInit {
     if(form.pretsort == "descrescator"){
       this.copyapartments = this.copyapartments.sort((ap1,ap2) => 0 - (ap1.price > ap2.price ? 1 : -1) );
       this.updatePage();
+      this.startSlice();
     }
     else
       if(form.pretsort == "crescator"){
         this.copyapartments = this.copyapartments.sort((ap1,ap2) => 0 - (ap1.price > ap2.price ? -1 : 1));
         this.updatePage();
+        this.startSlice();
       }
 
 
       if(form.suprafata == "descrescator"){
         this.copyapartments = this.copyapartments.sort((ap1,ap2) => 0 - (ap1.surface > ap2.surface ? 1 : -1) );
         this.startSlice();
+        this.startSlice();
         if(form.pretsort == "descrescator"){
           this.copyapartments = this.copyapartments.sort((ap1,ap2) => 0 - (ap1.price > ap2.price ? 1 : -1) );
           this.updatePage();
+          this.startSlice();
         }
         else
         if(form.pretsort == "crescator"){
           this.copyapartments = this.copyapartments.sort((ap1,ap2) => 0 - (ap1.price > ap2.price ? -1 : 1));
           this.updatePage();
+          this.startSlice();
         }
       }
       else
       if(form.suprafata == "crescator"){
         this.copyapartments = this.copyapartments.sort((ap1,ap2) => 0 - (ap1.surface > ap2.surface ? -1 : 1));
         this.updatePage();
+        this.startSlice();
         if(form.pretsort == "descrescator"){
           this.copyapartments = this.copyapartments.sort((ap1,ap2) => 0 - (ap1.price > ap2.price ? 1 : -1) );
           this.updatePage();
+          this.startSlice();
         }
         else
         if(form.pretsort == "crescator"){
           this.copyapartments = this.copyapartments.sort((ap1,ap2) => 0 - (ap1.price > ap2.price ? -1 : 1));
           this.updatePage();
+          this.startSlice();
         }
       }
   }
 
   reload(){
-    this.ngOnInit()
+    window.location.reload();
   }
 
   loadWishlist() {
