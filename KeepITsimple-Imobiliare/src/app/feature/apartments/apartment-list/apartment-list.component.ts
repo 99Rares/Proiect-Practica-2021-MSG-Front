@@ -47,9 +47,13 @@ export class ApartmentListComponent implements OnInit {
   wishlist: ApartmentDetails [] = [];
 
 
-  ngOnInit(): void {
+  async ngOnInit(): Promise<void> {
+
     this.loadApartments();
+    await new Promise(f => setTimeout(f, 100));
     this.loadApartmentsCopy();
+    await new Promise(f => setTimeout(f, 100));
+    this.setPageLength(this.copyapartments.length);
     this.startSlice();
     this.loadWishlist();
     console.log(this.copyapartments.length);
@@ -105,12 +109,12 @@ export class ApartmentListComponent implements OnInit {
     console.log(form);
     if(form.pretsort == "descrescator"){
       this.copyapartments = this.copyapartments.sort((ap1,ap2) => 0 - (ap1.price > ap2.price ? 1 : -1) );
-      this.startSlice();
+      this.updatePage();
     }
     else
       if(form.pretsort == "crescator"){
         this.copyapartments = this.copyapartments.sort((ap1,ap2) => 0 - (ap1.price > ap2.price ? -1 : 1));
-        this.startSlice();
+        this.updatePage();
       }
 
 
@@ -119,26 +123,26 @@ export class ApartmentListComponent implements OnInit {
         this.startSlice();
         if(form.pretsort == "descrescator"){
           this.copyapartments = this.copyapartments.sort((ap1,ap2) => 0 - (ap1.price > ap2.price ? 1 : -1) );
-          this.startSlice();
+          this.updatePage();
         }
         else
         if(form.pretsort == "crescator"){
           this.copyapartments = this.copyapartments.sort((ap1,ap2) => 0 - (ap1.price > ap2.price ? -1 : 1));
-          this.startSlice();
+          this.updatePage();
         }
       }
       else
       if(form.suprafata == "crescator"){
         this.copyapartments = this.copyapartments.sort((ap1,ap2) => 0 - (ap1.surface > ap2.surface ? -1 : 1));
-        this.startSlice();
+        this.updatePage();
         if(form.pretsort == "descrescator"){
           this.copyapartments = this.copyapartments.sort((ap1,ap2) => 0 - (ap1.price > ap2.price ? 1 : -1) );
-          this.startSlice();
+          this.updatePage();
         }
         else
         if(form.pretsort == "crescator"){
           this.copyapartments = this.copyapartments.sort((ap1,ap2) => 0 - (ap1.price > ap2.price ? -1 : 1));
-          this.startSlice();
+          this.updatePage();
         }
       }
   }
@@ -163,7 +167,11 @@ export class ApartmentListComponent implements OnInit {
   //------------------------Paginator----------------------------------
 
   pageSize = 3;
-  pageLength = this.copyapartments.length;
+  pageLength = 0;
+
+  setPageLength(index: number){
+    this.pageLength = index;
+  }
 
   updatePage(){
     this.currPage = this.copyapartments;
