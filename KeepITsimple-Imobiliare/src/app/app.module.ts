@@ -49,6 +49,7 @@ import { VerifyResetFormComponent } from './feature/users/verify-reset-form/veri
 import { PasswordResetFormComponent } from './feature/users/password-reset-form/password-reset-form.component';
 import { PasswordResetComponent } from './feature/users/password-reset/password-reset.component';
 import { UserDetailsComponent } from './feature/users/user-details/user-details.component';
+import {MatPaginatorModule} from "@angular/material/paginator";
 
 @NgModule({
   declarations: [
@@ -104,7 +105,8 @@ import { UserDetailsComponent } from './feature/users/user-details/user-details.
         MatTabsModule,
         MatBadgeModule,
         NgxChartsModule,
-        MatSelectModule
+        MatSelectModule,
+        MatPaginatorModule
     ],
   providers: [BackendService,
     authInterceptorProviders],
