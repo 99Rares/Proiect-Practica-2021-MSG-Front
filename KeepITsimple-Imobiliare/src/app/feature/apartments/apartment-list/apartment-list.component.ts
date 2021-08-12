@@ -54,6 +54,7 @@ export class ApartmentListComponent implements OnInit {
     this.loadApartmentsCopy();
     await new Promise(f => setTimeout(f, 100));
     this.setPageLength(this.copyapartments.length);
+    //this.setPage();
     this.startSlice();
     this.loadWishlist();
     console.log(this.copyapartments.length);
@@ -165,6 +166,12 @@ export class ApartmentListComponent implements OnInit {
   }
 
   //------------------------Paginator----------------------------------
+
+  //@ViewChild(MatPaginator) paginator: MatPaginator;
+
+  // setPage() {
+  //   this.paginator.length = this.pageSize;
+  // }
 
   pageSize = 3;
   pageLength = 0;
