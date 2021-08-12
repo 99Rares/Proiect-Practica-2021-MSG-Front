@@ -32,7 +32,6 @@ export class DownloadComponent implements OnInit {
 
   toWishlist(id: number) {
     this.wishlistService.toWishlist(id);
-
   }
 
 }

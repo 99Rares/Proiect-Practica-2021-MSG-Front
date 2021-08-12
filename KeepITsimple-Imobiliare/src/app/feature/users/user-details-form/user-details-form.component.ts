@@ -45,14 +45,12 @@ export class UserDetailsFormComponent implements OnInit {
   }
 
   onSubmit() {
-    console.log(this.userDetailsForm.value);
-    console.log('before emit')
+    //console.log(this.userDetailsForm.value);
     this.user.firstName = this.userDetailsForm.value.firstName;
     this.user.lastName = this.userDetailsForm.value.lastName;
     //this.user.email =this.userDetailsForm.value.email;
     this.user.id= this.tokenStorageService.getUserId();
     this.submitForm.emit(this.user);
-    console.log('after emit')
   }
 
   getFullName() {
