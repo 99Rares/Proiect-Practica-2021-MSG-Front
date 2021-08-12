@@ -1,4 +1,4 @@
-import { Injectable } from '@angular/core';
+import {Injectable} from '@angular/core';
 import {BackendService} from "../../backend/backend.service";
 import {LongUser, ShortUser} from "./model/users.data";
 import {Observable} from "rxjs";
@@ -10,8 +10,14 @@ export class UserService {
 
   url = 'http://localhost:8080/api/users/login';
   urlRegister = 'http://localhost:8080/api/users/register'
+  resetEndpoint = 'http://localhost:8080/api/users/reset'
+  resetPasswordEndpoint='http://localhost:8080/api/users/reset/'
+  getUserDetailsEndpoint = 'http://localhost:8080/api/users'
+  updateUserDetailsEndpoint ='http://localhost:8080/api/users/updateUserDetails'
 
-  constructor(private service: BackendService) {}
+
+  constructor(private service: BackendService) {
+  }
 
   login(user: ShortUser): Observable<LongUser> {
     return this.service.post(this.url, {
@@ -20,14 +26,35 @@ export class UserService {
     })
   }
 
-  //register care primeste user cu toate field urile obs void
-  register(user: LongUser): Observable<void>{
+  reset(email: string): Observable<void> {
+    console.log(`${this.resetEndpoint}/${email}`)
+    return this.service.post(`${this.resetEndpoint}`,email);
+  }
+  //resetPasswordEndpoint='http://localhost:8080/api/users/reset/{code}/pass'
+  resetPassword(password:string,code:string|null):Observable<void>{
+    console.log(`${this.resetPasswordEndpoint}${code}/pass`)
+    return this.service.post(`${this.resetPasswordEndpoint}${code}/pass`,password)
+  }
 
-    return this.service.post(this.urlRegister,{
+  //register care primeste user cu toate field urile obs void
+  register(user: LongUser): Observable<void> {
+
+    return this.service.post(this.urlRegister, {
       firstName: user.firstName,
       lastName: user.lastName,
       email: user.email,
       password: user.password
     })
   }
+
+  getUserDetails(id: number): Observable<LongUser> {
+    return this.service.get(`${this.getUserDetailsEndpoint}/${id}`);
+  }
+
+  updateUser(user: LongUser): Observable<LongUser> {
+    // console.log(this.updateUserDetailsEndpoint);
+    // console.log(user);
+    return this.service.put(`${this.updateUserDetailsEndpoint}`, user);
+  }
+
 }

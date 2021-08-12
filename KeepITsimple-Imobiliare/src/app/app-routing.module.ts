@@ -8,6 +8,11 @@ import {ApartmentPageComponent} from "./feature/apartments/apartment-page/apartm
 import {DownloadComponent} from "./feature/apartments/download/download.component";
 import {StatisticsComponent} from "./feature/apartments/statistics/statistics.component";
 import {ApartmentByOwnerComponent} from "./feature/apartments/apartment-by-owner/apartment-by-owner.component";
+import {UserDetailsFormComponent} from "./feature/users/user-details-form/user-details-form.component";
+import {HistoryComponent} from "./feature/users/history/history.component";
+import {VerifyEmailComponent} from "./feature/users/vreify-reset/verify-email.component";
+import {PasswordResetComponent} from "./feature/users/password-reset/password-reset.component";
+import {UserDetailsComponent} from "./feature/users/user-details/user-details.component";
 
 const routes: Routes = [
   {path: '', component: ApartmentListComponent},
@@ -19,6 +24,10 @@ const routes: Routes = [
   {path: 'owners/:ownerId', component: ApartmentByOwnerComponent},
   {path: 'wishlist', component: DownloadComponent},
   {path: 'statistics', component: StatisticsComponent},
+  {path: 'userDetails', component: UserDetailsComponent},
+  {path: 'userHistory', component: HistoryComponent},
+  {path: 'reset', component: VerifyEmailComponent},
+  {path: 'password-reset', component: PasswordResetComponent},
   {path: '**', redirectTo: ''}
 ];
 

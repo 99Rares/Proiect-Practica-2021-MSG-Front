@@ -13,3 +13,9 @@ export interface LongUser{
   token: string;
   fullName: string;
 }
+
+// export interface UserDetailData{
+//   firstName: string;
+//   lastName: string;
+//   email: string;
+// }

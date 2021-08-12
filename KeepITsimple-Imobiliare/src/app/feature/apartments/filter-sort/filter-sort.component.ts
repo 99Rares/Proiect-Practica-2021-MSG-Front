@@ -50,7 +50,7 @@ export class FilterSortComponent implements OnInit {
   selectedOras: String = "--Alege orasul--";
 
   Orase: Array<any> = [
-    { name: 'Cluj', cartiere: [ {name: 'Manastur'},
+    { name: 'Cluj-Napoca', cartiere: [ {name: 'Manastur'},
         {name: 'Marasti'},{name: 'Intre Lacuri'},{name: 'Zorilor'}] },
     { name: 'Brasov', cartiere: [ {name: 'Astra'}, {name: 'Valea Cetatii'} ] },
     { name: 'Sibiu', cartiere: [ {name: 'Valea Aurie'} ] },

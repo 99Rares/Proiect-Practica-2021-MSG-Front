@@ -30,18 +30,17 @@ export class ApartmentService {
     return this.service.get(`${this.api}/${this.apartmentsEndpoint}/${id}`);
   }
 
+  download(id: number): Observable<Blob> {
+    return this.http.get(`${this.api}/${this.wishlistEndpoint}/${id}`, {
+      responseType: 'blob'
+    });
+  }
+
   getOwner(id: number): Observable<OwnerDetails> {
     return this.service.get(`${this.api}/${this.ownersEndpoint}/${id}`);
   }
 
   getNumberOfApartmentsFromASpecificOwnerInWishlist(id: number) : Observable<number> {
     return this.service.get(`${this.api}/${this.wishlistGetByOwnerEndpoint}/${id}`);
-  }
-
-  download(email: string): Observable<Blob> {
-    console.log(email)
-    return this.http.get(`${this.api}/${this.wishlistEndpoint}/${email}`, {
-      responseType: 'blob'
-    });
   }
 }

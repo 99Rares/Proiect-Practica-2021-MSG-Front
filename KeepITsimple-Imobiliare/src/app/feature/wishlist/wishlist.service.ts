@@ -24,6 +24,7 @@ export class WishlistService {
   statistics1Endpoint = 'api/wishlist/statistics';
   ///api/wishlist/user/{userId}/apartment/{apId}
   wishlist: BehaviorSubject<ApartmentDetails []> = new BehaviorSubject<ApartmentDetails []>([]);
+  history: BehaviorSubject<ApartmentDetails []> = new BehaviorSubject<ApartmentDetails []>([]);
 
   getAllWishlists(userId: number) {
     this.backendService.get(`${this.url}/${userId}`).subscribe(data => {
@@ -59,6 +60,11 @@ export class WishlistService {
           this.loadWishlist());
       }
     }
+  }
+  toHistory(){
+    var myhistory = JSON.parse(<string>sessionStorage.getItem("my_history"));
+    //get them back
+    this.history.next(myhistory);
   }
 
   isFavourite(apartmentId: number) {

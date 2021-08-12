@@ -25,6 +25,7 @@ export class HeaderComponent implements OnInit {
 
   logout() {
     this.tokenStorageService.signOut();
+    window.location.href="/" //to get the browser to navigate to localhost:4200 when clicking on logout
     this._snackBar.open('Logged Out successfully!', 'Ok', {
       duration: 3000
     });
@@ -45,4 +46,9 @@ export class HeaderComponent implements OnInit {
   goToStatistics(){
     this.router.navigate(['/statistics']);
   }
+
+  goToUserDetails(){
+    this.router.navigate(['/userDetails']);
+  }
+
 }
