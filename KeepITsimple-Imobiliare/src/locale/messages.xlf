@@ -281,6 +281,276 @@
         <note priority="1" from="description">Description of percentage</note>
         <note priority="1" from="meaning">PercentageDescription</note>
       </trans-unit>
+      <trans-unit id="toolbarH" datatype="html">
+        <source>Ultimele 4 locuinte vizitate</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/feature/users/history/history.component.html</context>
+          <context context-type="linenumber">1</context>
+        </context-group>
+        <note priority="1" from="description">Toolbar for history</note>
+        <note priority="1" from="meaning">ToolbarHistory</note>
+      </trans-unit>
+      <trans-unit id="newPassword" datatype="html">
+        <source>New Password</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/feature/users/password-reset-form/password-reset-form.component.html</context>
+          <context context-type="linenumber">5</context>
+        </context-group>
+        <note priority="1" from="description">Desc for new password</note>
+        <note priority="1" from="meaning">NewPassword</note>
+      </trans-unit>
+      <trans-unit id="newPasswordConfirm" datatype="html">
+        <source>Confirm New Password</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/feature/users/password-reset-form/password-reset-form.component.html</context>
+          <context context-type="linenumber">11</context>
+        </context-group>
+        <note priority="1" from="description">Confirm new password</note>
+        <note priority="1" from="meaning">ConfirmNewPassword</note>
+      </trans-unit>
+      <trans-unit id="passwordsNotMatch" datatype="html">
+        <source> Passwords do not match! </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/feature/users/password-reset-form/password-reset-form.component.html</context>
+          <context context-type="linenumber">18,19</context>
+        </context-group>
+        <note priority="1" from="description">Password do not match Message</note>
+        <note priority="1" from="meaning">PasswordsNotMatch</note>
+      </trans-unit>
+      <trans-unit id="updatePassButton" datatype="html">
+        <source>Update Password</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/feature/users/password-reset-form/password-reset-form.component.html</context>
+          <context context-type="linenumber">22</context>
+        </context-group>
+        <note priority="1" from="description">Button for password update</note>
+        <note priority="1" from="meaning">UpdatePassButton</note>
+      </trans-unit>
+      <trans-unit id="firstname" datatype="html">
+        <source>Firstname</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/feature/users/register-form/register-form.component.html</context>
+          <context context-type="linenumber">5</context>
+        </context-group>
+        <note priority="1" from="description">Desc for firstname</note>
+        <note priority="1" from="meaning">Firstname</note>
+      </trans-unit>
+      <trans-unit id="lastname" datatype="html">
+        <source>Lastname</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/feature/users/register-form/register-form.component.html</context>
+          <context context-type="linenumber">11</context>
+        </context-group>
+        <note priority="1" from="description">Desc for lastname</note>
+        <note priority="1" from="meaning">Lastname</note>
+      </trans-unit>
+      <trans-unit id="email" datatype="html">
+        <source>Email</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/feature/users/register-form/register-form.component.html</context>
+          <context context-type="linenumber">17</context>
+        </context-group>
+        <note priority="1" from="description">Desc for email</note>
+        <note priority="1" from="meaning">Email</note>
+      </trans-unit>
+      <trans-unit id="passwordReg" datatype="html">
+        <source>Password</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/feature/users/register-form/register-form.component.html</context>
+          <context context-type="linenumber">23</context>
+        </context-group>
+        <note priority="1" from="description">Desc for passwordReg</note>
+        <note priority="1" from="meaning">PasswordReg</note>
+      </trans-unit>
+      <trans-unit id="passwordRegConfirm" datatype="html">
+        <source>Confirm Password</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/feature/users/register-form/register-form.component.html</context>
+          <context context-type="linenumber">29</context>
+        </context-group>
+        <note priority="1" from="description">Desc for passwordRegConfirm</note>
+        <note priority="1" from="meaning">ConfirmPasswordReg</note>
+      </trans-unit>
+      <trans-unit id="passwordsNotMatchReg" datatype="html">
+        <source> Passwords do not match! </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/feature/users/register-form/register-form.component.html</context>
+          <context context-type="linenumber">34,35</context>
+        </context-group>
+        <note priority="1" from="description">Password do not match MessageReg</note>
+        <note priority="1" from="meaning">PasswordsNotMatchReg</note>
+      </trans-unit>
+      <trans-unit id="registerButton" datatype="html">
+        <source>Register</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/feature/users/register-form/register-form.component.html</context>
+          <context context-type="linenumber">38</context>
+        </context-group>
+        <note priority="1" from="description">Button for register</note>
+        <note priority="1" from="meaning">RegisterButton</note>
+      </trans-unit>
+      <trans-unit id="redirectToLogin" datatype="html">
+        <source>Ai deja cont? Autentifica-te!</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/feature/users/register-form/register-form.component.html</context>
+          <context context-type="linenumber">42</context>
+        </context-group>
+        <note priority="1" from="description">Redirect user to login</note>
+        <note priority="1" from="meaning">redirectToLogin</note>
+      </trans-unit>
+      <trans-unit id="userWelcome" datatype="html">
+        <source>Bun venit, <x id="INTERPOLATION" equiv-text="{{getFullName()}}"/>! Aici iti poti modifica datele contului!</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/feature/users/user-details-form/user-details-form.component.html</context>
+          <context context-type="linenumber">8</context>
+        </context-group>
+        <note priority="1" from="description">Message to welcome user</note>
+        <note priority="1" from="meaning">WelcomeUser</note>
+      </trans-unit>
+      <trans-unit id="firstnameD" datatype="html">
+        <source>Firstname</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/feature/users/user-details-form/user-details-form.component.html</context>
+          <context context-type="linenumber">12</context>
+        </context-group>
+        <note priority="1" from="description">Desc for firstnameD</note>
+        <note priority="1" from="meaning">FirstnameD</note>
+      </trans-unit>
+      <trans-unit id="lastnameD" datatype="html">
+        <source>Lastname</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/feature/users/user-details-form/user-details-form.component.html</context>
+          <context context-type="linenumber">18</context>
+        </context-group>
+        <note priority="1" from="description">Desc for lastnameD</note>
+        <note priority="1" from="meaning">LastnameD</note>
+      </trans-unit>
+      <trans-unit id="emailD" datatype="html">
+        <source>Email</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/feature/users/user-details-form/user-details-form.component.html</context>
+          <context context-type="linenumber">24</context>
+        </context-group>
+        <note priority="1" from="description">Desc for emailD</note>
+        <note priority="1" from="meaning">EmailD</note>
+      </trans-unit>
+      <trans-unit id="detailsUpdateButton" datatype="html">
+        <source>Update Details</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/feature/users/user-details-form/user-details-form.component.html</context>
+          <context context-type="linenumber">30</context>
+        </context-group>
+        <note priority="1" from="description">Button for detailsUpdate</note>
+        <note priority="1" from="meaning">DetailsButtonUpdate</note>
+      </trans-unit>
+      <trans-unit id="username" datatype="html">
+        <source>Username</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/feature/users/user-form/user-form.component.html</context>
+          <context context-type="linenumber">5</context>
+        </context-group>
+        <note priority="1" from="description">Desc for username</note>
+        <note priority="1" from="meaning">Username</note>
+      </trans-unit>
+      <trans-unit id="password" datatype="html">
+        <source>Password</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/feature/users/user-form/user-form.component.html</context>
+          <context context-type="linenumber">11</context>
+        </context-group>
+        <note priority="1" from="description">Desc for password</note>
+        <note priority="1" from="meaning">Password</note>
+      </trans-unit>
+      <trans-unit id="loginButton" datatype="html">
+        <source>Login</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/feature/users/user-form/user-form.component.html</context>
+          <context context-type="linenumber">16</context>
+        </context-group>
+        <note priority="1" from="description">Button for Login</note>
+        <note priority="1" from="meaning">LoginButton</note>
+      </trans-unit>
+      <trans-unit id="redirectToRegister" datatype="html">
+        <source>Nu ai cont? Inregistreaza-te!</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/feature/users/user-form/user-form.component.html</context>
+          <context context-type="linenumber">20</context>
+        </context-group>
+        <note priority="1" from="description">Redirect user to register</note>
+        <note priority="1" from="meaning">redirectToRegister</note>
+      </trans-unit>
+      <trans-unit id="changePass" datatype="html">
+        <source>Ai uitat parola?</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/feature/users/user-form/user-form.component.html</context>
+          <context context-type="linenumber">24</context>
+        </context-group>
+        <note priority="1" from="description">Change password</note>
+        <note priority="1" from="meaning">changePass</note>
+      </trans-unit>
+      <trans-unit id="congratsVerif" datatype="html">
+        <source>Congratulations, your account has been verified.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/feature/users/verified/verified/verified.component.html</context>
+          <context context-type="linenumber">2</context>
+        </context-group>
+        <note priority="1" from="description">Congrats Msg for verification</note>
+        <note priority="1" from="meaning">CongratsVerification</note>
+      </trans-unit>
+      <trans-unit id="loginButtonVerif" datatype="html">
+        <source>Click here to Login</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/feature/users/verified/verified/verified.component.html</context>
+          <context context-type="linenumber">3</context>
+        </context-group>
+        <note priority="1" from="description">Button for login after verif</note>
+        <note priority="1" from="meaning">loginButtonVerif</note>
+      </trans-unit>
+      <trans-unit id="failedVerif" datatype="html">
+        <source>Sorry, we could not verify account. It maybe already verified, or verification code is incorrect.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/feature/users/verified/verified/verified.component.html</context>
+          <context context-type="linenumber">6,7</context>
+        </context-group>
+        <note priority="1" from="description">Fail Msg for verification</note>
+        <note priority="1" from="meaning">FailedVerification</note>
+      </trans-unit>
+      <trans-unit id="loginButtonVerifFail" datatype="html">
+        <source>Click here to Login</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/feature/users/verified/verified/verified.component.html</context>
+          <context context-type="linenumber">8</context>
+        </context-group>
+        <note priority="1" from="description">Button for login after verif fail</note>
+        <note priority="1" from="meaning">loginButtonVerifFail</note>
+      </trans-unit>
+      <trans-unit id="completeEmail" datatype="html">
+        <source>Completează cu adresa de email asociată contului tău.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/feature/users/verify-reset-form/verify-reset-form.component.html</context>
+          <context context-type="linenumber">2</context>
+        </context-group>
+        <note priority="1" from="description">Complete with your email</note>
+        <note priority="1" from="meaning">CompleteEmail</note>
+      </trans-unit>
+      <trans-unit id="emailVerifReset" datatype="html">
+        <source>Email</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/feature/users/verify-reset-form/verify-reset-form.component.html</context>
+          <context context-type="linenumber">8</context>
+        </context-group>
+        <note priority="1" from="description">Email verif reset page</note>
+        <note priority="1" from="meaning">EmailVerifReset</note>
+      </trans-unit>
+      <trans-unit id="submitbutton" datatype="html">
+        <source>Submit</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/feature/users/verify-reset-form/verify-reset-form.component.html</context>
+          <context context-type="linenumber">13</context>
+        </context-group>
+        <note priority="1" from="description">Button for submit</note>
+        <note priority="1" from="meaning">submitbutton</note>
+      </trans-unit>
     </body>
   </file>
 </xliff>

@@ -2,26 +2,26 @@
   <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
     <div class="row">
       <mat-form-field>
-        <mat-label>Username</mat-label>
-        <input matInput formControlName="username">
+        <mat-label i18n="Username|Desc for username@@username">Username</mat-label>
+        <input matInput formControlName="username" i18n="UsernameI|Desc for usernameI@@usernameI">
       </mat-form-field>
     </div>
     <div class="row">
       <mat-form-field>
-        <mat-label>Password</mat-label>
-        <input matInput formControlName="password" type="password">
+        <mat-label i18n="Password|Desc for password@@password">Password</mat-label>
+        <input matInput formControlName="password" type="password" i18n="PasswordI|Desc for passwordI@@passwordI">
       </mat-form-field>
     </div>
     <div class="row">
-      <button mat-raised-button color="primary" type = "submit" [disabled]="!isValid()" class="login-button">Login</button>
+      <button mat-raised-button color="primary" type = "submit" [disabled]="!isValid()" class="login-button" i18n="LoginButton|Button for Login@@loginButton">Login</button>
     </div>
     <br>
     <div class="row">
-        <a class="register-link" [routerLink]="['/register']">Nu ai cont? Inregistreaza-te!</a>
+        <a class="register-link" [routerLink]="['/register']" i18n="redirectToRegister|Redirect user to register@@redirectToRegister">Nu ai cont? Inregistreaza-te!</a>
     </div>
     <br>
     <div class="row">
-      <a class="register-link" [routerLink]="['/reset']">Ai uitat parola?</a>
+      <a class="register-link" [routerLink]="['/reset']" i18n="changePass|Change password@@changePass">Ai uitat parola?</a>
     </div>
 <!--    forgot password-->
   </form>

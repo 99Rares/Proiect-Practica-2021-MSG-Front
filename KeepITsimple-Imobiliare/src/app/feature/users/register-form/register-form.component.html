@@ -2,47 +2,45 @@
   <form [formGroup]="registerForm" (ngSubmit)="onSubmit()" appPasswordsMatch>
     <div class="row">
       <mat-form-field>
-        <mat-label>Firstname</mat-label>
+        <mat-label i18n="Firstname|Desc for firstname@@firstname">Firstname</mat-label>
         <input matInput formControlName="firstName">
       </mat-form-field>
     </div>
     <div class="row">
       <mat-form-field>
-        <mat-label>Lastname</mat-label>
+        <mat-label i18n="Lastname|Desc for lastname@@lastname">Lastname</mat-label>
         <input matInput formControlName="lastName">
       </mat-form-field>
     </div>
     <div class="row">
       <mat-form-field>
-        <mat-label>Email</mat-label>
+        <mat-label i18n="Email|Desc for email@@email">Email</mat-label>
         <input matInput formControlName="email">
       </mat-form-field>
     </div>
     <div class="row">
       <mat-form-field>
-        <mat-label>Password</mat-label>
+        <mat-label i18n="PasswordReg|Desc for passwordReg@@passwordReg">Password</mat-label>
         <input matInput formControlName="password" type="password">
       </mat-form-field>
     </div>
     <div class="row">
       <mat-form-field>
-        <mat-label>Confirm Password</mat-label>
+        <mat-label i18n="ConfirmPasswordReg|Desc for passwordRegConfirm@@passwordRegConfirm">Confirm Password</mat-label>
         <input matInput formControlName="passwordConfirm" type="password">
       </mat-form-field>
     </div>
-    <div *ngIf="registerForm.errors?.passwordsMustMatchValidator && (registerForm.touched || registerForm.dirty)" class="passwords-do-not-match-error-message">
+    <div *ngIf="registerForm.errors?.passwordsMustMatchValidator && (registerForm.touched || registerForm.dirty)" class="passwords-do-not-match-error-message" i18n="PasswordsNotMatchReg|Password do not match MessageReg@@passwordsNotMatchReg">
       Passwords do not match!
     </div>
     <br>
     <div class="row">
-      <button mat-raised-button color="primary" type = "submit" class="register-button">Register</button>
+      <button mat-raised-button color="primary" type = "submit" class="register-button" i18n="RegisterButton|Button for register@@registerButton">Register</button>
     </div>
     <br>
     <div class="row">
-      <a class="login-link" [routerLink]="['/login']">Ai deja cont? Autentifica-te!</a>
+      <a class="login-link" [routerLink]="['/login']" i18n="redirectToLogin|Redirect user to login@@redirectToLogin">Ai deja cont? Autentifica-te!</a>
     </div>
-
-    <!--    buton de login cu routing sa ma redirect pe comp de login-->
 
   </form>
 </div>
