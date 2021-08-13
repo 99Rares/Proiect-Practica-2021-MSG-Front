@@ -33,7 +33,7 @@
         <source>Locuinte</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/feature/apartments/apartment-list/apartment-list.component.html</context>
-          <context context-type="linenumber">1,2</context>
+          <context context-type="linenumber">1</context>
         </context-group>
         <note priority="1" from="description">Toolbar for apartments</note>
         <note priority="1" from="meaning">Toolbar Apartments</note>
@@ -42,7 +42,7 @@
         <source>Refresh</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/feature/apartments/apartment-list/apartment-list.component.html</context>
-          <context context-type="linenumber">3,4</context>
+          <context context-type="linenumber">3</context>
         </context-group>
         <note priority="1" from="description">Button for refresh</note>
         <note priority="1" from="meaning">Refresh button</note>
@@ -108,6 +108,27 @@
           <context context-type="linenumber">20</context>
         </context-group>
       </trans-unit>
+      <trans-unit id="tab2" datatype="html">
+        <source>Caracteristici</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/feature/apartments/apartment-page/apartment-page.component.ts</context>
+          <context context-type="linenumber">21</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="tab3" datatype="html">
+        <source>Pret</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/feature/apartments/apartment-page/apartment-page.component.ts</context>
+          <context context-type="linenumber">22</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="tab4" datatype="html">
+        <source>Contact proprietar</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/feature/apartments/apartment-page/apartment-page.component.ts</context>
+          <context context-type="linenumber">23</context>
+        </context-group>
+      </trans-unit>
       <trans-unit id="toolbarApartmentsD" datatype="html">
         <source>Locuinte</source>
         <context-group purpose="location">
@@ -116,6 +137,13 @@
         </context-group>
         <note priority="1" from="description">Toolbar for apartmentsD</note>
         <note priority="1" from="meaning">Toolbar ApartmentsD</note>
+      </trans-unit>
+      <trans-unit id="tooltipDownload" datatype="html">
+        <source>Download PDF with Wishlist</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/feature/apartments/download/download.component.ts</context>
+          <context context-type="linenumber">19</context>
+        </context-group>
       </trans-unit>
       <trans-unit id="filterDescription" datatype="html">
         <source> Filtreaza rezultatele dupa optiuni </source>
@@ -295,6 +323,34 @@
           <context context-type="linenumber">17</context>
         </context-group>
       </trans-unit>
+      <trans-unit id="tooltipLogin" datatype="html">
+        <source>Log in</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/feature/header/header.component.ts</context>
+          <context context-type="linenumber">18</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="tooltipGotoStatistics" datatype="html">
+        <source>Go to statistics</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/feature/header/header.component.ts</context>
+          <context context-type="linenumber">19</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="tooltipGotoWishlist" datatype="html">
+        <source>Go to wishlist</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/feature/header/header.component.ts</context>
+          <context context-type="linenumber">20</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="tooltipLogout" datatype="html">
+        <source>Log out</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/feature/header/header.component.ts</context>
+          <context context-type="linenumber">21</context>
+        </context-group>
+      </trans-unit>
       <trans-unit id="toolbarH" datatype="html">
         <source>Ultimele 4 locuinte vizitate</source>
         <context-group purpose="location">
@@ -463,6 +519,13 @@
         </context-group>
         <note priority="1" from="description">Button for detailsUpdate</note>
         <note priority="1" from="meaning">DetailsButtonUpdate</note>
+      </trans-unit>
+      <trans-unit id="tooltipHistory" datatype="html">
+        <source>History</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/feature/users/user-details-form/user-details-form.component.ts</context>
+          <context context-type="linenumber">30</context>
+        </context-group>
       </trans-unit>
       <trans-unit id="username" datatype="html">
         <source>Username</source>

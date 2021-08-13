@@ -27,6 +27,8 @@ export class UserDetailsFormComponent implements OnInit {
   };
   constructor(private tokenStorageService: TokenStorageService, private router: Router, private service: UserService) { }
 
+  tooltipHistory: string = $localize`:@@tooltipHistory:History`;
+
   userDetailsForm = new FormGroup({
       firstName: new FormControl('', [Validators.required]),
       lastName: new FormControl('', [Validators.required]),

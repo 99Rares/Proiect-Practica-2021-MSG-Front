@@ -636,6 +636,78 @@
           <context context-type="linenumber">17</context>
         </context-group>
       </trans-unit>
+      <trans-unit id="tooltipLogin" datatype="html">
+        <source>Log in</source>
+        <target>Einloggen</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/feature/header/header.component.ts</context>
+          <context context-type="linenumber">18</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="tooltipGotoStatistics" datatype="html">
+        <source>Go to statistics</source>
+        <target>Zur Statistik gehen</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/feature/header/header.component.ts</context>
+          <context context-type="linenumber">19</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="tooltipGotoWishlist" datatype="html">
+        <source>Go to wishlist</source>
+        <target>Zur Wunschliste gehen</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/feature/header/header.component.ts</context>
+          <context context-type="linenumber">20</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="tooltipLogout" datatype="html">
+        <source>Log out</source>
+        <target>Ausloggen</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/feature/header/header.component.ts</context>
+          <context context-type="linenumber">21</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="tooltipHistory" datatype="html">
+        <source>History</source>
+        <target>Geschichte</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/feature/users/user-details-form/user-details-form.component.ts</context>
+          <context context-type="linenumber">30</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="tooltipDownload" datatype="html">
+        <source>Download PDF with Wishlist</source>
+        <target>PDF mit Wunschliste herunterladen</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/feature/apartments/download/download.component.ts</context>
+          <context context-type="linenumber">19</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="tab2" datatype="html">
+        <source>Caracteristici</source>
+        <target>Eigenschaften</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/feature/apartments/apartment-page/apartment-page.component.ts</context>
+          <context context-type="linenumber">21</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="tab3" datatype="html">
+        <source>Pret</source>
+        <target>Preis</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/feature/apartments/apartment-page/apartment-page.component.ts</context>
+          <context context-type="linenumber">22</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="tab4" datatype="html">
+        <source>Contact proprietar</source>
+        <target>Eigentümer Kontakt</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/feature/apartments/apartment-page/apartment-page.component.ts</context>
+          <context context-type="linenumber">23</context>
+        </context-group>
+      </trans-unit>
     </body>
   </file>
 </xliff>

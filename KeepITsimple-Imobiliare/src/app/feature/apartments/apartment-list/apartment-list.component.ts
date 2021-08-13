@@ -48,13 +48,8 @@ export class ApartmentListComponent implements OnInit {
   wishlist: ApartmentDetails [] = [];
 
 
-  ngOnInit() { //: Promise<void> {
-
+  ngOnInit() {
     this.loadApartments();
-    //await new Promise(f => setTimeout(f, 500));
-    //this.loadApartmentsCopy();
-    //await new Promise(f => setTimeout(f, 500));
-    //console.log(this.copyapartments.length);
   }
 
 

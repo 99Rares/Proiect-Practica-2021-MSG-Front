@@ -15,6 +15,10 @@ export class HeaderComponent implements OnInit {
   }
   count:number=0;
   tooltip1: string = $localize`:@@tooltip1:Manage Account Details`;
+  tooltipLogin: string = $localize`:@@tooltipLogin:Log in`;
+  tooltipGotoStatistics: string = $localize`:@@tooltipGotoStatistics:Go to statistics`;
+  tooltipGotoWishlist: string = $localize`:@@tooltipGotoWishlist:Go to wishlist`;
+  tooltipLogout: string = $localize`:@@tooltipLogout:Log out`;
 
   ngOnInit(): void {
     this.wishlistService.wishlist.subscribe(data=>this.count=data.length)
