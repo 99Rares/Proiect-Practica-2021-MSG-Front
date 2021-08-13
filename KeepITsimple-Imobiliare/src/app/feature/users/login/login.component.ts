@@ -4,6 +4,7 @@ import {UserService} from '../user.service';
 import {Router} from '@angular/router';
 import {MatSnackBar} from '@angular/material/snack-bar';
 import {TokenStorageService} from "../../services/token-storage.service";
+import '@angular/localize/init';
 
 @Component({
   selector: 'app-login',
@@ -29,13 +30,14 @@ export class LoginComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  msg: string = $localize`:@@successfulLogin:Logged in successfully!`;
   login(user: ShortUser) {
     this.service.login(user)
       .subscribe((user: LongUser) => {
         this.storageService.saveToken(user.token)
         this.storageService.saveUser(user)
         this.router.navigate([''])
-        this._snackBar.open('Logged in successfully!', 'Ok', {
+        this._snackBar.open(this.msg, 'Ok', {
           duration: 5000,panelClass: 'snackbar-success'
         });
 

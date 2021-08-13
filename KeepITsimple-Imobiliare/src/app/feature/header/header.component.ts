@@ -14,6 +14,7 @@ export class HeaderComponent implements OnInit {
   constructor(private tokenStorageService: TokenStorageService, private router: Router, private _snackBar: MatSnackBar,private wishlistService:WishlistService) {
   }
   count:number=0;
+  tooltip1: string = $localize`:@@tooltip1:Manage Account Details`;
 
   ngOnInit(): void {
     this.wishlistService.wishlist.subscribe(data=>this.count=data.length)

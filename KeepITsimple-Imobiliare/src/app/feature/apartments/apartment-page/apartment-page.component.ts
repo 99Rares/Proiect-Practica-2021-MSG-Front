@@ -17,6 +17,7 @@ export class ApartmentPageComponent implements OnInit {
   history: ApartmentDetails[] = [];
 
   getStatistics1Data: string = '';
+  tab1 = $localize`:@@tab1:Descriere apartament`;
 
   constructor(private route: ActivatedRoute,
               private apartmentService: ApartmentService,
