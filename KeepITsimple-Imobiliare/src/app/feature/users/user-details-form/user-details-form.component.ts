@@ -1,13 +1,9 @@
-import {Component, EventEmitter, Inject, Injectable, OnInit, Output} from '@angular/core';
+import {Component, EventEmitter, OnInit, Output} from '@angular/core';
 import {TokenStorageService} from "../../services/token-storage.service";
 import {Router} from "@angular/router";
 import {FormControl, FormGroup, Validators} from "@angular/forms";
 import {UserService} from "../user.service";
-import {MAT_DIALOG_DATA} from "@angular/material/dialog";
-import {matFormFieldAnimations} from "@angular/material/form-field";
 import {LongUser} from "../model/users.data";
-import {MatSnackBar} from "@angular/material/snack-bar";
-import {UserDetailsComponent} from "../user-details/user-details.component";
 
 @Component({
   selector: 'app-user-details-form',
@@ -27,6 +23,8 @@ export class UserDetailsFormComponent implements OnInit {
   };
   constructor(private tokenStorageService: TokenStorageService, private router: Router, private service: UserService) { }
 
+  tooltipHistory: string = $localize`:@@tooltipHistory:History`;
+
   userDetailsForm = new FormGroup({
       firstName: new FormControl('', [Validators.required]),
       lastName: new FormControl('', [Validators.required]),
@@ -35,7 +33,6 @@ export class UserDetailsFormComponent implements OnInit {
 
 
   ngOnInit(): void {
-    //console.log(this.tokenStorageService.getUserId());
     this.service.getUserDetails(this.tokenStorageService.getUserId()).subscribe((result) => {
       this.userDetailsForm.patchValue(result);})
   }
@@ -45,10 +42,8 @@ export class UserDetailsFormComponent implements OnInit {
   }
 
   onSubmit() {
-    //console.log(this.userDetailsForm.value);
     this.user.firstName = this.userDetailsForm.value.firstName;
     this.user.lastName = this.userDetailsForm.value.lastName;
-    //this.user.email =this.userDetailsForm.value.email;
     this.user.id= this.tokenStorageService.getUserId();
     this.submitForm.emit(this.user);
   }

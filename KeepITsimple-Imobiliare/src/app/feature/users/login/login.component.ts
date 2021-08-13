@@ -31,6 +31,8 @@ export class LoginComponent implements OnInit {
   }
 
   msg: string = $localize`:@@successfulLogin:Logged in successfully!`;
+  msgLoginFailed: string = $localize`:@@msgLoginFailed:Log in failed!\nCheck your credentials or verify your email!`;
+
   login(user: ShortUser) {
     this.service.login(user)
       .subscribe((user: LongUser) => {
@@ -42,7 +44,7 @@ export class LoginComponent implements OnInit {
         });
 
       }, error => {
-        this._snackBar.open('Log in failed!\nCheck your credentials or verify your email!', 'Ok', {
+        this._snackBar.open(this.msgLoginFailed, 'Ok', {
           panelClass: 'snackbar-fail',duration:10000
         })
       });

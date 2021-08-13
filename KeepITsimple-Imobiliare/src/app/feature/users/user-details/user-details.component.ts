@@ -15,6 +15,9 @@ export class UserDetailsComponent implements OnInit {
 
   constructor(private tokenStorageService: TokenStorageService, private router: Router, private service: UserService,  private _snackBar: MatSnackBar) { }
 
+  msgUpdateSuccess: string = $localize`:@@msgUpdateSuccess:User was successfully updated! Please log out and then log in again to see your changes!`;
+  msgUpdateFail: string = $localize`:@@msgUpdateFail:Failed to update user details`;
+
   ngOnInit(): void {
   }
 
@@ -22,11 +25,11 @@ export class UserDetailsComponent implements OnInit {
     this.service.updateUser(user).subscribe(
       (newUser) => {
         this.service.getUserDetails(this.tokenStorageService.getUserId())
-        this._snackBar.open('User was successfully updated! Please log out and then log in again to see your changes!','OK', {
+        this._snackBar.open(this.msgUpdateSuccess,'OK', {
           duration:7000,
           panelClass: ['success-snackbar']});
       },
-      (error) => this._snackBar.open('Failed to update user details', 'OK', {
+      (error) => this._snackBar.open(this.msgUpdateFail, 'OK', {
         panelClass: ['fail-snackbar'],
         duration:5000,
       })

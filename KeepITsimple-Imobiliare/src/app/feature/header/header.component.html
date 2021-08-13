@@ -8,7 +8,7 @@
   <div class="button-container">
     <a href="http://localhost:4200/"><i class="flag flag-romania"></i></a>
     <a href="http://localhost:4201/"><i class="flag flag-germany"></i></a>
-    <button mat-raised-button matTooltip="Log in" (click)="login()" *ngIf="!isLogged()">
+    <button mat-raised-button matTooltip="{{tooltipLogin}}" (click)="login()" *ngIf="!isLogged()">
       <mat-icon>login</mat-icon>
     </button>
 
@@ -16,15 +16,15 @@
       <mat-icon>manage_accounts</mat-icon>
     </button>
 
-    <button mat-raised-button matTooltip="Go to statistics" (click)="goToStatistics()" *ngIf="isLogged()">
+    <button mat-raised-button matTooltip="{{tooltipGotoStatistics}}" (click)="goToStatistics()" *ngIf="isLogged()">
       <mat-icon>analytics</mat-icon>
     </button>
 
-    <button mat-raised-button matTooltip="Go to wishlist" (click)="wishlist()" *ngIf="isLogged()">
+    <button mat-raised-button matTooltip="{{tooltipGotoWishlist}}" (click)="wishlist()" *ngIf="isLogged()">
       <mat-icon matBadgeSize="small" matBadge="{{count}}" matBadgeColor="warn" >favorite</mat-icon>
     </button>
 
-    <button mat-raised-button matTooltip="Log out" (click)="logout()" *ngIf="isLogged()" [routerLink]="['']">
+    <button mat-raised-button matTooltip="{{tooltipLogout}}" (click)="logout()" *ngIf="isLogged()" [routerLink]="['']">
       <mat-icon>logout</mat-icon>
     </button>
   </div>

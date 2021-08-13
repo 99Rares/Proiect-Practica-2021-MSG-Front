@@ -34,17 +34,17 @@
       <p>Apartamentul apare de <strong>{{getStatistics1Data}}</strong> ori in lista de favorite a utilizatorilor</p>
     </mat-tab>
 
-    <mat-tab label="Caracteristici" i18n="Characteristics Tab|Description for apartment characteristics tab@@characteristicsTab">
+    <mat-tab label="{{tab2}}" i18n="Characteristics Tab|Description for apartment characteristics tab@@characteristicsTab">
       <p>Numar camere: {{apartment.nrRooms}}</p>
       <p>Suprafata: {{apartment.surface}} mp</p>
       <p>An constructie: {{apartment.yearConstruction}}</p>
     </mat-tab>
 
-    <mat-tab label="Pret" i18n="Price Tab|Description for price tab@@priceTab">
+    <mat-tab label="{{tab3}}" i18n="Price Tab|Description for price tab@@priceTab">
       {{apartment.price | currency:'EUR'}}
     </mat-tab>
 
-    <mat-tab label="Contact proprietar" i18n="Owner details Tab|Description for owner details tab@@ownerTab">
+    <mat-tab label="{{tab4}}" i18n="Owner details Tab|Description for owner details tab@@ownerTab">
       <p>{{apartment.owner.firstName}} {{apartment.owner.lastName}}</p>
       <p>{{apartment.owner.phoneNumber}}</p>
       <p ><a href="/owners/{{apartment.owner.id}}">Statistica Locuinte</a></p>

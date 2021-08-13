@@ -15,6 +15,12 @@ export class HeaderComponent implements OnInit {
   }
   count:number=0;
   tooltip1: string = $localize`:@@tooltip1:Manage Account Details`;
+  tooltipLogin: string = $localize`:@@tooltipLogin:Log in`;
+  tooltipGotoStatistics: string = $localize`:@@tooltipGotoStatistics:Go to statistics`;
+  tooltipGotoWishlist: string = $localize`:@@tooltipGotoWishlist:Go to wishlist`;
+  tooltipLogout: string = $localize`:@@tooltipLogout:Log out`;
+
+  msgLogout: string = $localize`:@@msgLogout:Logged Out successfully!`;
 
   ngOnInit(): void {
     this.wishlistService.wishlist.subscribe(data=>this.count=data.length)
@@ -27,7 +33,7 @@ export class HeaderComponent implements OnInit {
   logout() {
     this.tokenStorageService.signOut();
     window.location.href="/" //to get the browser to navigate to localhost:4200 when clicking on logout
-    this._snackBar.open('Logged Out successfully!', 'Ok', {
+    this._snackBar.open(this.msgLogout, 'Ok', {
       duration: 3000
     });
   }

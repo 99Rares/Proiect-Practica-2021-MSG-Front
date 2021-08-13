@@ -24,10 +24,6 @@ export class VerifyResetFormComponent implements OnInit {
   }
   isValid() {
     return !!this.resetForm.controls['username'].value;
-
-    // return !!(this.passwordReset.controls['passwordConfirm'].value === this.passwordReset.controls['password'].value && this.passwordReset.controls['passwordConfirm'].value &&
-    //   this.passwordReset.controls['password'].value);
-
   }
 
   onSubmit() {
