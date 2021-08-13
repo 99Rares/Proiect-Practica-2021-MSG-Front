@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
-  <file source-language="en-US" datatype="plaintext" original="ng2.template">
+  <file source-language="ro" datatype="plaintext" original="ng2.template">
     <body>
       <trans-unit id="contactHeader" datatype="html">
         <source>Contact:</source>
@@ -14,7 +14,7 @@
       </trans-unit>
       <trans-unit id="contactDescription" datatype="html">
         <source>Nr tel: <x id="INTERPOLATION" equiv-text="{{owner.phoneNumber}}"/> </source>
-        <target>Telefonnummer: <x id="INTERPOLATION" equiv-text="{{owner.phoneNumber}}"/> </target>
+        <target>Telefonnumer: <x id="INTERPOLATION" equiv-text="{{owner.phoneNumber}}"/> </target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/feature/apartments/apartment-by-owner/apartment-by-owner.component.html</context>
           <context context-type="linenumber">4,7</context>
@@ -31,6 +31,586 @@
         </context-group>
         <note priority="1" from="description">A description for the apartments card</note>
         <note priority="1" from="meaning">Card Description</note>
+      </trans-unit>
+      <trans-unit id="toolbarApartments" datatype="html">
+        <source>Locuinte</source>
+        <target>Wohnungen</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/feature/apartments/apartment-list/apartment-list.component.html</context>
+          <context context-type="linenumber">1,2</context>
+        </context-group>
+        <note priority="1" from="description">Toolbar for apartments</note>
+        <note priority="1" from="meaning">Toolbar Apartments</note>
+      </trans-unit>
+      <trans-unit id="buttonRefresh" datatype="html">
+        <source>Refresh</source>
+        <target>Aktualisieren</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/feature/apartments/apartment-list/apartment-list.component.html</context>
+          <context context-type="linenumber">3,4</context>
+        </context-group>
+        <note priority="1" from="description">Button for refresh</note>
+        <note priority="1" from="meaning">Refresh button</note>
+      </trans-unit>
+      <trans-unit id="apartDescriptionTab" datatype="html">
+        <source><x id="START_TAG_STRONG" ctype="x-strong" equiv-text="&lt;strong&gt;"/><x id="INTERPOLATION" equiv-text="{{apartment.titleApart}}"/><x id="CLOSE_TAG_STRONG" ctype="x-strong" equiv-text="&lt;/strong&gt;"/><x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br&gt;"/><x id="START_BOLD_TEXT" ctype="x-b" equiv-text="&lt;b class=&quot;transaction-type&quot;&gt;"/><x id="INTERPOLATION_1" equiv-text="{{apartment.transactionType}}"/><x id="CLOSE_BOLD_TEXT" ctype="x-b" equiv-text="&lt;/b&gt;"/><x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br&gt;"/><x id="START_PARAGRAPH" ctype="x-p" equiv-text="&lt;p&gt;"/><x id="INTERPOLATION_2" equiv-text="{{apartment.description}}"/><x id="CLOSE_PARAGRAPH" ctype="x-p" equiv-text="&lt;/p&gt;"/><x id="START_PARAGRAPH" ctype="x-p" equiv-text="&lt;p&gt;"/><x id="INTERPOLATION_3" equiv-text="{{apartment.city}}"/>, <x id="INTERPOLATION_4" equiv-text="{{apartment.neighbourhood}}"/><x id="CLOSE_PARAGRAPH" ctype="x-p" equiv-text="&lt;/p&gt;"/><x id="START_PARAGRAPH" ctype="x-p" equiv-text="&lt;p&gt;"/>Apartamentul apare de <x id="START_TAG_STRONG" ctype="x-strong" equiv-text="&lt;strong&gt;"/><x id="INTERPOLATION_5" equiv-text="{{getStatistics1Data}}"/><x id="CLOSE_TAG_STRONG" ctype="x-strong" equiv-text="&lt;/strong&gt;"/> ori in lista de favorite a utilizatorilor<x id="CLOSE_PARAGRAPH" ctype="x-p" equiv-text="&lt;/p&gt;"/></source>
+        <target><x id="START_TAG_STRONG" ctype="x-strong" equiv-text="&lt;strong&gt;"/><x id="INTERPOLATION" equiv-text="{{apartment.titleApart}}"/><x id="CLOSE_TAG_STRONG" ctype="x-strong" equiv-text="&lt;/strong&gt;"/><x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br&gt;"/><x id="START_BOLD_TEXT" ctype="x-b" equiv-text="&lt;b class=&quot;transaction-type&quot;&gt;"/><x id="INTERPOLATION_1" equiv-text="{{apartment.transactionType}}"/><x id="CLOSE_BOLD_TEXT" ctype="x-b" equiv-text="&lt;/b&gt;"/><x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br&gt;"/><x id="START_PARAGRAPH" ctype="x-p" equiv-text="&lt;p&gt;"/><x id="INTERPOLATION_2" equiv-text="{{apartment.description}}"/><x id="CLOSE_PARAGRAPH" ctype="x-p" equiv-text="&lt;/p&gt;"/><x id="START_PARAGRAPH" ctype="x-p" equiv-text="&lt;p&gt;"/><x id="INTERPOLATION_3" equiv-text="{{apartment.city}}"/>, <x id="INTERPOLATION_4" equiv-text="{{apartment.neighbourhood}}"/><x id="CLOSE_PARAGRAPH" ctype="x-p" equiv-text="&lt;/p&gt;"/><x id="START_PARAGRAPH" ctype="x-p" equiv-text="&lt;p&gt;"/>Die Wohnung erscheint <x id="START_TAG_STRONG" ctype="x-strong" equiv-text="&lt;strong&gt;"/><x id="INTERPOLATION_5" equiv-text="{{getStatistics1Data}}"/><x id="CLOSE_TAG_STRONG" ctype="x-strong" equiv-text="&lt;/strong&gt;"/> mal in der Favoritenliste der Benutzer<x id="CLOSE_PARAGRAPH" ctype="x-p" equiv-text="&lt;/p&gt;"/></target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/feature/apartments/apartment-page/apartment-page.component.html</context>
+          <context context-type="linenumber">28,36</context>
+        </context-group>
+        <note priority="1" from="description">Description for the apartment tab</note>
+        <note priority="1" from="meaning">Tab Description Apartment</note>
+      </trans-unit>
+      <trans-unit id="characteristicsTab" datatype="html">
+        <source><x id="START_PARAGRAPH" ctype="x-p" equiv-text="&lt;p&gt;"/>Numar camere: <x id="INTERPOLATION" equiv-text="{{apartment.nrRooms}}"/><x id="CLOSE_PARAGRAPH" ctype="x-p" equiv-text="&lt;/p&gt;"/><x id="START_PARAGRAPH" ctype="x-p" equiv-text="&lt;p&gt;"/>Suprafata: <x id="INTERPOLATION_1" equiv-text="{{apartment.surface}}"/> mp<x id="CLOSE_PARAGRAPH" ctype="x-p" equiv-text="&lt;/p&gt;"/><x id="START_PARAGRAPH" ctype="x-p" equiv-text="&lt;p&gt;"/>An constructie: <x id="INTERPOLATION_2" equiv-text="{{apartment.yearConstruction}}"/><x id="CLOSE_PARAGRAPH" ctype="x-p" equiv-text="&lt;/p&gt;"/></source>
+        <target><x id="START_PARAGRAPH" ctype="x-p" equiv-text="&lt;p&gt;"/>Anzahl der Räume: <x id="INTERPOLATION" equiv-text="{{apartment.nrRooms}}"/><x id="CLOSE_PARAGRAPH" ctype="x-p" equiv-text="&lt;/p&gt;"/><x id="START_PARAGRAPH" ctype="x-p" equiv-text="&lt;p&gt;"/>Oberfläche: <x id="INTERPOLATION_1" equiv-text="{{apartment.surface}}"/> mp<x id="CLOSE_PARAGRAPH" ctype="x-p" equiv-text="&lt;/p&gt;"/><x id="START_PARAGRAPH" ctype="x-p" equiv-text="&lt;p&gt;"/>Baujahr: <x id="INTERPOLATION_2" equiv-text="{{apartment.yearConstruction}}"/><x id="CLOSE_PARAGRAPH" ctype="x-p" equiv-text="&lt;/p&gt;"/></target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/feature/apartments/apartment-page/apartment-page.component.html</context>
+          <context context-type="linenumber">38,42</context>
+        </context-group>
+        <note priority="1" from="description">Description for apartment characteristics tab</note>
+        <note priority="1" from="meaning">Characteristics Tab</note>
+      </trans-unit>
+      <trans-unit id="priceTab" datatype="html">
+        <source> <x id="INTERPOLATION" equiv-text="{{apartment.price | currency:&apos;EUR&apos;}"/> </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/feature/apartments/apartment-page/apartment-page.component.html</context>
+          <context context-type="linenumber">43,45</context>
+        </context-group>
+        <note priority="1" from="description">Description for price tab</note>
+        <note priority="1" from="meaning">Price Tab</note>
+      </trans-unit>
+      <trans-unit id="ownerTab" datatype="html">
+        <source><x id="START_PARAGRAPH" ctype="x-p" equiv-text="&lt;p &gt;"/><x id="INTERPOLATION" equiv-text="{{apartment.owner.firstName}}"/> <x id="INTERPOLATION_1" equiv-text="{{apartment.owner.lastName}}"/><x id="CLOSE_PARAGRAPH" ctype="x-p" equiv-text="&lt;/p&gt;"/><x id="START_PARAGRAPH" ctype="x-p" equiv-text="&lt;p &gt;"/><x id="INTERPOLATION_2" equiv-text="{{apartment.owner.phoneNumber}}"/><x id="CLOSE_PARAGRAPH" ctype="x-p" equiv-text="&lt;/p&gt;"/><x id="START_PARAGRAPH" ctype="x-p" equiv-text="&lt;p &gt;"/><x id="START_LINK" ctype="x-a" equiv-text="&lt;a href=&quot;{{apartment.owner.urlStatisticsChart}}&quot;&gt;"/>Statistica Locuinte<x id="CLOSE_LINK" ctype="x-a" equiv-text="&lt;/a&gt;"/><x id="CLOSE_PARAGRAPH" ctype="x-p" equiv-text="&lt;/p&gt;"/></source>
+        <target><x id="START_PARAGRAPH" ctype="x-p" equiv-text="&lt;p &gt;"/><x id="INTERPOLATION" equiv-text="{{apartment.owner.firstName}}"/> <x id="INTERPOLATION_1" equiv-text="{{apartment.owner.lastName}}"/><x id="CLOSE_PARAGRAPH" ctype="x-p" equiv-text="&lt;/p&gt;"/><x id="START_PARAGRAPH" ctype="x-p" equiv-text="&lt;p &gt;"/><x id="INTERPOLATION_2" equiv-text="{{apartment.owner.phoneNumber}}"/><x id="CLOSE_PARAGRAPH" ctype="x-p" equiv-text="&lt;/p&gt;"/><x id="START_PARAGRAPH" ctype="x-p" equiv-text="&lt;p &gt;"/><x id="START_LINK" ctype="x-a" equiv-text="&lt;a href=&quot;{{apartment.owner.urlStatisticsChart}}&quot;&gt;"/>Wohnungsstatistik<x id="CLOSE_LINK" ctype="x-a" equiv-text="&lt;/a&gt;"/><x id="CLOSE_PARAGRAPH" ctype="x-p" equiv-text="&lt;/p&gt;"/></target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/feature/apartments/apartment-page/apartment-page.component.html</context>
+          <context context-type="linenumber">48,52</context>
+        </context-group>
+        <note priority="1" from="description">Description for owner details tab</note>
+        <note priority="1" from="meaning">Owner details Tab</note>
+      </trans-unit>
+      <trans-unit id="addButton" datatype="html">
+        <source>Adauga</source>
+        <target>Hinzufügen</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/feature/apartments/apartment-page/apartment-page.component.html</context>
+          <context context-type="linenumber">56,57</context>
+        </context-group>
+        <note priority="1" from="description">Button for add</note>
+        <note priority="1" from="meaning">AddButton</note>
+      </trans-unit>
+      <trans-unit id="deleteButton" datatype="html">
+        <source>Sterge</source>
+        <target>Löschen</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/feature/apartments/apartment-page/apartment-page.component.html</context>
+          <context context-type="linenumber">57,62</context>
+        </context-group>
+        <note priority="1" from="description">Button for delete</note>
+        <note priority="1" from="meaning">DeleteButton</note>
+      </trans-unit>
+      <trans-unit id="toolbarApartmentsD" datatype="html">
+        <source>Locuinte</source>
+        <target>Wohnungen</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/feature/apartments/download/download.component.html</context>
+          <context context-type="linenumber">1</context>
+        </context-group>
+        <note priority="1" from="description">Toolbar for apartmentsD</note>
+        <note priority="1" from="meaning">Toolbar ApartmentsD</note>
+      </trans-unit>
+      <trans-unit id="filterDescription" datatype="html">
+        <source> Filtreaza rezultatele dupa optiuni </source>
+        <target> Ergebnisse nach Optionen filtern </target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/feature/apartments/filter-sort/filter-sort.component.html</context>
+          <context context-type="linenumber">10,11</context>
+        </context-group>
+        <note priority="1" from="description">Description for filter panel</note>
+        <note priority="1" from="meaning">FilterDescription</note>
+      </trans-unit>
+      <trans-unit id="priceEuro" datatype="html">
+        <source>Pret(€): </source>
+        <target>Preis(€): </target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/feature/apartments/filter-sort/filter-sort.component.html</context>
+          <context context-type="linenumber">19</context>
+        </context-group>
+        <note priority="1" from="description">Price in euros</note>
+        <note priority="1" from="meaning">PriceEuro</note>
+      </trans-unit>
+      <trans-unit id="want" datatype="html">
+        <source>Doresc sa:</source>
+        <target>Ich will: </target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/feature/apartments/filter-sort/filter-sort.component.html</context>
+          <context context-type="linenumber">44</context>
+        </context-group>
+        <note priority="1" from="description">I want to</note>
+        <note priority="1" from="meaning">Iwant</note>
+      </trans-unit>
+      <trans-unit id="rentOption" datatype="html">
+        <source>Inchiriez</source>
+        <target>Vermieten</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/feature/apartments/filter-sort/filter-sort.component.html</context>
+          <context context-type="linenumber">46</context>
+        </context-group>
+        <note priority="1" from="description">Option for rent</note>
+        <note priority="1" from="meaning">RentOption</note>
+      </trans-unit>
+      <trans-unit id="buyOption" datatype="html">
+        <source>Cumpar</source>
+        <target>Kaufen</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/feature/apartments/filter-sort/filter-sort.component.html</context>
+          <context context-type="linenumber">47</context>
+        </context-group>
+        <note priority="1" from="description">Option for buy</note>
+        <note priority="1" from="meaning">BuyOption</note>
+      </trans-unit>
+      <trans-unit id="cityOption" datatype="html">
+        <source>Oras:</source>
+        <target>Stadt:</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/feature/apartments/filter-sort/filter-sort.component.html</context>
+          <context context-type="linenumber">54</context>
+        </context-group>
+        <note priority="1" from="description">Option for city</note>
+        <note priority="1" from="meaning">CityOption</note>
+      </trans-unit>
+      <trans-unit id="cityChoose" datatype="html">
+        <source> Alege orasul </source>
+        <target> Wähle eine Stadt </target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/feature/apartments/filter-sort/filter-sort.component.html</context>
+          <context context-type="linenumber">56</context>
+        </context-group>
+        <note priority="1" from="description">Choose city</note>
+        <note priority="1" from="meaning">CityOptionChoose</note>
+      </trans-unit>
+      <trans-unit id="neighbourhoodOption" datatype="html">
+        <source>Cartier:</source>
+        <target>Nachbarschaft:</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/feature/apartments/filter-sort/filter-sort.component.html</context>
+          <context context-type="linenumber">62</context>
+        </context-group>
+        <note priority="1" from="description">Option for neighbourhood</note>
+        <note priority="1" from="meaning">NeighbourhoodOption</note>
+      </trans-unit>
+      <trans-unit id="neighbourhoodChoose" datatype="html">
+        <source> Alege cartierul </source>
+        <target> Wähle eine Nachbarschaft </target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/feature/apartments/filter-sort/filter-sort.component.html</context>
+          <context context-type="linenumber">64</context>
+        </context-group>
+        <note priority="1" from="description">Choose neighbourhood</note>
+        <note priority="1" from="meaning">NeighbourhoodOptionChoose</note>
+      </trans-unit>
+      <trans-unit id="filterButton" datatype="html">
+        <source>Filtrare</source>
+        <target>Filtern</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/feature/apartments/filter-sort/filter-sort.component.html</context>
+          <context context-type="linenumber">69</context>
+        </context-group>
+        <note priority="1" from="description">Button for filter</note>
+        <note priority="1" from="meaning">FilterButton</note>
+      </trans-unit>
+      <trans-unit id="sortDescription" datatype="html">
+        <source> Sorteaza rezultatele dupa optiuni </source>
+        <target> Ergebnisse nach Optionen sortieren </target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/feature/apartments/filter-sort/filter-sort.component.html</context>
+          <context context-type="linenumber">86,87</context>
+        </context-group>
+        <note priority="1" from="description">Description for sort panel</note>
+        <note priority="1" from="meaning">SortDescription</note>
+      </trans-unit>
+      <trans-unit id="sortPrice" datatype="html">
+        <source>Sorteaza dupa pret:</source>
+        <target>Nach Preis sortieren:</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/feature/apartments/filter-sort/filter-sort.component.html</context>
+          <context context-type="linenumber">94</context>
+        </context-group>
+        <note priority="1" from="description">Sort by price</note>
+        <note priority="1" from="meaning">SortByPrice</note>
+      </trans-unit>
+      <trans-unit id="sortAscendingP" datatype="html">
+        <source>Crescator</source>
+        <target>Aufsteigend</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/feature/apartments/filter-sort/filter-sort.component.html</context>
+          <context context-type="linenumber">96</context>
+        </context-group>
+        <note priority="1" from="description">Sort ascendingP</note>
+        <note priority="1" from="meaning">SortAscendingP</note>
+      </trans-unit>
+      <trans-unit id="sortDescendingP" datatype="html">
+        <source>Descrescator</source>
+        <target>Absteigend</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/feature/apartments/filter-sort/filter-sort.component.html</context>
+          <context context-type="linenumber">97</context>
+        </context-group>
+        <note priority="1" from="description">Sort descendingP</note>
+        <note priority="1" from="meaning">SortDescendingP</note>
+      </trans-unit>
+      <trans-unit id="sortSurface" datatype="html">
+        <source>Sorteaza dupa suprafata:</source>
+        <target>Nach Oberfläche sortieren:</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/feature/apartments/filter-sort/filter-sort.component.html</context>
+          <context context-type="linenumber">106</context>
+        </context-group>
+        <note priority="1" from="description">Sort by surface</note>
+        <note priority="1" from="meaning">SortBySurface</note>
+      </trans-unit>
+      <trans-unit id="sortAscendingS" datatype="html">
+        <source>Crescator</source>
+        <target>Aufsteigend</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/feature/apartments/filter-sort/filter-sort.component.html</context>
+          <context context-type="linenumber">108</context>
+        </context-group>
+        <note priority="1" from="description">Sort ascendingS</note>
+        <note priority="1" from="meaning">SortAscendingS</note>
+      </trans-unit>
+      <trans-unit id="sortDescendingS" datatype="html">
+        <source>Descrescator</source>
+        <target>Absteigend</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/feature/apartments/filter-sort/filter-sort.component.html</context>
+          <context context-type="linenumber">109</context>
+        </context-group>
+        <note priority="1" from="description">Sort descendingS</note>
+        <note priority="1" from="meaning">SortDescendingS</note>
+      </trans-unit>
+      <trans-unit id="sortButton" datatype="html">
+        <source>Sortare</source>
+        <target>Sortieren</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/feature/apartments/filter-sort/filter-sort.component.html</context>
+          <context context-type="linenumber">114</context>
+        </context-group>
+        <note priority="1" from="description">Button for sort</note>
+        <note priority="1" from="meaning">SortButton</note>
+      </trans-unit>
+      <trans-unit id="percentageDesc" datatype="html">
+        <source>Procentaj: <x id="INTERPOLATION" equiv-text="{{apiResponse.apartmentsInWishlist/apiResponse.apartmentsTotal*100+&quot;%&quot;}}"/></source>
+        <target>Prozentsatz: <x id="INTERPOLATION" equiv-text="{{apiResponse.apartmentsInWishlist/apiResponse.apartmentsTotal*100+&quot;%&quot;}}"/></target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/feature/apartments/statistics/statistics.component.html</context>
+          <context context-type="linenumber">2</context>
+        </context-group>
+        <note priority="1" from="description">Description of percentage</note>
+        <note priority="1" from="meaning">PercentageDescription</note>
+      </trans-unit>
+      <trans-unit id="toolbarH" datatype="html">
+        <source>Ultimele 4 locuinte vizitate</source>
+        <target>Die letzten 4 besuchten Wohnungen</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/feature/users/history/history.component.html</context>
+          <context context-type="linenumber">1</context>
+        </context-group>
+        <note priority="1" from="description">Toolbar for history</note>
+        <note priority="1" from="meaning">ToolbarHistory</note>
+      </trans-unit>
+      <trans-unit id="username" datatype="html">
+        <source>Username</source>
+        <target>Benutzername</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/feature/users/user-form/user-form.component.html</context>
+          <context context-type="linenumber">5</context>
+        </context-group>
+        <note priority="1" from="description">Desc for username</note>
+        <note priority="1" from="meaning">Username</note>
+      </trans-unit>
+      <trans-unit id="password" datatype="html">
+        <source>Password</source>
+        <target>Passwort</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/feature/users/user-form/user-form.component.html</context>
+          <context context-type="linenumber">11</context>
+        </context-group>
+        <note priority="1" from="description">Desc for password</note>
+        <note priority="1" from="meaning">Password</note>
+      </trans-unit>
+      <trans-unit id="loginButton" datatype="html">
+        <source>Login</source>
+        <target>Einloggen</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/feature/users/user-form/user-form.component.html</context>
+          <context context-type="linenumber">16</context>
+        </context-group>
+        <note priority="1" from="description">Button for Login</note>
+        <note priority="1" from="meaning">LoginButton</note>
+      </trans-unit>
+      <trans-unit id="redirectToRegister" datatype="html">
+        <source>Nu ai cont? Inregistreaza-te!</source>
+        <target>Kein Konto? Bitte registrieren!</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/feature/users/user-form/user-form.component.html</context>
+          <context context-type="linenumber">20</context>
+        </context-group>
+        <note priority="1" from="description">Redirect user to register</note>
+        <note priority="1" from="meaning">redirectToRegister</note>
+      </trans-unit>
+      <trans-unit id="changePass" datatype="html">
+        <source>Ai uitat parola?</source>
+        <target>Passwort vergessen?</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/feature/users/user-form/user-form.component.html</context>
+          <context context-type="linenumber">24</context>
+        </context-group>
+        <note priority="1" from="description">Change password</note>
+        <note priority="1" from="meaning">changePass</note>
+      </trans-unit>
+      <trans-unit id="newPassword" datatype="html">
+        <source>New Password</source>
+        <target>Neues Passwort</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/feature/users/password-reset-form/password-reset-form.component.html</context>
+          <context context-type="linenumber">5</context>
+        </context-group>
+        <note priority="1" from="description">Desc for new password</note>
+        <note priority="1" from="meaning">NewPassword</note>
+      </trans-unit>
+      <trans-unit id="newPasswordConfirm" datatype="html">
+        <source>Confirm New Password</source>
+        <target>Bestätige neues Passwort</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/feature/users/password-reset-form/password-reset-form.component.html</context>
+          <context context-type="linenumber">11</context>
+        </context-group>
+        <note priority="1" from="description">Confirm new password</note>
+        <note priority="1" from="meaning">ConfirmNewPassword</note>
+      </trans-unit>
+      <trans-unit id="passwordsNotMatch" datatype="html">
+        <source> Passwords do not match! </source>
+        <target> Passwörter stimmen nicht überein! </target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/feature/users/password-reset-form/password-reset-form.component.html</context>
+          <context context-type="linenumber">18,19</context>
+        </context-group>
+        <note priority="1" from="description">Password do not match Message</note>
+        <note priority="1" from="meaning">PasswordsNotMatch</note>
+      </trans-unit>
+      <trans-unit id="updatePassButton" datatype="html">
+        <source>Update Password</source>
+        <target>Passwort aktualisieren</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/feature/users/password-reset-form/password-reset-form.component.html</context>
+          <context context-type="linenumber">22</context>
+        </context-group>
+        <note priority="1" from="description">Button for password update</note>
+        <note priority="1" from="meaning">UpdatePassButton</note>
+      </trans-unit>
+      <trans-unit id="firstname" datatype="html">
+        <source>Firstname</source>
+        <target>Vorname</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/feature/users/register-form/register-form.component.html</context>
+          <context context-type="linenumber">5</context>
+        </context-group>
+        <note priority="1" from="description">Desc for firstname</note>
+        <note priority="1" from="meaning">Firstname</note>
+      </trans-unit>
+      <trans-unit id="lastname" datatype="html">
+        <source>Lastname</source>
+        <target>Nachname</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/feature/users/register-form/register-form.component.html</context>
+          <context context-type="linenumber">11</context>
+        </context-group>
+        <note priority="1" from="description">Desc for lastname</note>
+        <note priority="1" from="meaning">Lastname</note>
+      </trans-unit>
+      <trans-unit id="email" datatype="html">
+        <source>Email</source>
+        <target>Email Adresse</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/feature/users/register-form/register-form.component.html</context>
+          <context context-type="linenumber">17</context>
+        </context-group>
+        <note priority="1" from="description">Desc for email</note>
+        <note priority="1" from="meaning">Email</note>
+      </trans-unit>
+      <trans-unit id="passwordReg" datatype="html">
+        <source>Password</source>
+        <target>Passwort</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/feature/users/register-form/register-form.component.html</context>
+          <context context-type="linenumber">23</context>
+        </context-group>
+        <note priority="1" from="description">Desc for passwordReg</note>
+        <note priority="1" from="meaning">PasswordReg</note>
+      </trans-unit>
+      <trans-unit id="passwordRegConfirm" datatype="html">
+        <source>Confirm Password</source>
+        <target>Bestätige Passwort</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/feature/users/register-form/register-form.component.html</context>
+          <context context-type="linenumber">29</context>
+        </context-group>
+        <note priority="1" from="description">Desc for passwordRegConfirm</note>
+        <note priority="1" from="meaning">ConfirmPasswordReg</note>
+      </trans-unit>
+      <trans-unit id="passwordsNotMatchReg" datatype="html">
+        <source> Passwords do not match! </source>
+        <target> Passwörter stimmen nicht überein! </target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/feature/users/register-form/register-form.component.html</context>
+          <context context-type="linenumber">34,35</context>
+        </context-group>
+        <note priority="1" from="description">Password do not match MessageReg</note>
+        <note priority="1" from="meaning">PasswordsNotMatchReg</note>
+      </trans-unit>
+      <trans-unit id="registerButton" datatype="html">
+        <source>Register</source>
+        <target>Registrieren</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/feature/users/register-form/register-form.component.html</context>
+          <context context-type="linenumber">38</context>
+        </context-group>
+        <note priority="1" from="description">Button for register</note>
+        <note priority="1" from="meaning">RegisterButton</note>
+      </trans-unit>
+      <trans-unit id="redirectToLogin" datatype="html">
+        <source>Ai deja cont? Autentifica-te!</source>
+        <target>Haben Sie bereits ein Konto? Bitte einloggen!</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/feature/users/register-form/register-form.component.html</context>
+          <context context-type="linenumber">42</context>
+        </context-group>
+        <note priority="1" from="description">Redirect user to login</note>
+        <note priority="1" from="meaning">redirectToLogin</note>
+      </trans-unit>
+      <trans-unit id="userWelcome" datatype="html">
+        <source>Bun venit, <x id="INTERPOLATION" equiv-text="{{getFullName()}}"/>! Aici iti poti modifica datele contului!</source>
+        <target>Willkommen, <x id="INTERPOLATION" equiv-text="{{getFullName()}}"/>! Hier können Sie Ihre Kontodaten ändern!</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/feature/users/user-details-form/user-details-form.component.html</context>
+          <context context-type="linenumber">8</context>
+        </context-group>
+        <note priority="1" from="description">Message to welcome user</note>
+        <note priority="1" from="meaning">WelcomeUser</note>
+      </trans-unit>
+      <trans-unit id="firstnameD" datatype="html">
+        <source>Firstname</source>
+        <target>Vorname</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/feature/users/user-details-form/user-details-form.component.html</context>
+          <context context-type="linenumber">12</context>
+        </context-group>
+        <note priority="1" from="description">Desc for firstnameD</note>
+        <note priority="1" from="meaning">FirstnameD</note>
+      </trans-unit>
+      <trans-unit id="lastnameD" datatype="html">
+        <source>Lastname</source>
+        <target>Nachname</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/feature/users/user-details-form/user-details-form.component.html</context>
+          <context context-type="linenumber">18</context>
+        </context-group>
+        <note priority="1" from="description">Desc for lastnameD</note>
+        <note priority="1" from="meaning">LastnameD</note>
+      </trans-unit>
+      <trans-unit id="emailD" datatype="html">
+        <source>Email</source>
+        <target>Email Adresse</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/feature/users/user-details-form/user-details-form.component.html</context>
+          <context context-type="linenumber">24</context>
+        </context-group>
+        <note priority="1" from="description">Desc for emailD</note>
+        <note priority="1" from="meaning">EmailD</note>
+      </trans-unit>
+      <trans-unit id="detailsUpdateButton" datatype="html">
+        <source>Update Details</source>
+        <target>Kontodaten aktualisieren</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/feature/users/user-details-form/user-details-form.component.html</context>
+          <context context-type="linenumber">30</context>
+        </context-group>
+        <note priority="1" from="description">Button for detailsUpdate</note>
+        <note priority="1" from="meaning">DetailsButtonUpdate</note>
+      </trans-unit>
+      <trans-unit id="congratsVerif" datatype="html">
+        <source>Congratulations, your account has been verified.</source>
+        <target>Herzlichen Glückwunsch, Ihr Konto wurde bestätigt.</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/feature/users/verified/verified/verified.component.html</context>
+          <context context-type="linenumber">2</context>
+        </context-group>
+        <note priority="1" from="description">Congrats Msg for verification</note>
+        <note priority="1" from="meaning">CongratsVerification</note>
+      </trans-unit>
+      <trans-unit id="loginButtonVerif" datatype="html">
+        <source>Click here to Login</source>
+        <target>Bitte hier klicken, um sich einzuloggen</target>
+        <target></target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/feature/users/verified/verified/verified.component.html</context>
+          <context context-type="linenumber">3</context>
+        </context-group>
+        <note priority="1" from="description">Button for login after verif</note>
+        <note priority="1" from="meaning">loginButtonVerif</note>
+      </trans-unit>
+      <trans-unit id="failedVerif" datatype="html">
+        <source>Sorry, we could not verify account. It maybe already verified, or verification code is incorrect.</source>
+        <target>Das Konto konnte nicht bestätigt werden. Es ist möglicherweise bereits verifiziert oder der Verifizierungscode ist falsch.</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/feature/users/verified/verified/verified.component.html</context>
+          <context context-type="linenumber">6,7</context>
+        </context-group>
+        <note priority="1" from="description">Fail Msg for verification</note>
+        <note priority="1" from="meaning">FailedVerification</note>
+      </trans-unit>
+      <trans-unit id="loginButtonVerifFail" datatype="html">
+        <source>Click here to Login</source>
+        <target>Bitte hier klicken, um sich einzuloggen</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/feature/users/verified/verified/verified.component.html</context>
+          <context context-type="linenumber">8</context>
+        </context-group>
+        <note priority="1" from="description">Button for login after verif fail</note>
+        <note priority="1" from="meaning">loginButtonVerifFail</note>
+      </trans-unit>
+      <trans-unit id="completeEmail" datatype="html">
+        <source>Completează cu adresa de email asociată contului tău.</source>
+        <target>Geben Sie die mit Ihrem Konto verknüpfte E-Mail Adresse ein.</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/feature/users/verify-reset-form/verify-reset-form.component.html</context>
+          <context context-type="linenumber">2</context>
+        </context-group>
+        <note priority="1" from="description">Complete with your email</note>
+        <note priority="1" from="meaning">CompleteEmail</note>
+      </trans-unit>
+      <trans-unit id="emailVerifReset" datatype="html">
+        <source>Email</source>
+        <target>Email Adresse</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/feature/users/verify-reset-form/verify-reset-form.component.html</context>
+          <context context-type="linenumber">8</context>
+        </context-group>
+        <note priority="1" from="description">Email verif reset page</note>
+        <note priority="1" from="meaning">EmailVerifReset</note>
+      </trans-unit>
+      <trans-unit id="submitbutton" datatype="html">
+        <source>Submit</source>
+        <target>Einsenden</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/feature/users/verify-reset-form/verify-reset-form.component.html</context>
+          <context context-type="linenumber">13</context>
+        </context-group>
+        <note priority="1" from="description">Button for submit</note>
+        <note priority="1" from="meaning">submitbutton</note>
       </trans-unit>
     </body>
   </file>
