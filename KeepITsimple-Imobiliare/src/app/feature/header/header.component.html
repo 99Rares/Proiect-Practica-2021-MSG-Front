@@ -1,4 +1,4 @@
-<div class="container">
+<div class="containerr">
   <p>{{getFullName()}}</p>
 
   <div class="logo zoom">
@@ -6,6 +6,8 @@
   </div>
 
   <div class="button-container">
+    <a href="http://localhost:4200/"><i class="flag flag-romania"></i></a>
+    <a href="http://localhost:4201/"><i class="flag flag-germany"></i></a>
     <button mat-raised-button matTooltip="Log in" (click)="login()" *ngIf="!isLogged()">
       <mat-icon>login</mat-icon>
     </button>

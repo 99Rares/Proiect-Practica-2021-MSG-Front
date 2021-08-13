@@ -7,7 +7,7 @@ import {WishlistService} from "../wishlist/wishlist.service";
 @Component({
   selector: 'app-header',
   templateUrl: './header.component.html',
-  styleUrls: ['./header.component.scss']
+  styleUrls: ['./header.component.scss','./_flag.scss']
 })
 export class HeaderComponent implements OnInit {
 
