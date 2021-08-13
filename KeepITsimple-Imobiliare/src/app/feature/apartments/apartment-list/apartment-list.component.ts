@@ -67,17 +67,6 @@ export class ApartmentListComponent implements OnInit {
     });
   }
 
-  // loadApartmentsCopy() {
-  //   this.apartmentService.getApartments().subscribe((data) => {
-  //     this.copyapartments = data
-  //   });
-  // }
-
-  // loadApartmentsPage() {
-  //   this.apartmentService.getApartments().subscribe((data) =>{this.currPage = data});
-  //   this.currPage = this.copyapartments.slice(0, this.pageSize);
-  // }
-
   filter(form: any) {
     console.log(form);
     if (form.pret) {
@@ -169,12 +158,6 @@ export class ApartmentListComponent implements OnInit {
   }
 
   //------------------------Paginator----------------------------------
-
-  //@ViewChild(MatPaginator) paginator: MatPaginator;
-
-  // setPage() {
-  //   this.paginator.length = this.pageSize;
-  // }
 
   pageSize = 3;
   pageLength = 0;

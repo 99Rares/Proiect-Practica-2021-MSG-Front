@@ -10,7 +10,6 @@ import {ActivatedRoute} from "@angular/router";
   styleUrls: ['./password-reset-form.component.scss']
 })
 export class PasswordResetFormComponent implements OnInit {
-  // obj:{password:string,code:string}={password:"",code:""}
   @Output() submitForm: EventEmitter<{ password: string, code: string | null }> = new EventEmitter<{ password: string, code: string | null }>();
 
   constructor(private route: ActivatedRoute,) {

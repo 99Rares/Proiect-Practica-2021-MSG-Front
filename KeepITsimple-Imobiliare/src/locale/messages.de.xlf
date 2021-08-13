@@ -708,6 +708,116 @@
           <context context-type="linenumber">23</context>
         </context-group>
       </trans-unit>
+      <trans-unit id="msgLogout" datatype="html">
+        <source>Logged Out successfully!</source>
+        <target>Erfolgreich ausgeloggt!</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/feature/header/header.component.ts</context>
+          <context context-type="linenumber">23</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="msgLoginFailed" datatype="html">
+        <source>Log in failed!
+Check your credentials or verify your email!</source>
+        <target>Anmeldung fehlgeschlagen!
+Überprüfen Sie Ihre Zugangsdaten oder bestätigen Sie Ihre E-Mail!</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/feature/users/login/login.component.ts</context>
+          <context context-type="linenumber">34</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="msgUpdateSuccess" datatype="html">
+        <source>User was successfully updated! Please log out and then log in again to see your changes!</source>
+        <target>Benutzer wurde erfolgreich aktualisiert! Bitte loggen Sie sich aus und wieder ein, um Ihre Änderungen zu sehen!</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/feature/users/user-details/user-details.component.ts</context>
+          <context context-type="linenumber">18</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="msgUpdateFail" datatype="html">
+        <source>Failed to update user details</source>
+        <target>Fehler beim Aktualisieren der Benutzerdetails</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/feature/users/user-details/user-details.component.ts</context>
+          <context context-type="linenumber">19</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="msgRegisterSuccess" datatype="html">
+        <source>You have registered successfully!
+Please check your email to confirm your account!</source>
+        <target>Du hast dich erfolgreich registriert!
+Bitte überprüfen Sie Ihre E-Mail, um Ihr Konto zu bestätigen!</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/feature/users/register/register.component.ts</context>
+          <context context-type="linenumber">22</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="msgRegisterFail" datatype="html">
+        <source>Registration failed!</source>
+        <target>Registrierung fehlgeschlagen!</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/feature/users/register/register.component.ts</context>
+          <context context-type="linenumber">23</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="msgPassReset" datatype="html">
+        <source>Your password has been reset!
+Try to log in!</source>
+        <target>Dein Passwort wurde zurückgesetzt!
+Versuchen Sie sich einzuloggen!</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/feature/users/password-reset/password-reset.component.ts</context>
+          <context context-type="linenumber">19</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="msgSomethingWrong" datatype="html">
+        <source>Something went wrong.</source>
+        <target>Etwas ist schief gelaufen.</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/feature/users/password-reset/password-reset.component.ts</context>
+          <context context-type="linenumber">20</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="msgVerifySuccess" datatype="html">
+        <source>You have verified successfully!</source>
+        <target>Sie haben erfolgreich verifiziert!</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/feature/users/verified/verified/verified.component.ts</context>
+          <context context-type="linenumber">21</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="msgVerifyFail" datatype="html">
+        <source>Verification failed!</source>
+        <target>Überprüfung fehlgeschlagen!</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/feature/users/verified/verified/verified.component.ts</context>
+          <context context-type="linenumber">22</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="msgEmailResetSent" datatype="html">
+        <source>Password-reset email was sent. Check your inbox!</source>
+        <target>E-Mail zum Zurücksetzen des Passworts wurde gesendet. Überprüfe deinen Posteingang!</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/feature/users/vreify-reset/verify-email.component.ts</context>
+          <context context-type="linenumber">26</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="msgEmailResetSentFailed" datatype="html">
+        <source>Failed to send email. Check your input!</source>
+        <target>E-Mail konnte nicht gesendet werden. Überprüfen Sie Ihre Daten!</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/feature/users/vreify-reset/verify-email.component.ts</context>
+          <context context-type="linenumber">27</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="msgsnackbarLogin" datatype="html">
+        <source>Please log in!</source>
+        <target>Bitte loggen Sie sich ein!</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/feature/wishlist/wishlist.service.ts</context>
+          <context context-type="linenumber">30</context>
+        </context-group>
+      </trans-unit>
     </body>
   </file>
 </xliff>

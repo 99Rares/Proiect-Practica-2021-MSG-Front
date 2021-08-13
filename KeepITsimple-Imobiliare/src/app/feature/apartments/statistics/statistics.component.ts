@@ -12,10 +12,6 @@ export class StatisticsComponent implements OnInit {
 
   apiResponse: any;
   apartmentData: any;
-  // saleData = [
-  //   { name: "Total apartamente", value:  this.apiResponse.apartmentsTotal},
-  //   { name: "In wishlist", value: 4}
-  // ];
 
   ngOnInit(): void {
     this.loadStatistics();

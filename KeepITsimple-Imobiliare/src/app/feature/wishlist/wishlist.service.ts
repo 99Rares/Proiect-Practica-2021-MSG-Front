@@ -26,6 +26,9 @@ export class WishlistService {
   wishlist: BehaviorSubject<ApartmentDetails []> = new BehaviorSubject<ApartmentDetails []>([]);
   history: BehaviorSubject<ApartmentDetails []> = new BehaviorSubject<ApartmentDetails []>([]);
 
+
+  msgSnackbarLogin: string = $localize`:@@msgsnackbarLogin:Please log in!`;
+
   getAllWishlists(userId: number) {
     this.backendService.get(`${this.url}/${userId}`).subscribe(data => {
       this.wishlist.next(data);
@@ -47,7 +50,7 @@ export class WishlistService {
   toWishlist(id: number) {
     const index = id
     if (!this.tokenService.getUser()) {
-      this._snackBar.open('Please log in!', 'Ok', {
+      this._snackBar.open(this.msgSnackbarLogin, 'Ok', {
         duration: 3000
       });
     } else {

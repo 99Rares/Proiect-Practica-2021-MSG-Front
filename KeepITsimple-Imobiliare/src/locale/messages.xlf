@@ -351,6 +351,13 @@
           <context context-type="linenumber">21</context>
         </context-group>
       </trans-unit>
+      <trans-unit id="msgLogout" datatype="html">
+        <source>Logged Out successfully!</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/feature/header/header.component.ts</context>
+          <context context-type="linenumber">23</context>
+        </context-group>
+      </trans-unit>
       <trans-unit id="toolbarH" datatype="html">
         <source>Ultimele 4 locuinte vizitate</source>
         <context-group purpose="location">
@@ -365,6 +372,14 @@
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/feature/users/login/login.component.ts</context>
           <context context-type="linenumber">33</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="msgLoginFailed" datatype="html">
+        <source>Log in failed!
+Check your credentials or verify your email!</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/feature/users/login/login.component.ts</context>
+          <context context-type="linenumber">34</context>
         </context-group>
       </trans-unit>
       <trans-unit id="newPassword" datatype="html">
@@ -402,6 +417,21 @@
         </context-group>
         <note priority="1" from="description">Button for password update</note>
         <note priority="1" from="meaning">UpdatePassButton</note>
+      </trans-unit>
+      <trans-unit id="msgPassReset" datatype="html">
+        <source>Your password has been reset!
+ Try to log in!</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/feature/users/password-reset/password-reset.component.ts</context>
+          <context context-type="linenumber">19</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="msgSomethingWrong" datatype="html">
+        <source>Something went wrong.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/feature/users/password-reset/password-reset.component.ts</context>
+          <context context-type="linenumber">20</context>
+        </context-group>
       </trans-unit>
       <trans-unit id="firstname" datatype="html">
         <source>Firstname</source>
@@ -475,6 +505,21 @@
         <note priority="1" from="description">Redirect user to login</note>
         <note priority="1" from="meaning">redirectToLogin</note>
       </trans-unit>
+      <trans-unit id="msgRegisterSuccess" datatype="html">
+        <source>You have registered successfully! 
+ Please check your email to confirm your account!</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/feature/users/register/register.component.ts</context>
+          <context context-type="linenumber">22</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="msgRegisterFail" datatype="html">
+        <source>Registration failed!</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/feature/users/register/register.component.ts</context>
+          <context context-type="linenumber">23</context>
+        </context-group>
+      </trans-unit>
       <trans-unit id="userWelcome" datatype="html">
         <source>Bun venit, <x id="INTERPOLATION" equiv-text="{{getFullName()}}"/>! Aici iti poti modifica datele contului!</source>
         <context-group purpose="location">
@@ -524,7 +569,21 @@
         <source>History</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/feature/users/user-details-form/user-details-form.component.ts</context>
-          <context context-type="linenumber">30</context>
+          <context context-type="linenumber">26</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="msgUpdateSuccess" datatype="html">
+        <source>User was successfully updated! Please log out and then log in again to see your changes!</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/feature/users/user-details/user-details.component.ts</context>
+          <context context-type="linenumber">18</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="msgUpdateFail" datatype="html">
+        <source>Failed to update user details</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/feature/users/user-details/user-details.component.ts</context>
+          <context context-type="linenumber">19</context>
         </context-group>
       </trans-unit>
       <trans-unit id="username" datatype="html">
@@ -608,6 +667,20 @@
         <note priority="1" from="description">Button for login after verif fail</note>
         <note priority="1" from="meaning">loginButtonVerifFail</note>
       </trans-unit>
+      <trans-unit id="msgVerifySuccess" datatype="html">
+        <source>You have verified successfully!</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/feature/users/verified/verified/verified.component.ts</context>
+          <context context-type="linenumber">21</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="msgVerifyFail" datatype="html">
+        <source>Verification failed!</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/feature/users/verified/verified/verified.component.ts</context>
+          <context context-type="linenumber">22</context>
+        </context-group>
+      </trans-unit>
       <trans-unit id="completeEmail" datatype="html">
         <source>Completează cu adresa de email asociată contului tău.</source>
         <context-group purpose="location">
@@ -634,6 +707,27 @@
         </context-group>
         <note priority="1" from="description">Button for submit</note>
         <note priority="1" from="meaning">submitbutton</note>
+      </trans-unit>
+      <trans-unit id="msgEmailResetSent" datatype="html">
+        <source>Password-reset email was sent. Check your inbox!</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/feature/users/vreify-reset/verify-email.component.ts</context>
+          <context context-type="linenumber">26</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="msgEmailResetSentFailed" datatype="html">
+        <source>Failed to send email. Check your input!</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/feature/users/vreify-reset/verify-email.component.ts</context>
+          <context context-type="linenumber">27</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="msgsnackbarLogin" datatype="html">
+        <source>Please log in!</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/feature/wishlist/wishlist.service.ts</context>
+          <context context-type="linenumber">30</context>
+        </context-group>
       </trans-unit>
     </body>
   </file>
