@@ -48,16 +48,13 @@ export class ApartmentListComponent implements OnInit {
   wishlist: ApartmentDetails [] = [];
 
 
-  async ngOnInit(): Promise<void> {
+  ngOnInit() { //: Promise<void> {
 
     this.loadApartments();
-    await new Promise(f => setTimeout(f, 500));
-    this.loadApartmentsCopy();
-    await new Promise(f => setTimeout(f, 500));
-    this.setPageLength(this.copyapartments.length);
-    this.startSlice();
-    this.loadWishlist();
-    console.log(this.copyapartments.length);
+    //await new Promise(f => setTimeout(f, 500));
+    //this.loadApartmentsCopy();
+    //await new Promise(f => setTimeout(f, 500));
+    //console.log(this.copyapartments.length);
   }
 
 
@@ -66,102 +63,100 @@ export class ApartmentListComponent implements OnInit {
   }
 
   loadApartments() {
-    this.apartmentService.getApartments().subscribe((data) =>{ this.apartments = data});
+    this.apartmentService.getApartments().subscribe((data) => {
+      this.apartments = data;
+      this.copyapartments = data;
+      this.setPageLength(this.copyapartments.length);
+      this.startSlice();
+      this.loadWishlist();
+    });
   }
 
-  loadApartmentsCopy() {
-    this.apartmentService.getApartments().subscribe((data) =>{this.copyapartments = data});
-  }
+  // loadApartmentsCopy() {
+  //   this.apartmentService.getApartments().subscribe((data) => {
+  //     this.copyapartments = data
+  //   });
+  // }
 
   // loadApartmentsPage() {
   //   this.apartmentService.getApartments().subscribe((data) =>{this.currPage = data});
   //   this.currPage = this.copyapartments.slice(0, this.pageSize);
   // }
 
-  filter(form:any){
+  filter(form: any) {
     console.log(form);
-    if(form.pret){
-      this.copyapartments = this.apartments.filter(ap =>ap.price <= form.pret)
+    if (form.pret) {
+      this.copyapartments = this.apartments.filter(ap => ap.price <= form.pret)
       this.updatePage();
       this.startSlice();
     }
 
-    if(form.tip == "inchiriere"){
+    if (form.tip == "inchiriere") {
       this.copyapartments = this.apartments.filter(ap => ap.transactionType == "inchiriere")
       this.updatePage();
       this.startSlice();
+    } else if (form.tip == "vanzare") {
+      this.copyapartments = this.apartments.filter(ap => ap.transactionType == "vanzare")
+      this.updatePage();
+      this.startSlice();
     }
-    else
-      if(form.tip == "vanzare"){
-        this.copyapartments = this.apartments.filter(ap => ap.transactionType == "vanzare")
-        this.updatePage();
-        this.startSlice();
-      }
 
-    if(form.oras){
+    if (form.oras) {
       this.copyapartments = this.apartments.filter(ap => ap.city === form.oras)
       this.updatePage();
       this.startSlice();
     }
 
-    if(form.cartier){
+    if (form.cartier) {
       this.copyapartments = this.apartments.filter(ap => ap.neighbourhood === form.cartier)
       this.updatePage();
       this.startSlice();
     }
   }
 
-  sort(form:any){
+  sort(form: any) {
     console.log(form);
-    if(form.pretsort == "descrescator"){
-      this.copyapartments = this.copyapartments.sort((ap1,ap2) => 0 - (ap1.price > ap2.price ? 1 : -1) );
+    if (form.pretsort == "descrescator") {
+      this.copyapartments = this.copyapartments.sort((ap1, ap2) => 0 - (ap1.price > ap2.price ? 1 : -1));
+      this.updatePage();
+      this.startSlice();
+    } else if (form.pretsort == "crescator") {
+      this.copyapartments = this.copyapartments.sort((ap1, ap2) => 0 - (ap1.price > ap2.price ? -1 : 1));
       this.updatePage();
       this.startSlice();
     }
-    else
-      if(form.pretsort == "crescator"){
-        this.copyapartments = this.copyapartments.sort((ap1,ap2) => 0 - (ap1.price > ap2.price ? -1 : 1));
+
+
+    if (form.suprafata == "descrescator") {
+      this.copyapartments = this.copyapartments.sort((ap1, ap2) => 0 - (ap1.surface > ap2.surface ? 1 : -1));
+      this.startSlice();
+      this.startSlice();
+      if (form.pretsort == "descrescator") {
+        this.copyapartments = this.copyapartments.sort((ap1, ap2) => 0 - (ap1.price > ap2.price ? 1 : -1));
+        this.updatePage();
+        this.startSlice();
+      } else if (form.pretsort == "crescator") {
+        this.copyapartments = this.copyapartments.sort((ap1, ap2) => 0 - (ap1.price > ap2.price ? -1 : 1));
         this.updatePage();
         this.startSlice();
       }
-
-
-      if(form.suprafata == "descrescator"){
-        this.copyapartments = this.copyapartments.sort((ap1,ap2) => 0 - (ap1.surface > ap2.surface ? 1 : -1) );
-        this.startSlice();
-        this.startSlice();
-        if(form.pretsort == "descrescator"){
-          this.copyapartments = this.copyapartments.sort((ap1,ap2) => 0 - (ap1.price > ap2.price ? 1 : -1) );
-          this.updatePage();
-          this.startSlice();
-        }
-        else
-        if(form.pretsort == "crescator"){
-          this.copyapartments = this.copyapartments.sort((ap1,ap2) => 0 - (ap1.price > ap2.price ? -1 : 1));
-          this.updatePage();
-          this.startSlice();
-        }
-      }
-      else
-      if(form.suprafata == "crescator"){
-        this.copyapartments = this.copyapartments.sort((ap1,ap2) => 0 - (ap1.surface > ap2.surface ? -1 : 1));
+    } else if (form.suprafata == "crescator") {
+      this.copyapartments = this.copyapartments.sort((ap1, ap2) => 0 - (ap1.surface > ap2.surface ? -1 : 1));
+      this.updatePage();
+      this.startSlice();
+      if (form.pretsort == "descrescator") {
+        this.copyapartments = this.copyapartments.sort((ap1, ap2) => 0 - (ap1.price > ap2.price ? 1 : -1));
         this.updatePage();
         this.startSlice();
-        if(form.pretsort == "descrescator"){
-          this.copyapartments = this.copyapartments.sort((ap1,ap2) => 0 - (ap1.price > ap2.price ? 1 : -1) );
-          this.updatePage();
-          this.startSlice();
-        }
-        else
-        if(form.pretsort == "crescator"){
-          this.copyapartments = this.copyapartments.sort((ap1,ap2) => 0 - (ap1.price > ap2.price ? -1 : 1));
-          this.updatePage();
-          this.startSlice();
-        }
+      } else if (form.pretsort == "crescator") {
+        this.copyapartments = this.copyapartments.sort((ap1, ap2) => 0 - (ap1.price > ap2.price ? -1 : 1));
+        this.updatePage();
+        this.startSlice();
       }
+    }
   }
 
-  reload(){
+  reload() {
     window.location.reload();
   }
 
@@ -189,20 +184,20 @@ export class ApartmentListComponent implements OnInit {
   pageSize = 3;
   pageLength = 0;
 
-  setPageLength(index: number){
+  setPageLength(index: number) {
     this.pageLength = index;
   }
 
-  updatePage(){
+  updatePage() {
     this.currPage = this.copyapartments;
   }
 
-  startSlice(){
-    this.currPage =  this.copyapartments.slice(0, this.pageSize);
+  startSlice() {
+    this.currPage = this.copyapartments.slice(0, this.pageSize);
   }
 
   onPageChange($event: { pageIndex: number; pageSize: number; }) {
-    this.currPage =  this.copyapartments.slice($event.pageIndex*$event.pageSize, $event.pageIndex*$event.pageSize + $event.pageSize);
+    this.currPage = this.copyapartments.slice($event.pageIndex * $event.pageSize, $event.pageIndex * $event.pageSize + $event.pageSize);
     this.pageSize = $event.pageSize;
     console.log(this.pageSize);
   }

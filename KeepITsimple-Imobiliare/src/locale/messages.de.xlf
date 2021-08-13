@@ -612,6 +612,30 @@
         <note priority="1" from="description">Button for submit</note>
         <note priority="1" from="meaning">submitbutton</note>
       </trans-unit>
+      <trans-unit id="successfulLogin" datatype="html">
+        <source>Logged in successfully!</source>
+        <target>Erfolgreich eingeloggt!</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/feature/users/login/login.component.ts</context>
+          <context context-type="linenumber">33</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="tab1" datatype="html">
+        <source>Descriere apartament</source>
+        <target>Wohnungsbeschreibung</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/feature/apartments/apartment-page/apartment-page.component.ts</context>
+          <context context-type="linenumber">20</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="tooltip1" datatype="html">
+        <source>Manage Account Details</source>
+        <target>Kontodetails verwalten</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/feature/header/header.component.ts</context>
+          <context context-type="linenumber">17</context>
+        </context-group>
+      </trans-unit>
     </body>
   </file>
 </xliff>
