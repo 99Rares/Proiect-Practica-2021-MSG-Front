@@ -1,9 +1,9 @@
 <div *ngIf="isVerified" class="container text-center verify">
-  <h3>Congratulations, your account has been verified.</h3>
-  <h4><a class="buton" href="/login">Click here to Login</a></h4>
+  <h3 i18n="CongratsVerification|Congrats Msg for verification@@congratsVerif">Congratulations, your account has been verified.</h3>
+  <h4><a class="buton" href="/login" i18n="loginButtonVerif|Button for login after verif@@loginButtonVerif">Click here to Login</a></h4>
 </div>
 <div *ngIf="!isVerified" class="container text-center verify">
-  <h3>Sorry, we could not verify account. It maybe already verified,
+  <h3 i18n="FailedVerification|Fail Msg for verification@@failedVerif">Sorry, we could not verify account. It maybe already verified,
     or verification code is incorrect.</h3>
-  <h4><a class="buton" href="/login">Click here to Login</a></h4>
+  <h4><a class="buton" href="/login" i18n="loginButtonVerifFail|Button for login after verif fail@@loginButtonVerifFail">Click here to Login</a></h4>
 </div>

@@ -24,37 +24,37 @@
     </mat-carousel>
   </div>
   <mat-tab-group>
-    <mat-tab label="Descriere apartament">
+    <mat-tab label="Descriere apartament" i18n="Tab Description Apartment|Description for the apartment tab@@apartDescriptionTab">
       <strong>{{apartment.titleApart}}</strong>
       <br>
       <b class="transaction-type">{{apartment.transactionType}}</b>
       <br>
       <p>{{apartment.description}}</p>
       <p>{{apartment.city}}, {{apartment.neighbourhood}}</p>
-      <p >Apartamentul apare de <strong>{{getStatistics1Data}}</strong> ori in lista de favorite a utilizatorilor</p>
+      <p>Apartamentul apare de <strong>{{getStatistics1Data}}</strong> ori in lista de favorite a utilizatorilor</p>
     </mat-tab>
 
-    <mat-tab label="Caracteristici">
+    <mat-tab label="Caracteristici" i18n="Characteristics Tab|Description for apartment characteristics tab@@characteristicsTab">
       <p>Numar camere: {{apartment.nrRooms}}</p>
       <p>Suprafata: {{apartment.surface}} mp</p>
       <p>An constructie: {{apartment.yearConstruction}}</p>
     </mat-tab>
 
-    <mat-tab label="Pret">
+    <mat-tab label="Pret" i18n="Price Tab|Description for price tab@@priceTab">
       {{apartment.price | currency:'EUR'}}
     </mat-tab>
 
-    <mat-tab label="Contact proprietar">
+    <mat-tab label="Contact proprietar" i18n="Owner details Tab|Description for owner details tab@@ownerTab">
       <p>{{apartment.owner.firstName}} {{apartment.owner.lastName}}</p>
       <p>{{apartment.owner.phoneNumber}}</p>
-      <p><a href="{{apartment.owner.urlStatisticsChart}}">Statistica Locuinte</a></p>
+      <p ><a href="{{apartment.owner.urlStatisticsChart}}">Statistica Locuinte</a></p>
     </mat-tab>
   </mat-tab-group>
   <div class="buton">
   <button  mat-icon-button color="warn" (click)="toWishlist(apartment.id)">
     <mat-icon class="size" [ngStyle]="{'color': isFavourite(apartment.id) ? 'red' : 'gray'}">favorite</mat-icon>
-    <span *ngIf="!isFavourite(apartment.id)" class="text">Adauga</span>
-    <span *ngIf="isFavourite(apartment.id)" class="text">Sterge</span>
+    <span *ngIf="!isFavourite(apartment.id)" class="text" i18n="AddButton|Button for add@@addButton">Adauga</span>
+    <span *ngIf="isFavourite(apartment.id)" class="text" i18n="DeleteButton|Button for delete@@deleteButton">Sterge</span>
   </button>
   </div>
   <br>

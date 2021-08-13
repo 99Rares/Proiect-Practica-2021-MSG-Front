@@ -1,7 +1,7 @@
 <div class="ownerInfo">
   <h1>{{owner.firstName}} {{owner.lastName}}</h1>
-  <h3>Contact:</h3>
-  <p>Nr tel: {{owner.phoneNumber}} </p>
+  <h3 i18n="Card Header|Title for the contact card@@contactHeader">Contact:</h3>
+  <p i18n="Card Description|A description for the contact card@@contactDescription">Nr tel: {{owner.phoneNumber}} </p>
 </div>
 
 <div class="chart">
@@ -16,7 +16,7 @@
 
 
 <div class="apartments">
-  <p>Imobiliarele lui {{owner.firstName}} {{owner.lastName}}: </p>
+  <p i18n="Card Description|A description for the apartments card@@apartmentsDescription">Imobiliarele lui {{owner.firstName}} {{owner.lastName}}: </p>
   <app-apartment-item [data]="apartments" (apartmentId)="toWishlist($event)" [wishlist]="wishlist"></app-apartment-item>
 </div>
 

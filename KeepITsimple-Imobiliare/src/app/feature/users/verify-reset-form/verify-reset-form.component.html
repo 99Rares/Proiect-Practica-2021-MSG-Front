@@ -1,16 +1,16 @@
 <div class="centered-element">
-  <h3>Completează cu adresa de email asociată contului tău.</h3>
+  <h3 i18n="CompleteEmail|Complete with your email@@completeEmail">Completează cu adresa de email asociată contului tău.</h3>
  </div>
 <div class="container">
   <form [formGroup]="resetForm" (ngSubmit)="onSubmit()">
     <div class="row">
       <mat-form-field>
-        <mat-label>Email</mat-label>
+        <mat-label i18n="EmailVerifReset|Email verif reset page@@emailVerifReset">Email</mat-label>
         <input matInput formControlName="username">
       </mat-form-field>
     </div>
     <div class="row">
-      <button [disabled]="!isValid()" mat-raised-button color="primary" type="submit" class="login-button">Submit</button>
+      <button [disabled]="!isValid()" mat-raised-button color="primary" type="submit" class="login-button" i18n="submitbutton|Button for submit@@submitbutton">Submit</button>
     </div>
     <br>
   </form>
