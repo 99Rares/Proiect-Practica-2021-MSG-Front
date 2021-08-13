@@ -2,33 +2,6 @@
 <xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
   <file source-language="ro" datatype="plaintext" original="ng2.template">
     <body>
-      <trans-unit id="contactHeader" datatype="html">
-        <source>Contact:</source>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/feature/apartments/apartment-by-owner/apartment-by-owner.component.html</context>
-          <context context-type="linenumber">3,4</context>
-        </context-group>
-        <note priority="1" from="description">Title for the contact card</note>
-        <note priority="1" from="meaning">Card Header</note>
-      </trans-unit>
-      <trans-unit id="contactDescription" datatype="html">
-        <source>Nr tel: <x id="INTERPOLATION" equiv-text="{{owner.phoneNumber}}"/> </source>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/feature/apartments/apartment-by-owner/apartment-by-owner.component.html</context>
-          <context context-type="linenumber">4,7</context>
-        </context-group>
-        <note priority="1" from="description">A description for the contact card</note>
-        <note priority="1" from="meaning">Card Description</note>
-      </trans-unit>
-      <trans-unit id="apartmentsDescription" datatype="html">
-        <source>Imobiliarele lui <x id="INTERPOLATION" equiv-text="{{owner.firstName}}"/> <x id="INTERPOLATION_1" equiv-text="{{owner.lastName}}"/>: </source>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/feature/apartments/apartment-by-owner/apartment-by-owner.component.html</context>
-          <context context-type="linenumber">19,20</context>
-        </context-group>
-        <note priority="1" from="description">A description for the apartments card</note>
-        <note priority="1" from="meaning">Card Description</note>
-      </trans-unit>
       <trans-unit id="toolbarApartments" datatype="html">
         <source>Locuinte</source>
         <context-group purpose="location">

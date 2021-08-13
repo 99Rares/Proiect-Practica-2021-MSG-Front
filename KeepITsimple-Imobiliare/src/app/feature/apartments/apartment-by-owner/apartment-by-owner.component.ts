@@ -4,6 +4,7 @@ import {ApartmentService} from "../apartment.service";
 import {ActivatedRoute} from "@angular/router";
 import {WishlistService} from "../../wishlist/wishlist.service";
 import {TokenStorageService} from "../../services/token-storage.service";
+import {$localize} from "@angular/localize/init";
 
 @Component({
   selector: 'app-apartment-by-owner',
