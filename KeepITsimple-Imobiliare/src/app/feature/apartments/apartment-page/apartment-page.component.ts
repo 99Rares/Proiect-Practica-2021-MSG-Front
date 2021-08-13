@@ -17,6 +17,7 @@ export class ApartmentPageComponent implements OnInit {
   history: ApartmentDetails[] = [];
 
   getStatistics1Data: string = '';
+  tab1 = $localize`:@@tab1:Descriere apartament`;
 
   constructor(private route: ActivatedRoute,
               private apartmentService: ApartmentService,
@@ -49,8 +50,7 @@ export class ApartmentPageComponent implements OnInit {
     if (this.tokenService.getUser()) {
       // await new Promise(f => setTimeout(f, 100));
       if (apartment) {
-        if (this.history === null)
-          this.history = [];
+        this.history= this.history ?? []
         if (this.isHistory(apartment.id)) {
           const index = this.history.map(function (e) {
             return e.id;

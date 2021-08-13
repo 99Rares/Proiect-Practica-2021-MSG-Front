@@ -9,7 +9,7 @@ import {Observable} from "rxjs";
 export class UserService {
 
   url = 'http://localhost:8080/api/users/login';
-  urlRegister = 'http://localhost:8080/api/users/register'
+  urlRegister = 'http://localhost:8080/api/users/register/'
   resetEndpoint = 'http://localhost:8080/api/users/reset'
   resetPasswordEndpoint='http://localhost:8080/api/users/reset/'
   getUserDetailsEndpoint = 'http://localhost:8080/api/users'
@@ -27,8 +27,9 @@ export class UserService {
   }
 
   reset(email: string): Observable<void> {
+    let port=window.location.port;
     console.log(`${this.resetEndpoint}/${email}`)
-    return this.service.post(`${this.resetEndpoint}`,email);
+    return this.service.post(`${this.resetEndpoint}/${port}`,email);
   }
   //resetPasswordEndpoint='http://localhost:8080/api/users/reset/{code}/pass'
   resetPassword(password:string,code:string|null):Observable<void>{
@@ -38,8 +39,8 @@ export class UserService {
 
   //register care primeste user cu toate field urile obs void
   register(user: LongUser): Observable<void> {
-
-    return this.service.post(this.urlRegister, {
+let port=window.location.port;
+    return this.service.post(this.urlRegister+port ,{
       firstName: user.firstName,
       lastName: user.lastName,
       email: user.email,
