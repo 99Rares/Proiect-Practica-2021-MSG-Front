@@ -53,8 +53,6 @@ let port=window.location.port;
   }
 
   updateUser(user: LongUser): Observable<LongUser> {
-    // console.log(this.updateUserDetailsEndpoint);
-    // console.log(user);
     return this.service.put(`${this.updateUserDetailsEndpoint}`, user);
   }
 

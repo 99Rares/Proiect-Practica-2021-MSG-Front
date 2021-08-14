@@ -48,13 +48,8 @@ export class ApartmentListComponent implements OnInit {
   wishlist: ApartmentDetails [] = [];
 
 
-  ngOnInit() { //: Promise<void> {
-
+  ngOnInit() {
     this.loadApartments();
-    //await new Promise(f => setTimeout(f, 500));
-    //this.loadApartmentsCopy();
-    //await new Promise(f => setTimeout(f, 500));
-    //console.log(this.copyapartments.length);
   }
 
 
@@ -71,17 +66,6 @@ export class ApartmentListComponent implements OnInit {
       this.loadWishlist();
     });
   }
-
-  // loadApartmentsCopy() {
-  //   this.apartmentService.getApartments().subscribe((data) => {
-  //     this.copyapartments = data
-  //   });
-  // }
-
-  // loadApartmentsPage() {
-  //   this.apartmentService.getApartments().subscribe((data) =>{this.currPage = data});
-  //   this.currPage = this.copyapartments.slice(0, this.pageSize);
-  // }
 
   filter(form: any) {
     console.log(form);
@@ -174,12 +158,6 @@ export class ApartmentListComponent implements OnInit {
   }
 
   //------------------------Paginator----------------------------------
-
-  //@ViewChild(MatPaginator) paginator: MatPaginator;
-
-  // setPage() {
-  //   this.paginator.length = this.pageSize;
-  // }
 
   pageSize = 3;
   pageLength = 0;

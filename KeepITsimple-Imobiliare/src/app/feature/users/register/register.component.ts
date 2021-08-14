@@ -19,20 +19,21 @@ export class RegisterComponent implements OnInit {
   ) {
   }
 
+  msgRegisterSuccess: string = $localize`:@@msgRegisterSuccess:You have registered successfully! \n Please check your email to confirm your account!`;
+  msgRegisterFail: string = $localize`:@@msgRegisterFail:Registration failed!`;
+
   ngOnInit(): void {
   }
 
   register(user: LongUser) {
     this.service.register(user).subscribe(
       data => {
-        //this.router.navigate(['/products']);
-        const msg: string = `You have registered successfully! \n Please check your email to confirm your account!`;
-        this._snackBar.open(msg, 'OK', {
+        this._snackBar.open(this.msgRegisterSuccess, 'OK', {
           duration: 10000,
           panelClass: ['success-snackbar']
         });
       },
-      (error) => this._snackBar.open('Registration failed!', "Ok", {
+      (error) => this._snackBar.open(this.msgRegisterFail, "Ok", {
         duration: 3000,
         panelClass: ['fail-snackbar']
       })

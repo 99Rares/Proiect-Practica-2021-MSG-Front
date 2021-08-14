@@ -16,6 +16,9 @@ export class PasswordResetComponent implements OnInit {
               private _snackBar: MatSnackBar) {
   }
 
+  msgPassReset: string = $localize`:@@msgPassReset:Your password has been reset!\n Try to log in!`;
+  msgSomethingWrong: string = $localize`:@@msgSomethingWrong:Something went wrong.`;
+
   ngOnInit(): void {
   }
 
@@ -23,14 +26,14 @@ export class PasswordResetComponent implements OnInit {
     // console.log(obj.password, obj.code)
     this.service.resetPassword(obj.password, obj.code).subscribe(() => {
         this.router.navigate(['/login']);
-        this._snackBar.open('Your password has been reset!\n Try to log in!', 'OK', {
+        this._snackBar.open(this.msgPassReset, 'OK', {
           duration:7000,
           panelClass: ['success-snackbar']
         });
       },
       () =>{
         this.router.navigate(['']);
-        this._snackBar.open('Something went wrong.', 'OK', {
+        this._snackBar.open(this.msgSomethingWrong, 'OK', {
           duration:7000,
           panelClass: ['fail-snackbar']
         })

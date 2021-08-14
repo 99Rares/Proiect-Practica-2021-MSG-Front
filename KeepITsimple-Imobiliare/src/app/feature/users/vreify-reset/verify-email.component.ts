@@ -23,17 +23,20 @@ export class VerifyEmailComponent implements OnInit {
     ])
   });
 
+  msgEmailResetSent: string = $localize`:@@msgEmailResetSent:Password-reset email was sent. Check your inbox!`;
+  msgEmailResetSentFailed: string = $localize`:@@msgEmailResetSentFailed:Failed to send email. Check your input!`;
+
   ngOnInit(): void {
   }
 
   sendEmail(email: string) {
     this.service.reset(email).subscribe(() =>
-        this._snackBar.open('Password-reset email was sent. Check your inbox!', 'OK', {
+        this._snackBar.open(this.msgEmailResetSent, 'OK', {
           duration:7000,
           panelClass: ['success-snackbar']
         }),
       () =>
-        this._snackBar.open('Failed to send email. Check your input!', 'OK', {
+        this._snackBar.open(this.msgEmailResetSentFailed, 'OK', {
           panelClass: ['fail-snackbar'],
           duration:5000,
         }));
