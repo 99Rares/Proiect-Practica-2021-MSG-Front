@@ -146,7 +146,7 @@ export class ApartmentListComponent implements OnInit {
 
   loadWishlist() {
     if (!this.tokenService.getUser()) {
-      // this._snackBar.open('Please log in!','Ok',{
+      // this._snackBar.open('Va rugam sa va logati!','Ok',{
       //   duration:3000
       // });
     } else {

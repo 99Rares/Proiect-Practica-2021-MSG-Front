@@ -372,7 +372,7 @@
         <note priority="1" from="meaning">changePass</note>
       </trans-unit>
       <trans-unit id="newPassword" datatype="html">
-        <source>New Password</source>
+        <source>Noua parolă</source>
         <target>Neues Passwort</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/feature/users/password-reset-form/password-reset-form.component.html</context>
@@ -382,7 +382,7 @@
         <note priority="1" from="meaning">NewPassword</note>
       </trans-unit>
       <trans-unit id="newPasswordConfirm" datatype="html">
-        <source>Confirm New Password</source>
+        <source>Confirmă noua parolă</source>
         <target>Bestätige neues Passwort</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/feature/users/password-reset-form/password-reset-form.component.html</context>
@@ -392,7 +392,7 @@
         <note priority="1" from="meaning">ConfirmNewPassword</note>
       </trans-unit>
       <trans-unit id="passwordsNotMatch" datatype="html">
-        <source> Passwords do not match! </source>
+        <source> Parolele nu se potrivesc! </source>
         <target> Passwörter stimmen nicht überein! </target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/feature/users/password-reset-form/password-reset-form.component.html</context>
@@ -402,7 +402,7 @@
         <note priority="1" from="meaning">PasswordsNotMatch</note>
       </trans-unit>
       <trans-unit id="updatePassButton" datatype="html">
-        <source>Update Password</source>
+        <source>Actualizați parola</source>
         <target>Passwort aktualisieren</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/feature/users/password-reset-form/password-reset-form.component.html</context>
@@ -412,7 +412,7 @@
         <note priority="1" from="meaning">UpdatePassButton</note>
       </trans-unit>
       <trans-unit id="firstname" datatype="html">
-        <source>Firstname</source>
+        <source>Prenume</source>
         <target>Vorname</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/feature/users/register-form/register-form.component.html</context>
@@ -422,7 +422,7 @@
         <note priority="1" from="meaning">Firstname</note>
       </trans-unit>
       <trans-unit id="lastname" datatype="html">
-        <source>Lastname</source>
+        <source>Nume</source>
         <target>Nachname</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/feature/users/register-form/register-form.component.html</context>
@@ -442,7 +442,7 @@
         <note priority="1" from="meaning">Email</note>
       </trans-unit>
       <trans-unit id="passwordReg" datatype="html">
-        <source>Password</source>
+        <source>Parola</source>
         <target>Passwort</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/feature/users/register-form/register-form.component.html</context>
@@ -452,7 +452,7 @@
         <note priority="1" from="meaning">PasswordReg</note>
       </trans-unit>
       <trans-unit id="passwordRegConfirm" datatype="html">
-        <source>Confirm Password</source>
+        <source>Confirmă Parola</source>
         <target>Bestätige Passwort</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/feature/users/register-form/register-form.component.html</context>
@@ -462,7 +462,7 @@
         <note priority="1" from="meaning">ConfirmPasswordReg</note>
       </trans-unit>
       <trans-unit id="passwordsNotMatchReg" datatype="html">
-        <source> Passwords do not match! </source>
+        <source> Parolele nu se potrivesc! </source>
         <target> Passwörter stimmen nicht überein! </target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/feature/users/register-form/register-form.component.html</context>
@@ -502,7 +502,7 @@
         <note priority="1" from="meaning">WelcomeUser</note>
       </trans-unit>
       <trans-unit id="firstnameD" datatype="html">
-        <source>Firstname</source>
+        <source>Prenume</source>
         <target>Vorname</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/feature/users/user-details-form/user-details-form.component.html</context>
@@ -512,7 +512,7 @@
         <note priority="1" from="meaning">FirstnameD</note>
       </trans-unit>
       <trans-unit id="lastnameD" datatype="html">
-        <source>Lastname</source>
+        <source>Nume</source>
         <target>Nachname</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/feature/users/user-details-form/user-details-form.component.html</context>
@@ -532,7 +532,7 @@
         <note priority="1" from="meaning">EmailD</note>
       </trans-unit>
       <trans-unit id="detailsUpdateButton" datatype="html">
-        <source>Update Details</source>
+        <source>Actualizați Datele</source>
         <target>Kontodaten aktualisieren</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/feature/users/user-details-form/user-details-form.component.html</context>
@@ -542,7 +542,7 @@
         <note priority="1" from="meaning">DetailsButtonUpdate</note>
       </trans-unit>
       <trans-unit id="congratsVerif" datatype="html">
-        <source>Congratulations, your account has been verified.</source>
+        <source>Felicitări, contul dvs. a fost verificat.</source>
         <target>Herzlichen Glückwunsch, Ihr Konto wurde bestätigt.</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/feature/users/verified/verified/verified.component.html</context>
@@ -552,7 +552,7 @@
         <note priority="1" from="meaning">CongratsVerification</note>
       </trans-unit>
       <trans-unit id="loginButtonVerif" datatype="html">
-        <source>Click here to Login</source>
+        <source>Apasa aici pentru a te loga</source>
         <target>Bitte hier klicken, um sich einzuloggen</target>
         <target></target>
         <context-group purpose="location">
@@ -563,7 +563,7 @@
         <note priority="1" from="meaning">loginButtonVerif</note>
       </trans-unit>
       <trans-unit id="failedVerif" datatype="html">
-        <source>Sorry, we could not verify account. It maybe already verified, or verification code is incorrect.</source>
+        <source>Ne pare rău, nu am putut verifica contul. Poate că este deja verificat sau codul de verificare este incorect.</source>
         <target>Das Konto konnte nicht bestätigt werden. Es ist möglicherweise bereits verifiziert oder der Verifizierungscode ist falsch.</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/feature/users/verified/verified/verified.component.html</context>
@@ -573,7 +573,7 @@
         <note priority="1" from="meaning">FailedVerification</note>
       </trans-unit>
       <trans-unit id="loginButtonVerifFail" datatype="html">
-        <source>Click here to Login</source>
+        <source>Apasa aici pentru a te loga</source>
         <target>Bitte hier klicken, um sich einzuloggen</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/feature/users/verified/verified/verified.component.html</context>
@@ -603,7 +603,7 @@
         <note priority="1" from="meaning">EmailVerifReset</note>
       </trans-unit>
       <trans-unit id="submitbutton" datatype="html">
-        <source>Submit</source>
+        <source>Trimite</source>
         <target>Einsenden</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/feature/users/verify-reset-form/verify-reset-form.component.html</context>
@@ -613,7 +613,7 @@
         <note priority="1" from="meaning">submitbutton</note>
       </trans-unit>
       <trans-unit id="successfulLogin" datatype="html">
-        <source>Logged in successfully!</source>
+        <source>Conectat cu succes!</source>
         <target>Erfolgreich eingeloggt!</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/feature/users/login/login.component.ts</context>
@@ -629,7 +629,7 @@
         </context-group>
       </trans-unit>
       <trans-unit id="tooltip1" datatype="html">
-        <source>Manage Account Details</source>
+        <source>Gestionați detaliile contului</source>
         <target>Kontodetails verwalten</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/feature/header/header.component.ts</context>
@@ -645,7 +645,7 @@
         </context-group>
       </trans-unit>
       <trans-unit id="tooltipGotoStatistics" datatype="html">
-        <source>Go to statistics</source>
+        <source>Accesați statistica</source>
         <target>Zur Statistik gehen</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/feature/header/header.component.ts</context>
@@ -653,7 +653,7 @@
         </context-group>
       </trans-unit>
       <trans-unit id="tooltipGotoWishlist" datatype="html">
-        <source>Go to wishlist</source>
+        <source>Accesați lista de dorințe</source>
         <target>Zur Wunschliste gehen</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/feature/header/header.component.ts</context>
@@ -661,7 +661,7 @@
         </context-group>
       </trans-unit>
       <trans-unit id="tooltipLogout" datatype="html">
-        <source>Log out</source>
+        <source>Deconectează-te</source>
         <target>Ausloggen</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/feature/header/header.component.ts</context>
@@ -669,7 +669,7 @@
         </context-group>
       </trans-unit>
       <trans-unit id="tooltipHistory" datatype="html">
-        <source>History</source>
+        <source>Istoric</source>
         <target>Geschichte</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/feature/users/user-details-form/user-details-form.component.ts</context>
@@ -677,7 +677,7 @@
         </context-group>
       </trans-unit>
       <trans-unit id="tooltipDownload" datatype="html">
-        <source>Download PDF with Wishlist</source>
+        <source>Descărcați PDF cu lista de dorințe</source>
         <target>PDF mit Wunschliste herunterladen</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/feature/apartments/download/download.component.ts</context>
@@ -709,7 +709,7 @@
         </context-group>
       </trans-unit>
       <trans-unit id="msgLogout" datatype="html">
-        <source>Logged Out successfully!</source>
+        <source>Deconectat cu succes!</source>
         <target>Erfolgreich ausgeloggt!</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/feature/header/header.component.ts</context>
@@ -717,8 +717,8 @@
         </context-group>
       </trans-unit>
       <trans-unit id="msgLoginFailed" datatype="html">
-        <source>Log in failed!
-Check your credentials or verify your email!</source>
+        <source>Autentificare eșuată!
+                Verificați acreditările sau verificați adresa de e-mail!</source>
         <target>Anmeldung fehlgeschlagen!
 Überprüfen Sie Ihre Zugangsdaten oder bestätigen Sie Ihre E-Mail!</target>
         <context-group purpose="location">
@@ -727,7 +727,7 @@ Check your credentials or verify your email!</source>
         </context-group>
       </trans-unit>
       <trans-unit id="msgUpdateSuccess" datatype="html">
-        <source>User was successfully updated! Please log out and then log in again to see your changes!</source>
+        <source>Utilizatorul a fost actualizat cu succes! Vă rugăm să vă deconectați și apoi să vă conectați din nou pentru a vedea modificările dvs.!</source>
         <target>Benutzer wurde erfolgreich aktualisiert! Bitte loggen Sie sich aus und wieder ein, um Ihre Änderungen zu sehen!</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/feature/users/user-details/user-details.component.ts</context>
@@ -735,7 +735,7 @@ Check your credentials or verify your email!</source>
         </context-group>
       </trans-unit>
       <trans-unit id="msgUpdateFail" datatype="html">
-        <source>Failed to update user details</source>
+        <source>Actualizarea datelor utilizatorului nu a reușit</source>
         <target>Fehler beim Aktualisieren der Benutzerdetails</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/feature/users/user-details/user-details.component.ts</context>
@@ -743,8 +743,8 @@ Check your credentials or verify your email!</source>
         </context-group>
       </trans-unit>
       <trans-unit id="msgRegisterSuccess" datatype="html">
-        <source>You have registered successfully!
-Please check your email to confirm your account!</source>
+        <source>Te-ai inregistrat cu succes!
+                Vă rugăm să verificați adresa de e-mail pentru a vă confirma contul!</source>
         <target>Du hast dich erfolgreich registriert!
 Bitte überprüfen Sie Ihre E-Mail, um Ihr Konto zu bestätigen!</target>
         <context-group purpose="location">
@@ -753,7 +753,7 @@ Bitte überprüfen Sie Ihre E-Mail, um Ihr Konto zu bestätigen!</target>
         </context-group>
       </trans-unit>
       <trans-unit id="msgRegisterFail" datatype="html">
-        <source>Registration failed!</source>
+        <source>Înregistrare eșuată!</source>
         <target>Registrierung fehlgeschlagen!</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/feature/users/register/register.component.ts</context>
@@ -761,17 +761,17 @@ Bitte überprüfen Sie Ihre E-Mail, um Ihr Konto zu bestätigen!</target>
         </context-group>
       </trans-unit>
       <trans-unit id="msgPassReset" datatype="html">
-        <source>Your password has been reset!
-Try to log in!</source>
+        <source>Parola dvs. a fost resetată!
+        Încercați să vă conectați!</source>
         <target>Dein Passwort wurde zurückgesetzt!
-Versuchen Sie sich einzuloggen!</target>
+        Versuchen Sie sich einzuloggen!</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/feature/users/password-reset/password-reset.component.ts</context>
           <context context-type="linenumber">19</context>
         </context-group>
       </trans-unit>
       <trans-unit id="msgSomethingWrong" datatype="html">
-        <source>Something went wrong.</source>
+        <source>Ceva nu a mers bine.</source>
         <target>Etwas ist schief gelaufen.</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/feature/users/password-reset/password-reset.component.ts</context>
@@ -779,7 +779,7 @@ Versuchen Sie sich einzuloggen!</target>
         </context-group>
       </trans-unit>
       <trans-unit id="msgVerifySuccess" datatype="html">
-        <source>You have verified successfully!</source>
+        <source>Ați fost verificat cu succes!</source>
         <target>Sie haben erfolgreich verifiziert!</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/feature/users/verified/verified/verified.component.ts</context>
@@ -787,7 +787,7 @@ Versuchen Sie sich einzuloggen!</target>
         </context-group>
       </trans-unit>
       <trans-unit id="msgVerifyFail" datatype="html">
-        <source>Verification failed!</source>
+        <source>Verificare esuata!</source>
         <target>Überprüfung fehlgeschlagen!</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/feature/users/verified/verified/verified.component.ts</context>
@@ -795,7 +795,7 @@ Versuchen Sie sich einzuloggen!</target>
         </context-group>
       </trans-unit>
       <trans-unit id="msgEmailResetSent" datatype="html">
-        <source>Password-reset email was sent. Check your inbox!</source>
+        <source>A fost trimis un e-mail de resetare a parolei. Verifica-ti casuta!</source>
         <target>E-Mail zum Zurücksetzen des Passworts wurde gesendet. Überprüfe deinen Posteingang!</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/feature/users/vreify-reset/verify-email.component.ts</context>
@@ -803,7 +803,7 @@ Versuchen Sie sich einzuloggen!</target>
         </context-group>
       </trans-unit>
       <trans-unit id="msgEmailResetSentFailed" datatype="html">
-        <source>Failed to send email. Check your input!</source>
+        <source>Trimiterea e-mailului nu a reușit. Verifică-ți datele!</source>
         <target>E-Mail konnte nicht gesendet werden. Überprüfen Sie Ihre Daten!</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/feature/users/vreify-reset/verify-email.component.ts</context>
@@ -811,7 +811,7 @@ Versuchen Sie sich einzuloggen!</target>
         </context-group>
       </trans-unit>
       <trans-unit id="msgsnackbarLogin" datatype="html">
-        <source>Please log in!</source>
+        <source>Va rugam sa va logati!</source>
         <target>Bitte loggen Sie sich ein!</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/feature/wishlist/wishlist.service.ts</context>

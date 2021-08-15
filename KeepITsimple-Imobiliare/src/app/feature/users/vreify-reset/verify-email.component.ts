@@ -23,8 +23,8 @@ export class VerifyEmailComponent implements OnInit {
     ])
   });
 
-  msgEmailResetSent: string = $localize`:@@msgEmailResetSent:Password-reset email was sent. Check your inbox!`;
-  msgEmailResetSentFailed: string = $localize`:@@msgEmailResetSentFailed:Failed to send email. Check your input!`;
+  msgEmailResetSent: string = $localize`:@@msgEmailResetSent:A fost trimis un e-mail de resetare a parolei. Verifica-ti casuta!`;
+  msgEmailResetSentFailed: string = $localize`:@@msgEmailResetSentFailed:Trimiterea e-mailului nu a reușit. Verifică-ți datele!`;
 
   ngOnInit(): void {
   }

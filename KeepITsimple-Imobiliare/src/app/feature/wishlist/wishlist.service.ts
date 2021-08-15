@@ -27,7 +27,7 @@ export class WishlistService {
   history: BehaviorSubject<ApartmentDetails []> = new BehaviorSubject<ApartmentDetails []>([]);
 
 
-  msgSnackbarLogin: string = $localize`:@@msgsnackbarLogin:Please log in!`;
+  msgSnackbarLogin: string = $localize`:@@msgsnackbarLogin:Va rugam sa va logati!`;
 
   getAllWishlists(userId: number) {
     this.backendService.get(`${this.url}/${userId}`).subscribe(data => {

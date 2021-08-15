@@ -15,8 +15,8 @@ export class UserDetailsComponent implements OnInit {
 
   constructor(private tokenStorageService: TokenStorageService, private router: Router, private service: UserService,  private _snackBar: MatSnackBar) { }
 
-  msgUpdateSuccess: string = $localize`:@@msgUpdateSuccess:User was successfully updated! Please log out and then log in again to see your changes!`;
-  msgUpdateFail: string = $localize`:@@msgUpdateFail:Failed to update user details`;
+  msgUpdateSuccess: string = $localize`:@@msgUpdateSuccess:Utilizatorul a fost actualizat cu succes! Vă rugăm să vă deconectați și apoi să vă conectați din nou pentru a vedea modificările dvs.!`;
+  msgUpdateFail: string = $localize`:@@msgUpdateFail:Actualizarea datelor utilizatorului nu a reușit`;
 
   ngOnInit(): void {
   }

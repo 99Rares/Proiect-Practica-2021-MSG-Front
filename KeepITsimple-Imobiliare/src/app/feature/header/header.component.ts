@@ -14,13 +14,13 @@ export class HeaderComponent implements OnInit {
   constructor(private tokenStorageService: TokenStorageService, private router: Router, private _snackBar: MatSnackBar,private wishlistService:WishlistService) {
   }
   count:number=0;
-  tooltip1: string = $localize`:@@tooltip1:Manage Account Details`;
+  tooltip1: string = $localize`:@@tooltip1:Gestionați detaliile contului`;
   tooltipLogin: string = $localize`:@@tooltipLogin:Log in`;
-  tooltipGotoStatistics: string = $localize`:@@tooltipGotoStatistics:Go to statistics`;
-  tooltipGotoWishlist: string = $localize`:@@tooltipGotoWishlist:Go to wishlist`;
-  tooltipLogout: string = $localize`:@@tooltipLogout:Log out`;
+  tooltipGotoStatistics: string = $localize`:@@tooltipGotoStatistics:Accesați statistica`;
+  tooltipGotoWishlist: string = $localize`:@@tooltipGotoWishlist:Accesați lista de dorințe`;
+  tooltipLogout: string = $localize`:@@tooltipLogout:Deconectează-te`;
 
-  msgLogout: string = $localize`:@@msgLogout:Logged Out successfully!`;
+  msgLogout: string = $localize`:@@msgLogout:Deconectat cu succes!`;
 
   ngOnInit(): void {
     this.wishlistService.wishlist.subscribe(data=>this.count=data.length)

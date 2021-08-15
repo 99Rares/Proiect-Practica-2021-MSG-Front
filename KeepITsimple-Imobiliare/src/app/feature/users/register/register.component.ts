@@ -19,8 +19,8 @@ export class RegisterComponent implements OnInit {
   ) {
   }
 
-  msgRegisterSuccess: string = $localize`:@@msgRegisterSuccess:You have registered successfully! \n Please check your email to confirm your account!`;
-  msgRegisterFail: string = $localize`:@@msgRegisterFail:Registration failed!`;
+  msgRegisterSuccess: string = $localize`:@@msgRegisterSuccess:Te-ai inregistrat cu succes!\nVă rugăm să verificați adresa de e-mail pentru a vă confirma contul!`;
+  msgRegisterFail: string = $localize`:@@msgRegisterFail:Înregistrare eșuată!`;
 
   ngOnInit(): void {
   }

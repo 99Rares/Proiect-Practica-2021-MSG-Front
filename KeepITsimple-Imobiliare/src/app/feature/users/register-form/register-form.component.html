@@ -2,13 +2,13 @@
   <form [formGroup]="registerForm" (ngSubmit)="onSubmit()" appPasswordsMatch>
     <div class="row">
       <mat-form-field>
-        <mat-label i18n="Firstname|Desc for firstname@@firstname">Firstname</mat-label>
+        <mat-label i18n="Firstname|Desc for firstname@@firstname">Prenume</mat-label>
         <input matInput formControlName="firstName">
       </mat-form-field>
     </div>
     <div class="row">
       <mat-form-field>
-        <mat-label i18n="Lastname|Desc for lastname@@lastname">Lastname</mat-label>
+        <mat-label i18n="Lastname|Desc for lastname@@lastname">Nume</mat-label>
         <input matInput formControlName="lastName">
       </mat-form-field>
     </div>
@@ -20,18 +20,18 @@
     </div>
     <div class="row">
       <mat-form-field>
-        <mat-label i18n="PasswordReg|Desc for passwordReg@@passwordReg">Password</mat-label>
+        <mat-label i18n="PasswordReg|Desc for passwordReg@@passwordReg">Parola</mat-label>
         <input matInput formControlName="password" type="password">
       </mat-form-field>
     </div>
     <div class="row">
       <mat-form-field>
-        <mat-label i18n="ConfirmPasswordReg|Desc for passwordRegConfirm@@passwordRegConfirm">Confirm Password</mat-label>
+        <mat-label i18n="ConfirmPasswordReg|Desc for passwordRegConfirm@@passwordRegConfirm">Confirmă Parola</mat-label>
         <input matInput formControlName="passwordConfirm" type="password">
       </mat-form-field>
     </div>
     <div *ngIf="registerForm.errors?.passwordsMustMatchValidator && (registerForm.touched || registerForm.dirty)" class="passwords-do-not-match-error-message" i18n="PasswordsNotMatchReg|Password do not match MessageReg@@passwordsNotMatchReg">
-      Passwords do not match!
+      Parolele nu se potrivesc!
     </div>
     <br>
     <div class="row">
