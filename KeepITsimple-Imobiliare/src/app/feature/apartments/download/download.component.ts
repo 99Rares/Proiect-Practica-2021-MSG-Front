@@ -16,7 +16,7 @@ export class DownloadComponent implements OnInit {
   }
 
   apartments: ApartmentDetails[] = []
-  tooltipDownload: string = $localize`:@@tooltipDownload:Download PDF with Wishlist`;
+  tooltipDownload: string = $localize`:@@tooltipDownload:Descărcați PDF cu lista de dorințe`;
 
   ngOnInit(): void {
     this.wishlistService.loadWishlist()

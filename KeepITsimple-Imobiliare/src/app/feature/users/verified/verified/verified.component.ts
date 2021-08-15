@@ -18,8 +18,8 @@ export class VerifiedComponent implements OnInit {
   ) {
   }
 
-  msgVerifySuccess: string = $localize`:@@msgVerifySuccess:You have verified successfully!`;
-  msgVerifyFail: string = $localize`:@@msgVerifyFail:Verification failed!`;
+  msgVerifySuccess: string = $localize`:@@msgVerifySuccess:Ați fost verificat cu succes!`;
+  msgVerifyFail: string = $localize`:@@msgVerifyFail:Verificare esuata!`;
 
   ngOnInit() {
     let code: string | null = ""

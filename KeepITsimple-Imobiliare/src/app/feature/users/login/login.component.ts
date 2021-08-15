@@ -30,8 +30,8 @@ export class LoginComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  msg: string = $localize`:@@successfulLogin:Logged in successfully!`;
-  msgLoginFailed: string = $localize`:@@msgLoginFailed:Log in failed!\nCheck your credentials or verify your email!`;
+  msg: string = $localize`:@@successfulLogin:Conectat cu succes!`;
+  msgLoginFailed: string = $localize`:@@msgLoginFailed:Autentificare eșuată!\nVerificați acreditările sau verificați adresa de e-mail!`;
 
   login(user: ShortUser) {
     this.service.login(user)

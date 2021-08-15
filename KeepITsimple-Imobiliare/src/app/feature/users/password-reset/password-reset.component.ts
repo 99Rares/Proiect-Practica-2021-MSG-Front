@@ -16,8 +16,8 @@ export class PasswordResetComponent implements OnInit {
               private _snackBar: MatSnackBar) {
   }
 
-  msgPassReset: string = $localize`:@@msgPassReset:Your password has been reset!\n Try to log in!`;
-  msgSomethingWrong: string = $localize`:@@msgSomethingWrong:Something went wrong.`;
+  msgPassReset: string = $localize`:@@msgPassReset:Parola dvs. a fost resetată!\nÎncercați să vă conectați!`;
+  msgSomethingWrong: string = $localize`:@@msgSomethingWrong:Ceva nu a mers bine.`;
 
   ngOnInit(): void {
   }
