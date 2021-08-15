@@ -2,9 +2,11 @@
 <app-filter-sort (formFilterOutput)="filter($event)" (formSortOutput)="sort($event)"></app-filter-sort>
 <button mat-raised-button color="primary" type = "submit" (click)='reload()' style="margin-left: 10px; margin-top: 5px" i18n="Refresh button|Button for refresh@@buttonRefresh">Refresh</button>
 <app-apartment-item [data]="currPage" (apartmentId)="toWishlist($event)" [wishlist]="wishlist"></app-apartment-item>
+<div class="mat-paginator-container" style="width:500px; margin:0 auto;">
 <mat-paginator
   (page)="onPageChange($event)"
   [length]="pageLength"
   [pageSize]="pageSize"
   [pageSizeOptions]="[1, 2, 3, 4, 5, 10, 20, 30, 40, 50]">
 </mat-paginator>
+</div>
